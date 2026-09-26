@@ -1,0 +1,34 @@
+.body {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 44px var(--gutter) 0;
+}
+
+.sectionLabel {
+  font-size: 10px; font-weight: 800; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--slate);
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.sectionLabel::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+
+.achTags {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px;
+}
+.achTag {
+  background: var(--linen); border: 1px solid var(--border);
+  color: var(--slate); font-size: 12px; font-weight: 600;
+  padding: 5px 12px; border-radius: 20px;
+}
+
+.bioText p {
+  font-size: 15px; color: #2a2a2a; line-height: 1.85; margin-bottom: 20px;
+}
+.bioText p:last-child { margin-bottom: 0; }
+
+@media (max-width: 767px) {
+  .body { padding: 28px var(--gutter) 0; }
+  .bioText p { font-size: 14px; }
+}

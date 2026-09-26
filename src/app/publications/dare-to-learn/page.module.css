@@ -1,0 +1,56 @@
+/* DARE TO LEARN */
+.hero { background: #1A365D; color: #fff; }
+.heroInner { max-width: var(--container); margin: 0 auto; padding: 48px var(--gutter) 44px; }
+.backLink { display: inline-block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,.5); text-decoration: none; margin-bottom: 16px; transition: color .15s; }
+.backLink:hover { color: rgba(255,255,255,.85); }
+.pubLabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 10px; }
+.title { font-family: var(--font-display); font-size: 40px; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 12px; }
+.subtitle { font-size: 14px; color: rgba(255,255,255,.65); max-width: 540px; line-height: 1.75; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* LATEST */
+.latest { background: var(--bg-page); padding: 48px 0; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #1A365D; margin-bottom: 16px; }
+.latestCard { background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid #1A365D; border-radius: 4px; padding: 32px 36px; }
+.latestMeta { margin-bottom: 12px; }
+.volBadge { font-size: 11px; font-weight: 700; color: #1A365D; text-transform: uppercase; letter-spacing: .5px; }
+.latestTheme { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 14px; }
+.latestExcerpt { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; max-width: 720px; }
+.latestEssays { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+
+/* ARCHIVE */
+.archive { background: var(--bg-linen); padding: 48px 0 64px; }
+.sectionTitle { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: #1A365D; margin-bottom: 20px; }
+.archiveList { display: flex; flex-direction: column; gap: 0; }
+.archiveRow {
+  display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: flex-start;
+  padding: 20px 0; border-top: 1px solid var(--border);
+}
+.archiveRow:last-child { border-bottom: 1px solid var(--border); }
+.archiveMeta { display: flex; flex-direction: column; gap: 4px; padding-top: 2px; }
+.archiveVol { font-size: 11px; font-weight: 700; color: #1A365D; text-transform: uppercase; letter-spacing: .5px; }
+.archiveSeason { font-size: 12px; color: var(--text-muted); }
+.archiveEssays { font-size: 10px; color: var(--text-muted); margin-top: 4px; }
+.archiveTheme { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.archiveExcerpt { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+
+/* ABOUT */
+.about { background: var(--bg-page); padding: 48px 0 64px; }
+.aboutGrid { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: flex-start; }
+.aboutTitle { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 14px; }
+.aboutBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; }
+
+.submitBox { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 6px; padding: 26px; }
+.submitEyebrow { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A365D; margin-bottom: 6px; }
+.submitTitle { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+.submitBody { font-size: 13px; color: var(--text-muted); line-height: 1.75; margin-bottom: 12px; }
+.submitBody:last-of-type { margin-bottom: 18px; }
+.submitBtn { display: inline-block; background: #1A365D; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; text-decoration: none; padding: 10px 22px; border-radius: 3px; transition: background .15s; }
+.submitBtn:hover { background: #0F2040; }
+
+@media (max-width: 1023px) { .aboutGrid { grid-template-columns: 1fr; } }
+@media (max-width: 767px) {
+  .title { font-size: 28px; }
+  .archiveRow { grid-template-columns: 1fr; gap: 8px; }
+}

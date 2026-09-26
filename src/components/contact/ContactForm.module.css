@@ -1,0 +1,78 @@
+.form { display: flex; flex-direction: column; gap: 20px; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--text);
+}
+.req { color: var(--crimson); }
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 9px 12px;
+  font-size: 14px; font-family: var(--font-body);
+  color: var(--text); background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+  box-sizing: border-box;
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--crimson);
+  box-shadow: 0 0 0 3px rgba(128,0,0,.08);
+}
+.textarea { resize: vertical; min-height: 120px; }
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A5568' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.submit {
+  align-self: flex-start;
+  background: var(--crimson); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  border: none; cursor: pointer;
+  padding: 12px 28px; border-radius: 3px;
+  transition: background .15s;
+}
+.submit:hover { background: var(--crimson-dark); }
+
+/* SUCCESS STATE */
+.success {
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 40px 32px; text-align: center;
+}
+.successIcon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #D1FAE5; color: #059669;
+  font-size: 20px; font-weight: 700; margin-bottom: 16px;
+}
+.successTitle {
+  font-family: var(--font-display); font-size: 22px; font-weight: 800;
+  color: var(--text); margin-bottom: 10px;
+}
+.successBody {
+  font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 24px;
+}
+.successReset {
+  background: none; border: 1px solid var(--border); color: var(--text-muted);
+  font-size: 12px; cursor: pointer; padding: 8px 20px; border-radius: 3px;
+  transition: border-color .15s;
+}
+.successReset:hover { border-color: var(--crimson); color: var(--crimson); }
+
+@media (max-width: 767px) {
+  .row { grid-template-columns: 1fr; }
+}

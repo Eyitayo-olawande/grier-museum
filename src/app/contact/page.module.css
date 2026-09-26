@@ -1,0 +1,75 @@
+/* CONTACT PAGE */
+
+/* HERO */
+.hero { background: var(--crimson-dark); color: #fff; }
+.heroInner {
+  max-width: var(--container); margin: 0 auto;
+  padding: 56px var(--gutter) 52px;
+}
+.eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 12px;
+}
+.title {
+  font-family: var(--font-display); font-size: 42px; font-weight: 900;
+  color: #fff; line-height: 1.1; margin-bottom: 12px;
+}
+.subtitle {
+  font-size: 15px; color: rgba(255,255,255,.65); max-width: 560px; line-height: 1.75;
+}
+
+/* BODY */
+.body { background: var(--bg-page); padding: 56px 0 80px; }
+.container {
+  max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter);
+}
+
+/* LAYOUT */
+.layout {
+  display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: flex-start;
+}
+
+/* FORM COLUMN */
+.formCol {}
+.formTitle {
+  font-family: var(--font-display); font-size: 22px; font-weight: 800;
+  color: var(--text); margin-bottom: 24px;
+}
+
+/* SIDEBAR */
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+.infoBox {
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: 4px; padding: 22px 24px;
+}
+.infoTitle {
+  font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .5px;
+  color: var(--crimson); margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--linen);
+}
+.infoList { display: flex; flex-direction: column; gap: 12px; }
+.infoRow { display: flex; flex-direction: column; gap: 3px; }
+.infoLabel {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+  color: var(--text-muted);
+}
+.infoValue {
+  font-size: 13px; color: var(--text); line-height: 1.6;
+}
+.infoBody {
+  font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 10px;
+}
+.infoLink { color: var(--crimson); text-decoration: none; font-size: 13px; }
+.infoLink:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* RESPONSIVE */
+@media (max-width: 1023px) {
+  .layout { grid-template-columns: 1fr; gap: 40px; }
+  .sidebar { order: -1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+
+@media (max-width: 767px) {
+  .title { font-size: 28px; }
+  .sidebar { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,66 @@
+/* Grier House Museum — Design Tokens
+   Palette derived from approved Template D */
+
+:root {
+  /* Brand colours */
+  --crimson: #800000;
+  --crimson-dark: #5C0000;
+  --crimson-light: #9A1515;
+  --slate: #4A5568;
+  --slate-dark: #2D3748;
+  --pearl: #F5F0EC;
+  --linen: #E8E2DC;
+  --black: #1A1A1A;
+  --gold: #B5862A;
+
+  /* Semantic text */
+  --text: #1A1A1A;
+  --text-muted: #5A5048;
+  --text-faint: rgba(0, 0, 0, 0.38);
+  --border: #D0C8C0;
+
+  /* Surface */
+  --bg-page: var(--pearl);
+  --bg-surface: #ffffff;
+  --bg-linen: var(--linen);
+
+  /* Header */
+  --header-bg: #ffffff;
+  --header-border: var(--crimson);
+  --header-title-color: var(--crimson);
+  --header-nav-color: var(--slate);
+  --header-nav-active: var(--crimson);
+
+  /* Hero */
+  --hero-bg: var(--crimson-dark);
+
+  /* Footer */
+  --footer-bg: var(--slate-dark);
+  --footer-border: var(--crimson);
+
+  /* Typography scale */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+
+  --text-xs: 10px;
+  --text-sm: 12px;
+  --text-base: 15px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 36px;
+
+  /* Spacing */
+  --container: 1200px;
+  --gutter: 48px;
+  --gutter-sm: 24px;
+  --gutter-xs: 16px;
+}
+
+@media (max-width: 1023px) {
+  :root { --gutter: var(--gutter-sm); }
+}
+
+@media (max-width: 767px) {
+  :root { --gutter: var(--gutter-xs); }
+}

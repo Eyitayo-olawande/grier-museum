@@ -1,0 +1,52 @@
+/* STORIES OF GRIERSONS */
+.hero { background: #5C3317; color: #fff; }
+.heroInner { max-width: var(--container); margin: 0 auto; padding: 48px var(--gutter) 44px; }
+.backLink { display: inline-block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,.5); text-decoration: none; margin-bottom: 16px; transition: color .15s; }
+.backLink:hover { color: rgba(255,255,255,.85); }
+.pubLabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 10px; }
+.title { font-family: var(--font-display); font-size: 40px; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 12px; }
+.subtitle { font-size: 14px; color: rgba(255,255,255,.65); max-width: 540px; line-height: 1.75; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* STORIES */
+.stories { background: var(--bg-page); padding: 52px 0; }
+.sectionHeader { margin-bottom: 24px; }
+.sectionTitle { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: #5C3317; margin-bottom: 4px; }
+.sectionDesc { font-size: 12px; color: var(--text-muted); }
+
+.storiesList { display: flex; flex-direction: column; gap: 0; }
+.storyCard { padding: 28px 0; border-top: 1px solid var(--border); }
+.storyCard:last-child { border-bottom: 1px solid var(--border); }
+.storyMeta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.storyAuthor { font-size: 12px; font-weight: 700; color: var(--text); }
+.storySet { font-size: 10px; color: var(--crimson); font-weight: 600; background: rgba(128,0,0,.06); padding: 2px 8px; border-radius: 10px; }
+.storyDate { font-size: 11px; color: var(--text-muted); }
+.storyTitle { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.25; margin-bottom: 10px; }
+.storyExcerpt { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; max-width: 720px; }
+
+.storyDetails { }
+.storyReadMore { font-size: 12px; font-weight: 700; color: #5C3317; cursor: pointer; list-style: none; }
+.storyReadMore::-webkit-details-marker { display: none; }
+.storyReadMore::after { content: ' ↓'; }
+.storyDetails[open] .storyReadMore::after { content: ' ↑'; }
+.storyBody { margin-top: 16px; max-width: 680px; }
+.storyBody p { font-size: 15px; color: var(--text); line-height: 1.9; margin-bottom: 18px; }
+.storyBody p:last-child { margin-bottom: 0; }
+
+/* SUBMIT */
+.submit { background: var(--bg-linen); padding: 56px 0 72px; }
+.submitLayout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: flex-start; }
+.submitTitle { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 14px; }
+.submitBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; }
+
+.guidelines { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 4px; padding: 18px 20px; margin-top: 20px; }
+.guidelinesTitle { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--text-muted); margin-bottom: 10px; }
+.guidelinesList { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.guidelinesList li { font-size: 13px; color: var(--text-muted); padding-left: 14px; position: relative; }
+.guidelinesList li::before { content: '·'; position: absolute; left: 0; color: #5C3317; font-weight: 700; }
+
+.submitFormCol {}
+
+@media (max-width: 1023px) { .submitLayout { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 767px) { .title { font-size: 28px; } }

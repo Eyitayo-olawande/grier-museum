@@ -1,0 +1,150 @@
+.timeline {
+  position: relative;
+  padding: 8px 0 32px;
+}
+
+/* Vertical spine line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+/* Each row: year | spine | card */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+/* Left rows: year on left, card on right (default) */
+.left .yearCol  { text-align: right; padding-right: 24px; }
+.left .cardCol  { padding-left: 24px; }
+
+/* Right rows: year on right, card on left */
+.right .yearCol { order: 2; text-align: left;  padding-left: 24px; }
+.right .spine   { order: 1; }
+.right .cardCol { order: 0; text-align: right; padding-right: 24px; }
+
+/* YEAR BUTTON */
+.yearCol { padding-top: 10px; }
+
+.yearBtn {
+  background: none; border: none; cursor: pointer; padding: 0;
+  display: inline-flex; flex-direction: column; align-items: inherit;
+}
+
+.yearNum {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 900;
+  color: var(--text-muted);
+  line-height: 1;
+  transition: color .15s;
+}
+.yearBtn:hover .yearNum,
+.yearOpen .yearNum { color: var(--crimson); }
+
+/* SPINE DOT */
+.spine {
+  display: flex; justify-content: center;
+  padding-top: 12px;
+  position: relative; z-index: 1;
+}
+
+.dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--border);
+  border: 2px solid var(--bg-page);
+  transition: background .2s, transform .2s;
+  flex-shrink: 0;
+}
+.dotOpen { transform: scale(1.4); }
+
+/* CARD */
+.cardCol { padding-top: 4px; }
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color .15s, box-shadow .15s;
+}
+.card:hover { border-color: var(--crimson); }
+.cardOpen { border-color: var(--crimson); box-shadow: 0 2px 12px rgba(128,0,0,.08); }
+
+.cardTop {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+}
+
+.right .cardTop { flex-direction: row-reverse; }
+
+.catBadge {
+  color: #fff; font-size: 9px; font-weight: 700;
+  letter-spacing: .8px; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 10px;
+}
+
+.toggle {
+  font-size: 18px; font-weight: 300;
+  color: var(--border); line-height: 1;
+  transition: color .15s;
+}
+.card:hover .toggle,
+.cardOpen .toggle { color: var(--crimson); }
+
+.cardTitle {
+  font-size: 14px; font-weight: 700;
+  color: var(--text); line-height: 1.4;
+}
+.right .cardTitle { text-align: right; }
+
+.cardBody {
+  margin-top: 10px;
+  font-size: 13px; color: var(--text-muted);
+  line-height: 1.75;
+  border-top: 1px solid var(--linen);
+  padding-top: 10px;
+}
+.right .cardBody { text-align: right; }
+
+/* MOBILE — single column, all left */
+@media (max-width: 767px) {
+  .timeline::before { left: 20px; transform: none; }
+
+  .row,
+  .right {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto;
+  }
+
+  /* Hide year column on mobile — year moves into card */
+  .yearCol { display: none; }
+
+  .right .yearCol  { display: none; }
+  .right .spine    { order: 0; }
+  .right .cardCol  { order: 1; text-align: left; padding-right: 0; padding-left: 12px; }
+
+  .left .cardCol  { padding-left: 12px; }
+
+  .spine { justify-content: flex-start; padding-top: 14px; }
+
+  .cardTitle::before {
+    content: attr(data-year);
+    display: block;
+    font-size: 11px; font-weight: 700;
+    color: var(--text-muted); margin-bottom: 4px;
+  }
+
+  .right .cardTitle { text-align: left; }
+  .right .cardTop { flex-direction: row; }
+  .right .cardBody { text-align: left; }
+}

@@ -1,0 +1,120 @@
+/* NOTABLE GRIERSONS — listing page */
+
+/* HERO */
+.hero { background: var(--crimson-dark); color: #fff; }
+.heroInner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 56px var(--gutter) 52px;
+}
+.eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 12px;
+}
+.title {
+  font-family: var(--font-display); font-size: 42px; font-weight: 900;
+  color: #fff; line-height: 1.1; margin-bottom: 12px; text-wrap: balance;
+}
+.subtitle {
+  font-size: 15px; color: rgba(255,255,255,.65); max-width: 560px;
+  line-height: 1.75; margin-bottom: 20px;
+}
+.stat { display: flex; align-items: baseline; gap: 10px; }
+.statNum {
+  font-family: var(--font-display); font-size: 32px; font-weight: 900; color: #fff;
+}
+.statLabel { font-size: 12px; color: rgba(255,255,255,.45); }
+
+/* A–Z JUMP NAV */
+.alphaNav { background: var(--bg-surface); border-bottom: 1px solid var(--border); position: sticky; top: 138px; z-index: 50; }
+.alphaInner {
+  max-width: var(--container); margin: 0 auto;
+  padding: 10px var(--gutter); display: flex; gap: 4px; flex-wrap: nowrap; overflow-x: auto;
+}
+.alphaActive {
+  font-size: 12px; font-weight: 700; color: var(--crimson);
+  padding: 4px 7px; border-radius: 2px; transition: background .12s;
+  white-space: nowrap;
+}
+.alphaActive:hover { background: var(--linen); }
+.alphaInactive { font-size: 12px; color: var(--border); padding: 4px 7px; }
+
+/* LISTING */
+.listing { background: var(--bg-page); }
+.listingInner {
+  max-width: var(--container); margin: 0 auto;
+  padding: 40px var(--gutter) 72px;
+}
+
+/* LETTER GROUP */
+.group { margin-bottom: 48px; }
+.groupLetter {
+  font-family: var(--font-display); font-size: 22px; font-weight: 900;
+  color: var(--crimson); padding-bottom: 10px;
+  border-bottom: 2px solid var(--crimson); margin-bottom: 16px;
+  display: inline-block; min-width: 36px;
+}
+
+/* CARDS */
+.cards { display: flex; flex-direction: column; gap: 1px; }
+
+.card {
+  display: flex; align-items: stretch; gap: 0;
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: 4px; overflow: hidden; position: relative;
+  transition: border-color .15s, box-shadow .15s;
+  text-decoration: none; color: inherit;
+}
+.card:hover {
+  border-color: var(--crimson);
+  box-shadow: 0 2px 10px rgba(128,0,0,.08);
+}
+.card + .card { margin-top: 8px; }
+
+/* Photo column */
+.cardPhoto {
+  width: 76px; flex-shrink: 0;
+  background: var(--crimson-dark);
+  display: flex; align-items: center; justify-content: center;
+}
+.cardImg { width: 76px; height: 100%; object-fit: cover; }
+.cardPhotoPlaceholder {
+  width: 76px; height: 100%; min-height: 80px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,.3);
+}
+.phIcon { width: 32px; height: 38px; }
+
+/* Card body */
+.cardBody { flex: 1; padding: 14px 16px; }
+.cardMeta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.eraTag {
+  display: inline-block; color: #fff; font-size: 9px; font-weight: 700;
+  letter-spacing: .8px; text-transform: uppercase; padding: 2px 8px; border-radius: 10px;
+}
+.fieldTag {
+  display: inline-block; background: var(--linen); color: var(--slate);
+  font-size: 9px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border);
+}
+.cardName { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+.cardFull { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
+.cardDetails { font-size: 11px; color: var(--text-muted); display: flex; gap: 6px; align-items: center; }
+.dot { color: var(--border); }
+.cardDistinction { font-size: 11px; color: var(--slate); margin-top: 4px; font-style: italic; }
+
+.cardArrow {
+  font-size: 16px; color: var(--border); padding: 0 18px;
+  display: flex; align-items: center; flex-shrink: 0;
+  transition: color .15s, transform .15s;
+}
+.card:hover .cardArrow { color: var(--crimson); transform: translateX(3px); }
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .title { font-size: 28px; }
+  .alphaNav { top: 68px; }
+  .cardPhoto { width: 56px; }
+  .cardPhotoPlaceholder { min-height: 72px; }
+  .cardArrow { padding: 0 12px; }
+}

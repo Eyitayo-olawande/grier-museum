@@ -1,0 +1,95 @@
+.hero { background: var(--crimson-dark); }
+
+.inner {
+  max-width: var(--container); margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 300px;
+  align-items: stretch;
+}
+
+/* PHOTO COLUMN */
+.photoCol {
+  background: rgba(0,0,0,.18);
+  border-right: 1px solid rgba(255,255,255,.08);
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 24px 24px 0;
+}
+
+.photo {
+  width: 200px; height: 260px;
+  object-fit: cover; object-position: top;
+  border-radius: 4px 4px 0 0;
+  display: block;
+}
+
+.placeholder {
+  width: 200px; height: 260px;
+  background: rgba(255,255,255,.04);
+  border: 2px dashed rgba(255,255,255,.18);
+  border-radius: 4px 4px 0 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; padding: 16px;
+}
+.phIcon { width: 40px; height: 48px; }
+.phLabel { font-size: 11px; color: rgba(255,255,255,.35); font-weight: 500; text-align: center; }
+.phSub { font-size: 10px; color: rgba(255,255,255,.2); text-align: center; }
+
+/* TEXT COLUMN */
+.textCol {
+  padding: 32px 0 32px 36px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+
+.tags { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+
+.fieldTag {
+  border: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.75);
+  font-size: 10px; font-weight: 600;
+  padding: 3px 10px; border-radius: 10px;
+}
+
+.awardTag {
+  background: rgba(255,255,255,.12); color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 3px 10px; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.30);
+}
+
+.name {
+  font-size: 36px; font-weight: 800; color: #fff;
+  line-height: 1.15; margin-bottom: 10px; text-wrap: balance;
+}
+
+.school {
+  font-size: 13px; color: rgba(255,255,255,.50);
+  display: flex; gap: 18px; flex-wrap: wrap; align-items: center;
+}
+.school span { display: flex; align-items: center; gap: 5px; }
+.school span + span::before {
+  content: '';
+  width: 4px; height: 4px;
+  background: rgba(255,255,255,.35); border-radius: 50%;
+  display: inline-block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1023px) {
+  .inner { padding: 0 var(--gutter); }
+}
+
+@media (max-width: 767px) {
+  .inner { grid-template-columns: 1fr; min-height: auto; }
+  .photoCol {
+    border-right: none; border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 20px 16px; justify-content: center;
+  }
+  .photo { width: 160px; height: 200px; }
+  .placeholder { width: 160px; height: 200px; }
+  .textCol { padding: 20px 16px 24px; }
+  .name { font-size: 24px; }
+  .school { flex-direction: column; gap: 6px; }
+}

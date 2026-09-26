@@ -1,0 +1,49 @@
+/* NEWSLETTER */
+.hero { background: #4A5568; color: #fff; }
+.heroInner { max-width: var(--container); margin: 0 auto; padding: 48px var(--gutter) 44px; }
+.backLink { display: inline-block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,.5); text-decoration: none; margin-bottom: 16px; transition: color .15s; }
+.backLink:hover { color: rgba(255,255,255,.85); }
+.pubLabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 10px; }
+.title { font-family: var(--font-display); font-size: 40px; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 12px; }
+.subtitle { font-size: 14px; color: rgba(255,255,255,.65); max-width: 540px; line-height: 1.75; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* LATEST */
+.latest { background: var(--bg-page); padding: 48px 0; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--slate); margin-bottom: 16px; }
+.latestCard { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 6px; padding: 32px 36px; }
+.latestHeader { margin-bottom: 20px; }
+.issueBadge { display: inline-block; background: var(--linen); color: var(--slate); font-size: 10px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; padding: 3px 10px; border-radius: 10px; margin-bottom: 10px; }
+.latestHeadline { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.3; }
+
+.itemList { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.itemBullet { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--crimson); margin-top: 7px; }
+
+/* ARCHIVE */
+.archive { background: var(--bg-linen); padding: 48px 0 64px; }
+.sectionTitle { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--slate-dark); margin-bottom: 20px; }
+.archiveGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.archiveCard { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 4px; padding: 18px 20px; }
+.archiveBadge { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--slate); background: var(--linen); padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; }
+.archiveHeadline { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 12px; }
+.archiveItems { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.archiveItem { font-size: 12px; color: var(--text-muted); line-height: 1.5; padding-left: 12px; position: relative; }
+.archiveItem::before { content: '·'; position: absolute; left: 0; color: var(--slate); }
+.archiveMore { font-size: 11px; color: var(--crimson); font-weight: 600; padding-left: 12px; margin-top: 2px; }
+
+/* SUBSCRIBE */
+.subscribe { background: var(--black); padding: 44px 0; }
+.subscribeInner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.subscribeTitle { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.subscribeBody { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.7; max-width: 500px; }
+.subscribeBtn { display: inline-block; background: var(--crimson); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; text-decoration: none; padding: 12px 24px; border-radius: 3px; white-space: nowrap; transition: background .15s; }
+.subscribeBtn:hover { background: var(--crimson-dark); }
+
+@media (max-width: 1023px) { .archiveGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 767px) {
+  .title { font-size: 28px; }
+  .archiveGrid { grid-template-columns: 1fr; }
+  .subscribeInner { flex-direction: column; align-items: flex-start; }
+}

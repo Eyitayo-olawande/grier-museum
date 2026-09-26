@@ -1,0 +1,32 @@
+.form { display: flex; flex-direction: column; gap: 18px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--text); }
+.req { color: var(--crimson); }
+.input, .textarea {
+  width: 100%; border: 1px solid var(--border); border-radius: 3px;
+  padding: 9px 12px; font-size: 14px; font-family: var(--font-body);
+  color: var(--text); background: #fff;
+  transition: border-color .15s, box-shadow .15s; box-sizing: border-box;
+}
+.input:focus, .textarea:focus {
+  outline: none; border-color: #5C3317;
+  box-shadow: 0 0 0 3px rgba(92,51,23,.08);
+}
+.textarea { resize: vertical; min-height: 200px; line-height: 1.7; }
+.note { font-size: 11px; color: var(--text-muted); line-height: 1.6; font-style: italic; }
+.submit {
+  align-self: flex-start; background: #5C3317; color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  border: none; cursor: pointer; padding: 12px 28px; border-radius: 3px; transition: background .15s;
+}
+.submit:hover { background: #3D2010; }
+
+.success { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 6px; padding: 36px 28px; text-align: center; }
+.successIcon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #D1FAE5; color: #059669; font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+.successTitle { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.successBody { font-size: 13px; color: var(--text-muted); line-height: 1.75; margin-bottom: 20px; }
+.resetBtn { background: none; border: 1px solid var(--border); color: var(--text-muted); font-size: 12px; cursor: pointer; padding: 7px 18px; border-radius: 3px; transition: border-color .15s; }
+.resetBtn:hover { border-color: #5C3317; color: #5C3317; }
+
+@media (max-width: 767px) { .row { grid-template-columns: 1fr; } }
