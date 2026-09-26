@@ -120,15 +120,15 @@
   /* Nav hidden by default on mobile */
   .nav {
     display: none;
+  }
+
+  /* Nav open — JS sets data-open="true"; attribute selector beats .nav alone (specificity 20 vs 10) */
+  .nav[data-open="true"] {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     overflow-x: visible;
     padding-bottom: 10px;
-  }
-
-  /* Nav open — JS adds this class */
-  .navOpen {
-    display: flex;
   }
 
   .navLink {

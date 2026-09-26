@@ -42,7 +42,8 @@ export default function Header() {
 
         <nav
           id="main-nav"
-          className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}
+          className={styles.nav}
+          data-open={menuOpen}
           aria-label="Main navigation"
         >
           {NAV_ITEMS.map((item) => (
