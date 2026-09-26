@@ -54,6 +54,23 @@
   margin-top: 4px;
 }
 
+/* ── Hamburger (hidden on desktop) ── */
+.menuBtn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  padding: 6px 11px;
+  border-radius: 3px;
+  color: var(--slate);
+  font-size: 18px;
+  line-height: 1;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+.menuBtn:hover { color: var(--crimson); border-color: var(--crimson); }
+
 /* ── Row 2: nav ── */
 .nav {
   display: flex;
@@ -95,8 +112,34 @@
 }
 
 @media (max-width: 767px) {
-  .nav { display: none; }
+  .menuBtn { display: flex; align-items: center; justify-content: center; }
   .titleMain { font-size: 18px; }
   .titleSub { font-size: 10px; letter-spacing: 3px; }
   .logo { height: 60px; }
+
+  /* Nav hidden by default on mobile */
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-x: visible;
+    padding-bottom: 10px;
+  }
+
+  /* Nav open — JS adds this class */
+  .navOpen {
+    display: flex;
+  }
+
+  .navLink {
+    font-size: 13px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    white-space: normal;
+  }
+  .navLink:first-child { padding-left: 0; }
+  .navLink:last-child { border-bottom: none; }
+
+  /* Remove underline active indicator on mobile — use colour only */
+  .navLink.active::after { display: none; }
 }

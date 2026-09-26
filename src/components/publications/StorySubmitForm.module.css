@@ -15,12 +15,25 @@
 }
 .textarea { resize: vertical; min-height: 200px; line-height: 1.7; }
 .note { font-size: 11px; color: var(--text-muted); line-height: 1.6; font-style: italic; }
+.inputError {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 0 3px rgba(220,38,38,.1) !important;
+}
+.fieldError { font-size: 11px; color: #DC2626; line-height: 1.4; }
+.serverError {
+  font-size: 13px; color: #DC2626; background: #FEF2F2;
+  border: 1px solid #FECACA; border-radius: 3px;
+  padding: 10px 14px; line-height: 1.5;
+}
+
 .submit {
   align-self: flex-start; background: #5C3317; color: #fff;
   font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
-  border: none; cursor: pointer; padding: 12px 28px; border-radius: 3px; transition: background .15s;
+  border: none; cursor: pointer; padding: 12px 28px; border-radius: 3px;
+  transition: background .15s, opacity .15s;
 }
-.submit:hover { background: #3D2010; }
+.submit:hover:not(:disabled) { background: #3D2010; }
+.submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .success { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 6px; padding: 36px 28px; text-align: center; }
 .successIcon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #D1FAE5; color: #059669; font-size: 18px; font-weight: 700; margin-bottom: 14px; }
