@@ -25,7 +25,7 @@ export default async function HomePage() {
   const HIGHLIGHTS = [
     { label: 'Notable Griersons', value: String(profiles.length), desc: 'Distinguished Griersons celebrated in our profiles' },
     { label: 'Photographs', value: String(archive.filter((i) => i.type === 'Photo').length), desc: 'Original photographs from the Museum collection' },
-    { label: 'Founded', value: '1930', desc: 'Grier House was founded in January 1930' },
+    { label: 'Grier House Founded', value: '1930', desc: 'Founded in January 1930 at Government College Ibadan (founded 1929)' },
     { label: 'Museum Opened', value: '2026', desc: 'The Grier Museum and Library, October 2026' },
   ];
 
@@ -35,7 +35,7 @@ export default async function HomePage() {
       <section className={styles.hero}>
         <div className={`${styles.heroInner} ${home?.introVideo ? styles.heroWithVideo : ''}`}>
           <div className={styles.heroContent}>
-            <p className={styles.heroEyebrow}>Government College Ibadan &nbsp;&middot;&nbsp; Founded 1930</p>
+            <p className={styles.heroEyebrow}>Government College Ibadan, founded 1929 &nbsp;&middot;&nbsp; Grier House, founded 1930</p>
             <h1 className={styles.heroTitle}>Grier House Museum<br />&amp; Library</h1>
             <p className={styles.heroDesc}>
               Home of the Grier House Museum &amp; Library &mdash; custodian of the history and traditions of Grier House, Government College Ibadan. Explore profiles of notable Griersons, the traditions of the House, and an archive of photographs and videos from the Museum.

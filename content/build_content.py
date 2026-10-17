@@ -230,10 +230,10 @@ def history_articles():
 
 # Every event below is stated in the supplied History, Traditions or profile documents.
 TIMELINE = [
-    (1929, "Teacher Training School Opens in Ibadan", "Founding",
-     "Selwyn Macgregor Grier, Director of Education for the Southern Provinces, establishes a teacher training school in Ibadan. V. B. V. Powell is posted there to teach Mathematics and History."),
+    (1929, "Government College Ibadan is Founded", "Founding",
+     "Government College Ibadan is founded, beginning as a teacher training school established by Selwyn Macgregor Grier, Director of Education for the Southern Provinces. V. B. V. Powell is posted there to teach Mathematics and History."),
     (1930, "Grier House is Founded", "Founding",
-     "In January 1930 the school becomes Government College Ibadan and Grier House is founded, with V. B. V. Powell as its first Housemaster. He names the House after Selwyn Macgregor Grier and gives it its Crest, Colour, Motto, House Prayer and House Supper."),
+     "In January 1930 Government College Ibadan becomes a secondary school and Grier House is founded as its second House, after Swanston House, with V. B. V. Powell as its first Housemaster. He names the House after Selwyn Macgregor Grier and gives it its Crest, Colour, Motto, House Prayer and House Supper."),
     (1933, "The Grier Cup is Started", "Sport",
      "V. B. V. Powell starts the Grier Cup athletic competition for secondary schools. Around the same year, the tradition of moonlight stories begins in Grier House."),
     (1935, "Red Letter Day", "Founding",
@@ -452,8 +452,8 @@ REPLACE = [("GCI", "Government College Ibadan"), ("NYC", "Nigerian Youth Congres
            ("OPEC", "OPEC"), ("Form6", "Form 6"), (" B&W", ""), (" color", " (colourised)"), (" Pic", ""), (" pic", ""), (" 1944 Otegbeye", " 1944, with Tunji Otegbeye"),
            (" 1945 Otegbeye", " 1945, with Tunji Otegbeye"), (" 1946 Otegbeye", " 1946, with Tunji Otegbeye")]
 CAPTIONS = {
-    "1930 Boys.png": "The first Government College Ibadan students, 1930",
-    "1930 Boys2.png": "The first Government College Ibadan students, 1930 (archive record)",
+    "1930 Boys.png": "Government College Ibadan students, 1930",
+    "1930 Boys2.png": "Government College Ibadan students, 1930 (archive record)",
     "Current Griersons.jpg": "Current Griersons at the House Supper",
     "Cadet Boys.jpg": "Cadets at the new Grier House",
     "Wole Soyinka inspecting Cadet Boys.jpg": "Wole Soyinka inspecting Grier House cadets",

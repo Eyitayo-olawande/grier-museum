@@ -1931,15 +1931,15 @@
   "api::timeline-event.timeline-event": [
     {
       "year": 1929,
-      "title": "Teacher Training School Opens in Ibadan",
+      "title": "Government College Ibadan is Founded",
       "category": "Founding",
-      "body": "Selwyn Macgregor Grier, Director of Education for the Southern Provinces, establishes a teacher training school in Ibadan. V. B. V. Powell is posted there to teach Mathematics and History."
+      "body": "Government College Ibadan is founded, beginning as a teacher training school established by Selwyn Macgregor Grier, Director of Education for the Southern Provinces. V. B. V. Powell is posted there to teach Mathematics and History."
     },
     {
       "year": 1930,
       "title": "Grier House is Founded",
       "category": "Founding",
-      "body": "In January 1930 the school becomes Government College Ibadan and Grier House is founded, with V. B. V. Powell as its first Housemaster. He names the House after Selwyn Macgregor Grier and gives it its Crest, Colour, Motto, House Prayer and House Supper."
+      "body": "In January 1930 Government College Ibadan becomes a secondary school and Grier House is founded as its second House, after Swanston House, with V. B. V. Powell as its first Housemaster. He names the House after Selwyn Macgregor Grier and gives it its Crest, Colour, Motto, House Prayer and House Supper."
     },
     {
       "year": 1933,
@@ -2315,7 +2315,7 @@
   ],
   "api::archive-item.archive-item": [
     {
-      "title": "The first Government College Ibadan students, 1930",
+      "title": "Government College Ibadan students, 1930",
       "type": "Photo",
       "era": "Colonial",
       "year": "1930",
@@ -2324,11 +2324,11 @@
       "collection": "Photo Archives",
       "media": {
         "$file": "Photo Archives /1930 Boys.png",
-        "alt": "The first Government College Ibadan students, 1930"
+        "alt": "Government College Ibadan students, 1930"
       }
     },
     {
-      "title": "The first Government College Ibadan students, 1930 (archive record)",
+      "title": "Government College Ibadan students, 1930 (archive record)",
       "type": "Photo",
       "era": "Colonial",
       "year": "1930",
@@ -2337,7 +2337,7 @@
       "collection": "Photo Archives",
       "media": {
         "$file": "Photo Archives /1930 Boys2.png",
-        "alt": "The first Government College Ibadan students, 1930 (archive record)"
+        "alt": "Government College Ibadan students, 1930 (archive record)"
       }
     },
     {
