@@ -33,7 +33,7 @@ export default async function HomePage() {
     <>
       {/* HERO */}
       <section className={styles.hero}>
-        <div className={styles.heroInner}>
+        <div className={`${styles.heroInner} ${home?.introVideo ? styles.heroWithVideo : ''}`}>
           <div className={styles.heroContent}>
             <p className={styles.heroEyebrow}>Government College Ibadan &nbsp;&middot;&nbsp; Founded 1930</p>
             <h1 className={styles.heroTitle}>Grier House Museum<br />&amp; Library</h1>
@@ -45,6 +45,12 @@ export default async function HomePage() {
               <Link href="/history" className={styles.btnSecondary}>Explore History</Link>
             </div>
           </div>
+          {home?.introVideo && (
+            <figure className={styles.heroVideo}>
+              <video src={`${home.introVideo.url}#t=0.5`} controls preload="metadata" playsInline className={styles.heroVideoPlayer} />
+              <figcaption className={styles.heroVideoCaption}>{home.introVideo.alt}</figcaption>
+            </figure>
+          )}
         </div>
       </section>
 

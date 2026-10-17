@@ -15,6 +15,26 @@
 
 .heroContent { max-width: 640px; }
 
+/* Welcome video beside the hero text */
+.heroWithVideo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 520px);
+  gap: 48px;
+  align-items: center;
+}
+.heroVideo { margin: 0; }
+.heroVideoPlayer {
+  width: 100%; display: block; background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.heroVideoCaption {
+  font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.7); margin-top: 10px;
+}
+@media (max-width: 1023px) {
+  .heroWithVideo { grid-template-columns: 1fr; gap: 32px; }
+}
+
 .heroEyebrow {
   font-size: 11px;
   font-weight: 700;

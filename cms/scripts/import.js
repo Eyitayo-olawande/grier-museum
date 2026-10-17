@@ -14,7 +14,8 @@
  *
  * Media fields may hold {"$file": "relative/path.jpg", "alt": "..."}. The file
  * is read from the media folder, images are resized to at most 2000px, and
- * the upload is reused on later imports (matched on the relative path).
+ * the upload is reused on later imports (matched on the relative path), with
+ * its alternative text and caption updated from the file.
  *
  * --prune deletes entries of the imported collections that are not in the
  * file. Use it only when the file is the complete source for those collections.
@@ -37,6 +38,10 @@ function createUploader(app, mediaRoot) {
     if (cache.has(rel)) return cache.get(rel);
     const existing = await files.findOne({ where: { name: rel } });
     if (existing) {
+      // keep captions in step with the content file
+      if (alt && existing.alternativeText !== alt) {
+        await files.update({ where: { id: existing.id }, data: { alternativeText: alt, caption: alt } });
+      }
       cache.set(rel, existing.id);
       return existing.id;
     }

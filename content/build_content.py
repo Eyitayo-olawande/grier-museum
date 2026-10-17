@@ -365,6 +365,9 @@ def home_page():
         i += 1
     return {
         "welcomeTitle": "Welcome to the Grier House Museum and Library",
+        # title given by the project owner
+        "introVideo": media(f"{EXTRA}/Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
+                            "Grier House song by Old Griersons and current students at the 2026 Reunion, October 17, 2026"),
         "welcomeText": "\n\n".join(blocks),
         "featuredPhotos": [media(f"{PHOTOS}/{f}", caption(f)) for f in
                            ["Grier House 1940.jpg", "Grier House Football Team 1931.jpg", "New Grier House Building.jpg"]],
@@ -417,9 +420,7 @@ def extracurricular():
     return [
         {"title": "About Extracurricular Activities", "slug": "about", "order": 0,
          "summary": "The wider mission of the Grier History and Traditions Committee beyond the Museum and Library.",
-         "body": intro,
-         "videos": [media(f"{EXTRA}/{f}", re.sub(r"\.mp4$", "", f)) for f in sorted(os.listdir(os.path.join(SRC, EXTRA)))
-                    if f.endswith(".mp4")]},
+         "body": intro, "videos": []},
         {"title": "Marching Band", "slug": "marching-band", "order": 1,
          "summary": "Parade drums, trumpets and flutes to galvanize Grier House teams at interhouse sports.",
          "body": band, "photos": [media(f"{PHOTOS}/Grier House Marching Band.jpg", "Grier House Marching Band")]},

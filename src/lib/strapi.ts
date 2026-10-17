@@ -34,8 +34,22 @@ export interface StrapiLabel {
   label: string;
 }
 
+const RETRIES = 2;
+
+/* Strapi closes idle connections; a long-running server can hit one that was
+   just closed (ECONNRESET), so network errors are retried. */
+async function fetchWithRetry(url: string, init: RequestInit): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await fetch(url, init);
+    } catch (err) {
+      if (attempt >= RETRIES) throw err;
+    }
+  }
+}
+
 async function request<T>(path: string): Promise<T> {
-  const res = await fetch(`${STRAPI_URL}/api/${path}`, {
+  const res = await fetchWithRetry(`${STRAPI_URL}/api/${path}`, {
     headers: STRAPI_TOKEN ? { Authorization: `Bearer ${STRAPI_TOKEN}` } : undefined,
   });
   // Fail the build loudly rather than publish an empty or stale site

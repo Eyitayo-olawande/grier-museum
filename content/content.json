@@ -2283,12 +2283,7 @@
       "order": 0,
       "summary": "The wider mission of the Grier History and Traditions Committee beyond the Museum and Library.",
       "body": "The responsibilities of the Grier History and Traditions Committee go beyond establishing and maintaining the Grier Museum and Library. The wider mission of this Committee is to organize students living in the Grier House dormitory so they can engage in various activities (outside sports) outside the classroom. Therefore, the Museum and Library also oversees the following activities for the students:",
-      "videos": [
-        {
-          "$file": "Extracurricular Activities /Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
-          "alt": "Old Griersons and Young boys singing house anthem at 2026 Reunion"
-        }
-      ]
+      "videos": []
     },
     {
       "title": "Marching Band",
@@ -4231,6 +4226,10 @@
   ],
   "api::home-page.home-page": {
     "welcomeTitle": "Welcome to the Grier House Museum and Library",
+    "introVideo": {
+      "$file": "Extracurricular Activities /Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
+      "alt": "Grier House song by Old Griersons and current students at the 2026 Reunion, October 17, 2026"
+    },
     "welcomeText": "Grier House, founded in 1930, is one of the 2 foundational boarding Houses of Government College Ibadan, one of the most renowned historically elite boarding secondary schools in Africa. Boys who have passed through Grier House call themselves Griersons. Through the generations, Griersons have played leading roles in the cultural, academic and political development of Nigeria and the African continent.\n\nThe Grier Museum and Library, established in October 2026, is a legacy project that encapsulates the narratives and aspirations of generations of Griersons.\n\nWelcome to the online platform of the Grier House Museum and Library, a living repository of the history, achievements and legacy of generations of Griersons. Here are the stories, photographs, experiences and contributions of past and current students who have passed through the walls of Grier House, ensuring that future generations know what Grier House has stood for since it was founded in 1930.\n\n> “Through this initiative, the story of Grier House has been given a permanent place in the historical records of Government College Ibadan.”\n> — Wilfred Ighodaro ‘61\n\n> “If you know anything, share it. If you don’t know something, search for it.”\n> — motto of the Grier Museum and Library\n\nThis platform is not just about the past. Click on the menu contents to learn what is going on currently in Grier House, what the  House Governor has to say, and what current students have to say through their narratives published in the iconic Grier House magazine, The Mustard Seed.",
     "featuredPhotos": [
       {

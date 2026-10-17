@@ -26,10 +26,16 @@ async function single<T>(uid: string, endpoint: string): Promise<T | null> {
   return cmsEnabled ? findSingle<T>(endpoint) : ((LOCAL[uid] ?? null) as T | null);
 }
 
-/* Each source is read once per build. */
+/* Each source is read once per build. In development every request reads
+   afresh so edits in Strapi show up, and a failed read is never kept. */
 function once<T>(load: () => Promise<T>): () => Promise<T> {
+  if (process.env.NODE_ENV === 'development') return load;
   let promise: Promise<T> | undefined;
-  return () => (promise ??= load());
+  return () =>
+    (promise ??= load().catch((err) => {
+      promise = undefined;
+      throw err;
+    }));
 }
 
 const bySlug = <T extends { slug: string }>(list: T[], slug: string) => list.find((x) => x.slug === slug);
@@ -276,14 +282,19 @@ export interface HomePage {
   /* Markdown */
   welcomeText: string;
   featuredPhotos: Media[];
+  introVideo?: Media;
 }
 
 export const getHomePage = once(async () => {
-  const raw = await single<Omit<HomePage, 'featuredPhotos'> & { featuredPhotos: StrapiMedia[] | null }>(
-    'api::home-page.home-page',
-    'home-page'
-  );
-  return raw ? { ...raw, featuredPhotos: toMediaList(raw.featuredPhotos) } : null;
+  const raw = await single<
+    Omit<HomePage, 'featuredPhotos' | 'introVideo'> & {
+      featuredPhotos: StrapiMedia[] | null;
+      introVideo: StrapiMedia | null;
+    }
+  >('api::home-page.home-page', 'home-page');
+  return raw
+    ? { ...raw, featuredPhotos: toMediaList(raw.featuredPhotos), introVideo: toMedia(raw.introVideo) }
+    : null;
 });
 
 export interface MuseumPage {
