@@ -2282,7 +2282,13 @@
       "slug": "about",
       "order": 0,
       "summary": "The wider mission of the Grier History and Traditions Committee beyond the Museum and Library.",
-      "body": "The responsibilities of the Grier History and Traditions Committee go beyond establishing and maintaining the Grier Museum and Library. The wider mission of this Committee is to organize students living in the Grier House dormitory so they can engage in various activities (outside sports) outside the classroom. Therefore, the Museum and Library also oversees the following activities for the students:"
+      "body": "The responsibilities of the Grier History and Traditions Committee go beyond establishing and maintaining the Grier Museum and Library. The wider mission of this Committee is to organize students living in the Grier House dormitory so they can engage in various activities (outside sports) outside the classroom. Therefore, the Museum and Library also oversees the following activities for the students:",
+      "videos": [
+        {
+          "$file": "Extracurricular Activities /Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
+          "alt": "Old Griersons and Young boys singing house anthem at 2026 Reunion"
+        }
+      ]
     },
     {
       "title": "Marching Band",

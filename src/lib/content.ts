@@ -229,17 +229,19 @@ export interface Activity {
   /* Markdown */
   body: string;
   photos: Media[];
+  videos: Media[];
 }
 
-interface RawActivity extends Omit<Activity, 'photos'> {
+interface RawActivity extends Omit<Activity, 'photos' | 'videos'> {
   order: number;
   photos: StrapiMedia[] | null;
+  videos: StrapiMedia[] | null;
 }
 
 export const getActivities = once(async () =>
   (await collection<RawActivity>('api::extracurricular-activity.extracurricular-activity', 'extracurricular-activities'))
     .sort((a, b) => a.order - b.order)
-    .map<Activity>((a) => ({ ...a, photos: toMediaList(a.photos) }))
+    .map<Activity>((a) => ({ ...a, photos: toMediaList(a.photos), videos: toMediaList(a.videos) }))
 );
 
 /* ---------- Archives ---------- */

@@ -30,6 +30,16 @@ export default async function ExtracurricularPage() {
       </section>
 
       <div className={styles.container}>
+        {intro && intro.videos.length > 0 && (
+          <section className={styles.featured}>
+            {intro.videos.map((video) => (
+              <figure key={video.url} className={styles.featuredVideo}>
+                <video src={video.url} controls preload="metadata" className={styles.video} />
+                {video.alt && <figcaption className={styles.videoCaption}>{video.alt}</figcaption>}
+              </figure>
+            ))}
+          </section>
+        )}
         {sections.map((activity) => (
           <section key={activity.slug} id={activity.slug} className={styles.activity}>
             <div className={styles.activityText}>
