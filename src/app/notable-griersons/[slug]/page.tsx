@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getProfileBySlug, getAdjacentProfiles, PROFILES } from '@/data/profiles';
+import { getProfileBySlug, getAdjacentProfiles, getProfiles } from '@/lib/content';
 import ProfileHero from '@/components/profile/ProfileHero';
 import ProfileBody from '@/components/profile/ProfileBody';
 import PullQuote from '@/components/profile/PullQuote';
@@ -11,12 +11,12 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return PROFILES.map((p) => ({ slug: p.slug }));
+  return (await getProfiles()).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const profile = getProfileBySlug(slug);
+  const profile = await getProfileBySlug(slug);
   if (!profile) return {};
   return {
     title: profile.shortName,
@@ -26,20 +26,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProfilePage({ params }: Props) {
   const { slug } = await params;
-  const profile = getProfileBySlug(slug);
+  const profile = await getProfileBySlug(slug);
   if (!profile) notFound();
 
-  const { prev, next } = getAdjacentProfiles(slug);
+  const { prev, next } = await getAdjacentProfiles(slug);
 
   return (
     <>
       <ProfileHero profile={profile} />
       <ProfileBody profile={profile} />
-      <PullQuote
-        text={profile.pullQuote.text}
-        attribution={profile.pullQuote.attribution}
-        source={profile.pullQuote.source}
-      />
+      {profile.pullQuote && (
+        <PullQuote
+          text={profile.pullQuote.text}
+          attribution={profile.pullQuote.attribution}
+          source={profile.pullQuote.source}
+        />
+      )}
       <ProfileNav prev={prev} next={next} />
     </>
   );

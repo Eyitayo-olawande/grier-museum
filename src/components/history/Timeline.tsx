@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { TIMELINE } from '@/data/timeline';
 import type { TimelineMilestone } from '@/data/timeline';
 import styles from './Timeline.module.css';
 
@@ -14,12 +13,12 @@ const CATEGORY_COLOURS: Record<TimelineMilestone['category'], string> = {
   Museum:            '#4A5568',
 };
 
-export default function Timeline() {
+export default function Timeline({ items }: { items: TimelineMilestone[] }) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
     <div className={styles.timeline}>
-      {TIMELINE.map((item, idx) => {
+      {items.map((item, idx) => {
         const isOpen = openIdx === idx;
         const isLeft = idx % 2 === 0;
 

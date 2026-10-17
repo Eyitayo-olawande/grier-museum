@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "traditions",
+  "info": {
+    "singularName": "tradition",
+    "pluralName": "traditions",
+    "displayName": "Tradition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Literary",
+        "Sport",
+        "Leadership",
+        "Cultural",
+        "Academic",
+        "Social"
+      ]
+    },
+    "era": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

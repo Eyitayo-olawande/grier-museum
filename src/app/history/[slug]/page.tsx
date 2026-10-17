@@ -1,25 +1,25 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getArticleBySlug, HISTORY_ARTICLES } from '@/data/articles';
+import { getHistoryArticle, getHistoryArticles } from '@/lib/content';
 import styles from './page.module.css';
 
 interface Props { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
-  return HISTORY_ARTICLES.map((a) => ({ slug: a.slug }));
+  return (await getHistoryArticles()).map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = await getHistoryArticle(slug);
   if (!article) return {};
   return { title: article.title, description: article.excerpt };
 }
 
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = await getHistoryArticle(slug);
   if (!article) notFound();
 
   const date = new Date(article.date).toLocaleDateString('en-GB', {

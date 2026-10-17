@@ -103,7 +103,3 @@ export const HISTORY_ARTICLES: Article[] = [
     ],
   },
 ];
-
-export function getArticleBySlug(slug: string): Article | undefined {
-  return HISTORY_ARTICLES.find((a) => a.slug === slug);
-}

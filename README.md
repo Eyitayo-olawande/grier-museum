@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Grier House Museum & Library
 
-## Getting Started
+Website for griermuseum.org: home of the Grier House Museum & Library, custodian of the history and traditions of Grier House, Government College Ibadan.
 
-First, run the development server:
+## Structure
+
+| Folder | What it is |
+|---|---|
+| `src/` | Next.js 16 website, exported as static pages (`out/`) |
+| `src/lib/content.ts` | Where pages get their content: Strapi when `STRAPI_URL` is set, otherwise the local files in `src/data/` |
+| `cms/` | Strapi 5 Content Management System (content types, admin panel, import script) |
+| `docs/design/template_d.html` | Approved Template D (profile page design) |
+
+## Development
+
+Requires Node 20 or later.
+
+### Website only (local data files)
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Website with the Content Management System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Start Strapi (first run asks you to create an administrator at http://localhost:1337/admin):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   cd cms
+   npm install
+   cp .env.example .env   # first time only, then replace the "tobemodified" secrets
+   npm run develop
+   ```
 
-## Learn More
+2. In another terminal, run the website against it:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   STRAPI_URL=http://localhost:1337 npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website reads published entries only. Drafts stay invisible until they are published in the admin panel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Importing content
 
-## Deploy on Vercel
+```bash
+cd cms
+npm run import -- path/to/content.json
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The file maps content type identifiers (for example `api::profile.profile`) to entries. Entries are matched on `slug` (or `title`), so imports can be rerun safely.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content types
+
+Notable Griersons (profiles), Articles (History, News & Publications), Timeline Events, Traditions, Archive Items, Extracurricular Activities, Mustard Seed Issues, Dare to Learn excerpts and book page, Newsletter Issues, From the Desk of the House Governor, Stories of Griersons, Home Page, Museum & Library Page.
+
+## Build
+
+```bash
+npm run build            # local data
+STRAPI_URL=... npm run build   # from Strapi; fails if Strapi cannot be reached
+```
+
+Deployment (Render static site, Strapi on Render with PostgreSQL, media on Cloudflare R2) is configured in a later phase.

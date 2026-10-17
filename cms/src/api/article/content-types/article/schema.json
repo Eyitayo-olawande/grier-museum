@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "section": {
+      "type": "enumeration",
+      "enum": [
+        "History",
+        "News and Publications",
+        "Museum and Library",
+        "Home"
+      ],
+      "default": "History"
+    },
+    "category": {
+      "type": "string"
+    },
+    "era": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

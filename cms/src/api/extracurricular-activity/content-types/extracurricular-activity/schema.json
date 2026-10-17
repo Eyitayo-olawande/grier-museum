@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extracurricular_activities",
+  "info": {
+    "singularName": "extracurricular-activity",
+    "pluralName": "extracurricular-activities",
+    "displayName": "Extracurricular Activity"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "videos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "videos"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "museum_library_pages",
+  "info": {
+    "singularName": "museum-library-page",
+    "pluralName": "museum-library-pages",
+    "displayName": "Museum and Library Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intro": {
+      "type": "richtext"
+    },
+    "history": {
+      "type": "richtext"
+    },
+    "goals": {
+      "type": "richtext"
+    },
+    "galleryImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "creatingTheMuseumTitle": {
+      "type": "string",
+      "default": "Creating the Museum, October 2026"
+    },
+    "creatingTheMuseumText": {
+      "type": "richtext"
+    },
+    "creatingTheMuseumMedia": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    }
+  }
+}

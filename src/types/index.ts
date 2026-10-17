@@ -28,13 +28,15 @@ export interface Profile {
   slug: string;
   fullName: string;
   shortName: string;
+  /* Used for A to Z ordering; defaults to the last word of fullName */
+  surname?: string;
   era: Era;
   fields: Field[];
   meta: ProfileMeta;
   heroTags: string[];
   achievements: Achievement[];
   bio: string[];
-  pullQuote: {
+  pullQuote?: {
     text: string;
     attribution: string;
     source: string;

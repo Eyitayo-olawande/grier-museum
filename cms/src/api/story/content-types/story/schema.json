@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "singularName": "story",
+    "pluralName": "stories",
+    "displayName": "Story of a Grierson"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "set": {
+      "type": "integer"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getProfilesSortedAlpha } from '@/data/profiles';
+import { getProfiles, profileInitial } from '@/lib/content';
 import type { Era, Field } from '@/types';
 import styles from './page.module.css';
 
@@ -17,19 +17,17 @@ const ERA_COLOURS: Record<Era, string> = {
   Modern:       '#1A365D',
 };
 
-export default function NotableGriersonsPage() {
-  const profiles = getProfilesSortedAlpha();
+export default async function NotableGriersonsPage() {
+  const profiles = await getProfiles();
 
   // Build A–Z index of letters that actually appear
   const letters = [...new Set(
-    profiles.map((p) => p.fullName.split(' ').at(-1)![0].toUpperCase())
+    profiles.map(profileInitial)
   )].sort();
 
   // Group profiles by first letter of surname
   const grouped = letters.reduce<Record<string, typeof profiles>>((acc, letter) => {
-    acc[letter] = profiles.filter(
-      (p) => p.fullName.split(' ').at(-1)![0].toUpperCase() === letter
-    );
+    acc[letter] = profiles.filter((p) => profileInitial(p) === letter);
     return acc;
   }, {});
 

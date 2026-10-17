@@ -64,27 +64,3 @@ export const PROFILES: Profile[] = [
     },
   },
 ];
-
-export function getProfileBySlug(slug: string): Profile | undefined {
-  return PROFILES.find((p) => p.slug === slug);
-}
-
-export function getAdjacentProfiles(slug: string): {
-  prev: Profile | null;
-  next: Profile | null;
-} {
-  const sorted = [...PROFILES].sort((a, b) =>
-    a.fullName.split(' ').at(-1)!.localeCompare(b.fullName.split(' ').at(-1)!)
-  );
-  const idx = sorted.findIndex((p) => p.slug === slug);
-  return {
-    prev: idx > 0 ? sorted[idx - 1] : null,
-    next: idx < sorted.length - 1 ? sorted[idx + 1] : null,
-  };
-}
-
-export function getProfilesSortedAlpha(): Profile[] {
-  return [...PROFILES].sort((a, b) =>
-    a.fullName.split(' ').at(-1)!.localeCompare(b.fullName.split(' ').at(-1)!)
-  );
-}

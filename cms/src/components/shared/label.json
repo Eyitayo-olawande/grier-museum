@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_labels",
+  "info": {
+    "displayName": "Label",
+    "icon": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

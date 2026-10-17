@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dare_to_learn_excerpts",
+  "info": {
+    "singularName": "dare-to-learn-excerpt",
+    "pluralName": "dare-to-learn-excerpts",
+    "displayName": "Dare to Learn Excerpt"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext"
+    }
+  }
+}

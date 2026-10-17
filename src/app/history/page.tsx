@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { HISTORY_ARTICLES } from '@/data/articles';
+import { getHistoryArticles, getTimeline } from '@/lib/content';
 import Timeline from '@/components/history/Timeline';
 import styles from './page.module.css';
 
@@ -18,7 +18,9 @@ const CATEGORY_COLOURS: Record<string, string> = {
   Sport:      '#1B4D2E',
 };
 
-export default function HistoryPage() {
+export default async function HistoryPage() {
+  const [articles, timeline] = await Promise.all([getHistoryArticles(), getTimeline()]);
+
   return (
     <>
       {/* HERO */}
@@ -37,11 +39,11 @@ export default function HistoryPage() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Articles</h2>
-            <p className={styles.sectionDesc}>{HISTORY_ARTICLES.length} articles &middot; click to read in full</p>
+            <p className={styles.sectionDesc}>{articles.length} articles &middot; click to read in full</p>
           </div>
 
           <div className={styles.grid}>
-            {HISTORY_ARTICLES.map((article) => (
+            {articles.map((article) => (
               <Link key={article.slug} href={`/history/${article.slug}`} className={styles.card}>
                 <div className={styles.cardTop}>
                   <span
@@ -80,7 +82,7 @@ export default function HistoryPage() {
             <h2 className={styles.sectionTitle}>Timeline of Grier House</h2>
             <p className={styles.sectionDesc}>Select any milestone to expand it and read the full account</p>
           </div>
-          <Timeline />
+          <Timeline items={timeline} />
         </div>
       </section>
     </>
