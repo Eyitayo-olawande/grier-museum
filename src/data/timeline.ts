@@ -55,12 +55,6 @@ export const TIMELINE: TimelineMilestone[] = [
     category: 'Founding',
   },
   {
-    year: 1975,
-    title: 'Adebayo Adedeji Appointed to United Nations',
-    body: 'Saburi Biobaku\'s fellow Grierson Adebayo Adedeji is appointed Executive Secretary of the United Nations Economic Commission for Africa, a position he will hold for sixteen years. His appointment places a Grierson at the heart of the continent\'s development agenda at a critical moment in post-independence Africa.',
-    category: 'Notable Grierson',
-  },
-  {
     year: 1986,
     title: 'Wole Soyinka Wins the Nobel Prize in Literature',
     body: 'Wole Soyinka is awarded the Nobel Prize in Literature, becoming the first Black African to receive the honour. The Nobel Committee cites his wide cultural perspective and his poetic overtones in fashioning the drama of existence. Grier House celebrates one of its own on the world\'s greatest literary stage.',

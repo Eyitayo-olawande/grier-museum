@@ -107,7 +107,7 @@ export default function ArchivesPage() {
                 Researchers, journalists and members of the public may apply for access to materials in the physical archive that are not yet available digitally. Access is granted at the discretion of the Grier History and Traditions Committee.
               </p>
               <ul className={styles.accessList}>
-                <li>In-person access at the Grier House Museum, GCI Ibadan</li>
+                <li>In-person access at the Grier House Museum, Government College Ibadan</li>
                 <li>High-resolution digital copies available for academic use</li>
                 <li>Citation guidelines provided on request</li>
                 <li>Response within 10 working days</li>

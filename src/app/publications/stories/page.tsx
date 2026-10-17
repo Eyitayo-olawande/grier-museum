@@ -76,7 +76,7 @@ export default function StoriesPage() {
                 <ul className={styles.guidelinesList}>
                   <li>300 to 1,500 words in length</li>
                   <li>First-person, personal accounts only</li>
-                  <li>Must relate to your time in Grier House or GCI</li>
+                  <li>Must relate to your time in Grier House or Government College Ibadan</li>
                   <li>Will be lightly edited for clarity; not substantially changed</li>
                   <li>You will be credited by name and set year</li>
                 </ul>

@@ -17,7 +17,7 @@ export const PROFILES: Profile[] = [
       { label: 'Nobel Prize in Literature (1986)' },
       { label: 'Pyrates Confraternity Founder' },
       { label: 'National Arts Theatre Namesake' },
-      { label: 'University of Leeds Alumni' },
+      { label: 'University of Ibadan Alumni' },
       { label: 'Political Prisoner 1967–1969' },
     ],
     bio: [
@@ -61,64 +61,6 @@ export const PROFILES: Profile[] = [
       text: '“A scholar is not defined by the books he reads but by the questions he refuses to stop asking.”',
       attribution: 'Saburi Biobaku',
       source: 'Convocation Address, University of Lagos',
-    },
-  },
-  {
-    slug: 'olu-falae',
-    fullName: 'Samuel Olu Falae',
-    shortName: 'Olu Falae',
-    era: 'Independence',
-    fields: ['Politics', 'Public Service'],
-    meta: {
-      schoolNumber: '534',
-      set: 1955,
-      distinctions: ['Former Secretary to the Federal Government', '1999 Presidential Candidate'],
-    },
-    heroTags: ['Politics', 'Public Service'],
-    achievements: [
-      { label: 'Secretary to the Federal Government (1986–1990)' },
-      { label: 'Minister of Finance' },
-      { label: 'Alliance for Democracy Presidential Candidate, 1999' },
-      { label: 'Yale University Alumni' },
-    ],
-    bio: [
-      'Samuel Olu Falae was born on 25 July 1938 in Ilare-Akure, Ondo State. He attended Government College Ibadan, where he was a member of Grier House, before proceeding to University College Ibadan and later Yale University, where he earned a doctorate in economics.',
-      'He built a distinguished career in public service, rising through the ranks of the federal civil service to become Secretary to the Federal Government of Nigeria under the military administration of General Ibrahim Babangida. He also served as Minister of Finance and Governor of the Central Bank of Nigeria.',
-      'In 1999, as Nigeria returned to democratic governance, Falae ran for president on the platform of the Alliance for Democracy, contesting against Olusegun Obasanjo. Though he did not prevail, his campaign was widely regarded as one of principle and intellectual substance.',
-    ],
-    pullQuote: {
-      text: '“Governance is a calling, not a career. Those who treat it as a career will always disappoint the people they serve.”',
-      attribution: 'Olu Falae',
-      source: 'Interview, 2000',
-    },
-  },
-  {
-    slug: 'adebayo-adedeji',
-    fullName: 'Adebayo Adedeji',
-    shortName: 'Adebayo Adedeji',
-    era: 'Independence',
-    fields: ['Public Service', 'Academia'],
-    meta: {
-      schoolNumber: '489',
-      set: 1951,
-      distinctions: ['Executive Secretary, United Nations Economic Commission for Africa', 'CFR'],
-    },
-    heroTags: ['Public Service', 'Academia'],
-    achievements: [
-      { label: 'Executive Secretary, UN Economic Commission for Africa (1975–1991)' },
-      { label: 'Federal Commissioner for Economic Development' },
-      { label: 'Architect of the Lagos Plan of Action' },
-      { label: 'Commander of the Federal Republic (CFR)' },
-    ],
-    bio: [
-      'Adebayo Adedeji was born in 1930 in Ijebu-Ode, Ogun State. He attended Government College Ibadan where he was a member of Grier House, before proceeding to Leicester University and later Harvard University, where he earned advanced degrees in economics and public administration.',
-      'He served as Nigeria’s Federal Commissioner for Economic Development and was among the principal architects of the country’s early national development plans. His work shaped the economic policy trajectory of a newly independent Nigeria.',
-      'His most enduring contribution was as Executive Secretary of the United Nations Economic Commission for Africa, a position he held for sixteen years. In this role he championed African economic integration and was the driving force behind the Lagos Plan of Action, a seminal blueprint for African development.',
-    ],
-    pullQuote: {
-      text: '“Africa’s development must be driven by Africans, designed for Africans, and measured by the wellbeing of African people.”',
-      attribution: 'Adebayo Adedeji',
-      source: 'Lagos Plan of Action, 1980',
     },
   },
 ];

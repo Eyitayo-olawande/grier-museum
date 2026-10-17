@@ -57,7 +57,7 @@ export default function PublicationsPage() {
             <div>
               <h2 className={styles.ctaTitle}>Contribute to our publications</h2>
               <p className={styles.ctaDesc}>
-                Old Griersons, current students, and members of the GCI community are invited to submit writing, photographs and memories across all our publications.
+                Old Griersons, current students, and members of the Government College Ibadan community are invited to submit writing, photographs and memories across all our publications.
               </p>
             </div>
             <div className={styles.ctaBtns}>
