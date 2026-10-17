@@ -81,24 +81,26 @@
 }
 .nav::-webkit-scrollbar { display: none; }
 
+/* Same typeface and weight as the GRIER HOUSE title, sized for easy reading */
 .navLink {
-  color: var(--slate);
-  font-size: 10.5px;
-  font-weight: 600;
+  color: var(--slate-dark);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 800;
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 11px 14px;
   white-space: nowrap;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   transition: color 0.15s;
   position: relative;
 }
 
-.navLink:first-child { padding-left: 0; }
+/* every row starts flush with the logo: pull the nav left by one link's padding */
+.nav { margin-left: -14px; }
 .navLink:hover { color: var(--crimson); }
 .navLink.active {
   color: var(--crimson);
-  font-weight: 800;
 }
 .navLink.active::after {
   content: '';
@@ -122,6 +124,8 @@
   }
 
   /* Nav open — JS sets data-open="true"; attribute selector beats .nav alone (specificity 20 vs 10) */
+  .nav { margin-left: 0; }
+
   .nav[data-open="true"] {
     display: flex;
     flex-direction: column;
@@ -131,8 +135,8 @@
   }
 
   .navLink {
-    font-size: 13px;
-    padding: 12px 0;
+    font-size: 16px;
+    padding: 14px 0;
     border-bottom: 1px solid var(--border);
     white-space: normal;
   }
