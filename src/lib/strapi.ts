@@ -1,17 +1,33 @@
 /* Strapi Content Management System client (build time only).
-   When STRAPI_URL is not set, callers fall back to the local data files. */
+   When STRAPI_URL is not set, callers fall back to content/content.json. */
 
 const STRAPI_URL = process.env.STRAPI_URL?.replace(/\/$/, '');
 const STRAPI_TOKEN = process.env.STRAPI_TOKEN;
 
 export const cmsEnabled = Boolean(STRAPI_URL);
 
+interface StrapiFormat {
+  url: string;
+  width: number;
+  height: number;
+}
+
 export interface StrapiMedia {
   url: string;
   alternativeText?: string | null;
+  caption?: string | null;
   mime?: string;
   width?: number | null;
   height?: number | null;
+  formats?: Partial<Record<'thumbnail' | 'small' | 'medium' | 'large', StrapiFormat>> | null;
+}
+
+/* An image or video ready for the page: full size plus a smaller version for grids. */
+export interface Media {
+  url: string;
+  thumb: string;
+  alt: string;
+  isVideo: boolean;
 }
 
 export interface StrapiLabel {
@@ -55,9 +71,28 @@ export async function findSingle<T>(singleType: string, query = 'populate=*'): P
   }
 }
 
-export function mediaUrl(media?: StrapiMedia | null): string | undefined {
+function absolute(url: string): string {
+  return url.startsWith('http') ? url : `${STRAPI_URL}${url}`;
+}
+
+/* Media entries without a url (local content file, nothing uploaded yet) are skipped. */
+export function toMedia(media?: StrapiMedia | null, fallbackAlt = ''): Media | undefined {
   if (!media?.url) return undefined;
-  return media.url.startsWith('http') ? media.url : `${STRAPI_URL}${media.url}`;
+  const f = media.formats ?? {};
+  return {
+    url: absolute((f.large ?? media).url),
+    thumb: absolute((f.small ?? f.medium ?? media).url),
+    alt: media.alternativeText || fallbackAlt,
+    isVideo: Boolean(media.mime?.startsWith('video/')),
+  };
+}
+
+export function toMediaList(list?: StrapiMedia[] | null): Media[] {
+  return (list ?? []).map((m) => toMedia(m)).filter((m): m is Media => Boolean(m));
+}
+
+export function mediaUrl(media?: StrapiMedia | null): string | undefined {
+  return toMedia(media)?.url;
 }
 
 export function labels(items?: StrapiLabel[] | null): string[] {

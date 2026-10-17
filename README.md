@@ -41,14 +41,28 @@ npm run dev
 
 The website reads published entries only. Drafts stay invisible until they are published in the admin panel.
 
-### Importing content
+### Content from the Google Drive folder
+
+`content/content.json` holds all site content (profiles, History, Traditions, Dare to Learn excerpts, Extracurricular Activities, archive captions, Home and Museum text). It is generated from the client's Google Drive export:
+
+```bash
+python3 -I content/build_content.py "/path/to/GRIER-HOUSE-MUSEUM/CONTENT"
+```
+
+- Text is kept as written by the Grier History and Traditions Committee.
+- Profile chips (fields, achievements, distinctions) and portrait choices are in `content/profiles_meta.py` and `PORTRAITS` in the build script, drawn only from facts in each profile document.
+- Without Strapi, the website reads this file directly (text only, no photos).
+
+### Importing into Strapi
 
 ```bash
 cd cms
-npm run import -- path/to/content.json
+npm run import -- ../content/content.json "/path/to/GRIER-HOUSE-MUSEUM/CONTENT"
 ```
 
-The file maps content type identifiers (for example `api::profile.profile`) to entries. Entries are matched on `slug` (or `title`), so imports can be rerun safely.
+- Entries are matched on `slug` (or `title`), so imports can be rerun safely.
+- Photos and videos referenced as `{"$file": ...}` are uploaded from the Drive folder; images are resized to at most 2000px. Files already uploaded are reused, so a rerun takes about a minute.
+- Add `--prune` to delete entries of the imported collections that are not in the file. Do not use it once editors have added content directly in Strapi.
 
 ## Content types
 

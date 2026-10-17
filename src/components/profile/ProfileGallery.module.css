@@ -1,0 +1,42 @@
+.gallery {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 40px var(--gutter) 8px;
+}
+
+.sectionLabel {
+  font-size: 10px; font-weight: 800; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--slate);
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.sectionLabel::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.item {
+  display: flex; flex-direction: column; gap: 6px;
+  text-decoration: none; color: inherit;
+}
+
+.img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+  background: var(--linen); border: 1px solid var(--border);
+}
+
+.item:hover .img { border-color: var(--crimson); }
+
+.caption {
+  font-size: 12px; color: var(--text-muted); line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .gallery { padding: 28px var(--gutter) 8px; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}

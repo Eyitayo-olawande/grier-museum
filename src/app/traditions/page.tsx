@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { TRADITIONS, FEATURED_TRADITION_ID, getTraditionById } from '@/data/traditions';
+import { getTraditions } from '@/lib/content';
+import Prose from '@/components/common/Prose';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -17,9 +18,10 @@ const CATEGORY_COLOURS: Record<string, string> = {
   Social:      '#5C0050',
 };
 
-export default function TraditionsPage() {
-  const featured = getTraditionById(FEATURED_TRADITION_ID);
-  const rest = TRADITIONS.filter((t) => t.id !== FEATURED_TRADITION_ID);
+export default async function TraditionsPage() {
+  const traditions = await getTraditions();
+  const featured = traditions.find((t) => t.featured);
+  const rest = traditions.filter((t) => t !== featured);
 
   return (
     <>
@@ -46,7 +48,7 @@ export default function TraditionsPage() {
                 >
                   {featured.category}
                 </span>
-                <span className={styles.featuredEra}>{featured.era}</span>
+                {featured.era && <span className={styles.featuredEra}>{featured.era}</span>}
                 <span className={styles.featuredLabel}>Featured Tradition</span>
               </div>
 
@@ -58,11 +60,7 @@ export default function TraditionsPage() {
                 </div>
 
                 <div className={styles.featuredRight}>
-                  {featured.details.map((detail, i) => (
-                    <p key={i} className={styles.featuredDetail}>
-                      {detail}
-                    </p>
-                  ))}
+                  <Prose markdown={featured.body} className={styles.featuredDetail} />
                 </div>
               </div>
             </div>
@@ -75,12 +73,12 @@ export default function TraditionsPage() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>All Traditions</h2>
-            <p className={styles.sectionDesc}>{TRADITIONS.length} living traditions of Grier House</p>
+            <p className={styles.sectionDesc}>{traditions.length} traditions of Grier House</p>
           </div>
 
           <div className={styles.grid}>
             {rest.map((tradition) => (
-              <div key={tradition.id} className={styles.card}>
+              <div key={tradition.slug} className={styles.card}>
                 <div className={styles.cardTop}>
                   <span className={styles.cardIcon}>{tradition.icon}</span>
                   <span
@@ -92,17 +90,17 @@ export default function TraditionsPage() {
                 </div>
 
                 <h3 className={styles.cardTitle}>{tradition.title}</h3>
-                <p className={styles.cardEra}>{tradition.era}</p>
+                {tradition.era && <p className={styles.cardEra}>{tradition.era}</p>}
                 <p className={styles.cardDesc}>{tradition.description}</p>
 
-                <details className={styles.details}>
-                  <summary className={styles.detailsSummary}>Read more</summary>
-                  <div className={styles.detailsBody}>
-                    {tradition.details.map((detail, i) => (
-                      <p key={i}>{detail}</p>
-                    ))}
-                  </div>
-                </details>
+                {tradition.body && (
+                  <details className={styles.details}>
+                    <summary className={styles.detailsSummary}>Read more</summary>
+                    <div className={styles.detailsBody}>
+                      <Prose markdown={tradition.body} />
+                    </div>
+                  </details>
+                )}
               </div>
             ))}
           </div>

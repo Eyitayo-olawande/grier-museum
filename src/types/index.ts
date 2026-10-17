@@ -12,7 +12,9 @@ export type Field =
   | 'Science'
   | 'Arts'
   | 'Human Rights'
-  | 'Politics';
+  | 'Politics'
+  | 'Engineering'
+  | 'Agriculture';
 
 export interface Achievement {
   label: string;
@@ -42,6 +44,7 @@ export interface Profile {
     source: string;
   };
   photo?: string;
+  gallery?: import('@/lib/strapi').Media[];
 }
 
 export interface Article {
@@ -67,5 +70,6 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'News & Publications', href: '/publications' },
   { label: 'Archives', href: '/archives' },
   { label: 'Museum & Library', href: '/museum-library' },
+  { label: 'Extracurricular Activities', href: '/extracurricular-activities' },
   { label: 'Contact Us', href: '/contact' },
 ];

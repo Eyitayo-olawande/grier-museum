@@ -176,3 +176,23 @@
   .missionStats { grid-template-columns: repeat(2, 1fr); }
   .grid { grid-template-columns: 1fr; }
 }
+
+/* MEDIA GRIDS */
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.mediaItem {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+  background: var(--black); border: 1px solid var(--border);
+}
+
+/* LIBRARY */
+.library { padding: 56px 0; background: var(--bg-surface); }
+.libraryGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.volumes { columns: 1; font-size: 14px; }
+
+@media (max-width: 1023px) {
+  .libraryGrid { grid-template-columns: 1fr; gap: 32px; }
+}

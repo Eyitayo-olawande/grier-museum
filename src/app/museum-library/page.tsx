@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getMuseumPage } from '@/lib/content';
+import Prose from '@/components/common/Prose';
+import type { Media } from '@/lib/strapi';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -8,45 +11,6 @@ export const metadata: Metadata = {
     'The Grier House Museum and Library preserves the history, traditions and achievements of Grier House, Government College Ibadan. Visit us, explore the collections, or contribute to the archive.',
 };
 
-const COLLECTIONS = [
-  {
-    icon: '📜',
-    title: 'Historical Documents',
-    desc: 'Original correspondence, administrative records, and school documents spanning from the founding of Grier House in 1929 to the present day.',
-    count: '200+ items',
-  },
-  {
-    icon: '📸',
-    title: 'Photograph Archive',
-    desc: 'Over two hundred photographs documenting house life, sporting events, Prize Giving Days, and the notable Griersons who shaped the house across nine decades.',
-    count: '200+ photographs',
-  },
-  {
-    icon: '🎥',
-    title: 'Video & Audio',
-    desc: 'Filmed recordings of house events, oral history interviews with notable alumni, and audio recordings of the house song from various eras.',
-    count: '30+ recordings',
-  },
-  {
-    icon: '📚',
-    title: 'The Mustard Seed Collection',
-    desc: 'The complete run of Grier House\'s literary magazine, from its founding edition in 1962 to the present day, including limited-circulation early editions.',
-    count: 'All editions, 1962–present',
-  },
-  {
-    icon: '🏆',
-    title: 'Trophies & Artefacts',
-    desc: 'Inter-house athletics shields, academic cups, and personal artefacts donated by Old Griersons, forming a tangible record of the house\'s competitive achievements.',
-    count: 'On permanent display',
-  },
-  {
-    icon: '📖',
-    title: 'Published Works',
-    desc: 'Books, monographs, academic papers, and journalism by Old Griersons — a library of the intellectual output of men who passed through Grier House.',
-    count: '500+ works',
-  },
-];
-
 const VISIT_INFO = [
   { label: 'Location', value: 'Grier House, Government College Ibadan, Ibadan, Oyo State, Nigeria' },
   { label: 'Opening Hours', value: 'By appointment — contact us to arrange a visit' },
@@ -54,7 +18,27 @@ const VISIT_INFO = [
   { label: 'Digital Access', value: 'Selected collections available online at griermuseum.org' },
 ];
 
-export default function MuseumLibraryPage() {
+function MediaGrid({ items }: { items: Media[] }) {
+  return (
+    <div className={styles.mediaGrid}>
+      {items.map((m) =>
+        m.isVideo ? (
+          <video key={m.url} src={m.url} controls preload="metadata" className={styles.mediaItem} />
+        ) : (
+          <a key={m.url} href={m.url} target="_blank" rel="noopener">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={m.thumb} alt={m.alt} loading="lazy" className={styles.mediaItem} />
+          </a>
+        )
+      )}
+    </div>
+  );
+}
+
+export default async function MuseumLibraryPage() {
+  const museum = await getMuseumPage();
+  const volumes = (museum?.goals.match(/^- /gm) ?? []).length;
+
   return (
     <>
       {/* HERO */}
@@ -74,56 +58,65 @@ export default function MuseumLibraryPage() {
           <div className={styles.missionInner}>
             <div className={styles.missionText}>
               <p className={styles.missionEyebrow}>Our Mission</p>
-              <h2 className={styles.missionTitle}>A living archive for a remarkable legacy</h2>
+              <h2 className={styles.missionTitle}>A living repository of the Grier House legacy</h2>
+              <p className={styles.missionBody}>{museum?.intro}</p>
               <p className={styles.missionBody}>
-                The Grier House Museum and Library was established in 2024 by the Grier History and Traditions Committee, with the support of Old Griersons from across Nigeria and the diaspora. Its purpose is to collect, preserve, document and present the history and traditions of Grier House, Government College Ibadan — one of the oldest and most distinguished houses in one of Nigeria's finest schools.
-              </p>
-              <p className={styles.missionBody}>
-                From the founding of the house in 1929 to the alumni who have shaped Nigerian public life across every generation since Independence, the Grier House story is one of remarkable continuity, intellectual achievement, and service to Nigeria. This museum exists to tell that story in full.
+                The Museum holds framed iconic photographs, original oil paintings and trophies, and the Library gives Grier House students access to encyclopedias, atlases, classic literature and biographies.
               </p>
             </div>
 
             <div className={styles.missionStats}>
               <div className={styles.stat}>
-                <span className={styles.statNum}>1929</span>
-                <span className={styles.statLabel}>Year Founded</span>
+                <span className={styles.statNum}>1930</span>
+                <span className={styles.statLabel}>Grier House Founded</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNum}>95+</span>
-                <span className={styles.statLabel}>Years of History</span>
-              </div>
-              <div className={styles.stat}>
-                <span className={styles.statNum}>1,000+</span>
-                <span className={styles.statLabel}>Old Griersons</span>
-              </div>
-              <div className={styles.stat}>
-                <span className={styles.statNum}>2024</span>
+                <span className={styles.statNum}>2026</span>
                 <span className={styles.statLabel}>Museum Established</span>
+              </div>
+              <div className={styles.stat}>
+                <span className={styles.statNum}>{museum?.galleryImages.length ?? 0}</span>
+                <span className={styles.statLabel}>Images from the Museum</span>
+              </div>
+              <div className={styles.stat}>
+                <span className={styles.statNum}>{volumes}</span>
+                <span className={styles.statLabel}>Library Volumes Listed</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* COLLECTIONS */}
-      <section className={styles.collections}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>The Collections</h2>
-            <p className={styles.sectionDesc}>
-              The museum holds six core collections spanning documents, photographs, recordings, publications and artefacts.
-            </p>
+      {/* IMAGES FROM THE MUSEUM */}
+      {museum && museum.galleryImages.length > 0 && (
+        <section className={styles.collections}>
+          <div className={styles.container}>
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.sectionTitle}>Images from the Museum</h2>
+            </div>
+            <MediaGrid items={museum.galleryImages} />
           </div>
+        </section>
+      )}
 
-          <div className={styles.grid}>
-            {COLLECTIONS.map((item) => (
-              <div key={item.title} className={styles.collCard}>
-                <div className={styles.collIcon}>{item.icon}</div>
-                <h3 className={styles.collTitle}>{item.title}</h3>
-                <p className={styles.collDesc}>{item.desc}</p>
-                <p className={styles.collCount}>{item.count}</p>
-              </div>
-            ))}
+      {/* CREATING THE MUSEUM */}
+      {museum && museum.creatingTheMuseumMedia.length > 0 && (
+        <section className={styles.collections} id="creating-the-museum">
+          <div className={styles.container}>
+            <div className={styles.sectionHeader}>
+              <h2 className={styles.sectionTitle}>{museum.creatingTheMuseumTitle}</h2>
+            </div>
+            <MediaGrid items={museum.creatingTheMuseumMedia} />
+          </div>
+        </section>
+      )}
+
+      {/* THE LIBRARY */}
+      <section className={styles.library}>
+        <div className={styles.container}>
+          <div className={styles.libraryGrid}>
+            <Prose markdown={museum?.history} />
+            <Prose markdown={museum?.goals} className={styles.volumes} />
           </div>
         </div>
       </section>
@@ -177,7 +170,7 @@ export default function MuseumLibraryPage() {
           <div className={styles.committeeInner}>
             <h2 className={styles.committeeTitle}>Grier History and Traditions Committee</h2>
             <p className={styles.committeeBody}>
-              The museum is governed by the Grier History and Traditions Committee, formed in 2020 by Old Griersons with a commitment to preserving the legacy of Grier House. The Committee oversees the collection, commissions research, and manages the museum and its digital presence.
+              The Grier Museum and Library is a project of the Grier History and Traditions Committee, chaired by Oladele Olusanya. Beyond the Museum and Library, the Committee organizes extracurricular activities for students living in Grier House.
             </p>
             <Link href="/contact" className={styles.committeeLink}>
               Contact the Committee &rarr;

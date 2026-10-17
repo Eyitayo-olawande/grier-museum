@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getHistoryArticle, getHistoryArticles } from '@/lib/content';
+import Prose from '@/components/common/Prose';
 import styles from './page.module.css';
 
 interface Props { params: Promise<{ slug: string }> }
@@ -22,10 +23,6 @@ export default async function ArticlePage({ params }: Props) {
   const article = await getHistoryArticle(slug);
   if (!article) notFound();
 
-  const date = new Date(article.date).toLocaleDateString('en-GB', {
-    day: 'numeric', month: 'long', year: 'numeric',
-  });
-
   return (
     <>
       {/* ARTICLE HERO */}
@@ -41,16 +38,13 @@ export default async function ArticlePage({ params }: Props) {
           </div>
           <h1 className={styles.title}>{article.title}</h1>
           <p className={styles.excerpt}>{article.excerpt}</p>
-          <p className={styles.date}>{date}</p>
         </div>
       </section>
 
       {/* ARTICLE BODY */}
       <article className={styles.body}>
         <div className={styles.bodyInner}>
-          {article.body.map((para, i) => (
-            <p key={i}>{para}</p>
-          ))}
+          <Prose markdown={article.body} />
         </div>
       </article>
 

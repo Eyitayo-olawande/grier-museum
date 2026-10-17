@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getArchiveItems, getHomePage, getProfiles } from '@/lib/content';
+import Prose from '@/components/common/Prose';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -8,33 +10,35 @@ export const metadata: Metadata = {
     'Home of the Grier House Museum & Library — custodian of the history and traditions of Grier House, Government College Ibadan.',
 };
 
-const HIGHLIGHTS = [
-  { label: 'Notable Alumni', value: '24+', desc: 'Distinguished Griersons celebrated in our profiles' },
-  { label: 'Photographs', value: '200', desc: 'Original photographs from the Museum collection' },
-  { label: 'Years of History', value: '95+', desc: 'From the founding of Grier House in 1929' },
-  { label: 'Archive Videos', value: '30', desc: 'Recordings documenting Grier House traditions' },
-];
-
 const QUICK_LINKS = [
   { href: '/notable-griersons', label: 'Notable Griersons', desc: 'Profiles of distinguished alumni' },
   { href: '/history', label: 'Grier House History', desc: 'Articles and an interactive timeline' },
   { href: '/traditions', label: 'House Traditions', desc: 'The House Song, House Supper and more' },
-  { href: '/publications', label: 'News & Publications', desc: 'Mustard Seed, Newsletter and Stories' },
+  { href: '/publications', label: 'News & Publications', desc: 'Dare to Learn, the Mustard Seed and Stories of Griersons' },
   { href: '/archives', label: 'Archives', desc: 'Photos, videos and historical documents' },
   { href: '/museum-library', label: 'Museum & Library', desc: 'About the Museum and its collection' },
+  { href: '/extracurricular-activities', label: 'Extracurricular Activities', desc: 'Marching Band, Saturday Night Socials and more' },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [home, profiles, archive] = await Promise.all([getHomePage(), getProfiles(), getArchiveItems()]);
+  const HIGHLIGHTS = [
+    { label: 'Notable Griersons', value: String(profiles.length), desc: 'Distinguished Griersons celebrated in our profiles' },
+    { label: 'Photographs', value: String(archive.filter((i) => i.type === 'Photo').length), desc: 'Original photographs from the Museum collection' },
+    { label: 'Founded', value: '1930', desc: 'Grier House was founded in January 1930' },
+    { label: 'Museum Opened', value: '2026', desc: 'The Grier Museum and Library, October 2026' },
+  ];
+
   return (
     <>
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.heroContent}>
-            <p className={styles.heroEyebrow}>Government College Ibadan &nbsp;&middot;&nbsp; Founded 1929</p>
+            <p className={styles.heroEyebrow}>Government College Ibadan &nbsp;&middot;&nbsp; Founded 1930</p>
             <h1 className={styles.heroTitle}>Grier House Museum<br />&amp; Library</h1>
             <p className={styles.heroDesc}>
-              Custodian of the history, traditions and legacy of Grier House &mdash; one of the four great houses of Government College Ibadan. Explore profiles of distinguished Griersons, centuries of house traditions, and an archive of photographs and recordings from the Museum.
+              Home of the Grier House Museum &amp; Library &mdash; custodian of the history and traditions of Grier House, Government College Ibadan. Explore profiles of notable Griersons, the traditions of the House, and an archive of photographs and videos from the Museum.
             </p>
             <div className={styles.heroActions}>
               <Link href="/notable-griersons" className={styles.btnPrimary}>Notable Griersons</Link>
@@ -76,26 +80,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ABOUT STRIP */}
+      {/* WELCOME */}
       <section className={styles.about}>
         <div className={styles.container}>
           <div className={styles.aboutGrid}>
             <div>
-              <h2 className={styles.aboutTitle}>About Grier House</h2>
-              <p className={styles.aboutText}>
-                Grier House is one of the four boarding houses of Government College Ibadan, one of Nigeria&rsquo;s most distinguished secondary schools. Founded in 1929, Government College Ibadan has produced some of Nigeria&rsquo;s most accomplished scholars, professionals, public servants and leaders.
-              </p>
-              <p className={styles.aboutText}>
-                The Grier House Museum &amp; Library was established to preserve and celebrate the unique history and traditions of Grier House, and to honour the legacy of the distinguished men who have called Grier House their home.
-              </p>
+              <h2 className={styles.aboutTitle}>{home?.welcomeTitle ?? 'About Grier House'}</h2>
+              <Prose markdown={home?.welcomeText} className={styles.aboutText} />
               <Link href="/museum-library" className={styles.aboutLink}>Learn about the Museum &rarr;</Link>
             </div>
             <div className={styles.aboutMission}>
-              <div className={styles.missionLabel}>Our Mission</div>
+              <div className={styles.missionLabel}>Motto of the Grier Museum and Library</div>
               <blockquote className={styles.missionQuote}>
-                &ldquo;To preserve and celebrate the history, traditions and legacy of Grier House for current and future generations of Griersons.&rdquo;
+                &ldquo;If you know anything, share it. If you don&rsquo;t know something, search for it.&rdquo;
               </blockquote>
               <div className={styles.missionAttr}>Grier History and Traditions Committee</div>
+              {home && home.featuredPhotos.length > 0 && (
+                <div className={styles.featuredPhotos}>
+                  {home.featuredPhotos.map((photo) => (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img key={photo.url} src={photo.thumb} alt={photo.alt} className={styles.featuredPhoto} loading="lazy" />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

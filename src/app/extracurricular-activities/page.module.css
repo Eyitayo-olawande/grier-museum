@@ -1,0 +1,46 @@
+.hero { background: var(--crimson-dark); color: #fff; }
+.heroInner {
+  max-width: var(--container); margin: 0 auto;
+  padding: 56px var(--gutter) 44px;
+}
+.eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 12px;
+}
+.title {
+  font-family: var(--font-display); font-size: 42px; font-weight: 900;
+  color: #fff; line-height: 1.1; margin-bottom: 12px;
+}
+.subtitle {
+  font-size: 15px; color: rgba(255,255,255,.75); max-width: 720px; line-height: 1.75;
+}
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.jumpLink {
+  font-size: 12px; font-weight: 700; color: #fff; text-decoration: none;
+  border: 1px solid rgba(255,255,255,.35); border-radius: 20px; padding: 6px 14px;
+}
+.jumpLink:hover { background: rgba(255,255,255,.1); }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 16px var(--gutter) 64px; }
+
+.activity {
+  display: grid; grid-template-columns: 1fr 360px; gap: 40px; align-items: start;
+  padding: 44px 0; border-bottom: 1px solid var(--border);
+  scroll-margin-top: 24px;
+}
+.activity:last-child { border-bottom: 0; }
+.activityText { grid-column: 1; }
+.activityTitle {
+  font-family: var(--font-display); font-size: var(--text-2xl); color: var(--crimson);
+  margin-bottom: 8px;
+}
+.summary { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
+.photos { display: grid; gap: 12px; }
+.photo { width: 100%; object-fit: cover; border: 1px solid var(--border); }
+
+@media (max-width: 1023px) {
+  .activity { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 767px) {
+  .title { font-size: 32px; }
+}

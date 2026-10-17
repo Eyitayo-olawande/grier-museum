@@ -1,16 +1,26 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ARCHIVE_STATS, ERA_LABELS } from '@/data/archives';
-import ArchiveBrowser from '@/components/archives/ArchiveBrowser';
+import { getArchiveItems } from '@/lib/content';
+import ArchiveBrowser, { ERA_LABELS } from '@/components/archives/ArchiveBrowser';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'Archives',
   description:
-    'The digital archive of the Grier House Museum — photographs, video recordings, historical documents and artefacts spanning the full history of Grier House, Government College Ibadan, from 1929 to the present.',
+    'The digital archive of the Grier House Museum — photographs, video recordings, historical documents and artefacts spanning the full history of Grier House, Government College Ibadan, from 1930 to the present.',
 };
 
-export default function ArchivesPage() {
+export default async function ArchivesPage() {
+  const items = await getArchiveItems();
+  const count = (type: string) => items.filter((i) => i.type === type).length;
+  const ARCHIVE_STATS = {
+    photos: count('Photo'),
+    videos: count('Video'),
+    documents: count('Document'),
+    artefacts: count('Artefact'),
+    total: items.length,
+  };
+
   return (
     <>
       {/* HERO */}
@@ -19,7 +29,7 @@ export default function ArchivesPage() {
           <p className={styles.eyebrow}>Grier House Museum &amp; Library</p>
           <h1 className={styles.title}>Archives</h1>
           <p className={styles.subtitle}>
-            Photographs, video recordings, historical documents and artefacts spanning the full history of Grier House — from its founding in 1929 to the present day.
+            Photographs, video recordings, historical documents and artefacts spanning the full history of Grier House — from its founding in 1930 to the present day.
           </p>
         </div>
       </section>
@@ -80,7 +90,7 @@ export default function ArchivesPage() {
               Use the tabs to filter by collection type, and the era pills to narrow by period. Click any item to expand its full description.
             </p>
           </div>
-          <ArchiveBrowser />
+          <ArchiveBrowser items={items} />
         </div>
       </section>
 
@@ -90,7 +100,7 @@ export default function ArchivesPage() {
           <div className={styles.noticeInner}>
             <span className={styles.noticeIcon}>ℹ️</span>
             <p className={styles.noticeText}>
-              The Grier House Museum archive is actively being digitised. This catalogue currently represents selected highlights from a larger physical collection. The full archive — including the complete Mustard Seed run, additional photographs and oral history recordings — will be added to the digital portal progressively through 2025.
+              The Grier House Museum archive is actively being digitised. This catalogue currently represents selected highlights from a larger physical collection. Further photographs, videos, scanned documents and past editions of the Mustard Seed will be added as they are received.
             </p>
           </div>
         </div>

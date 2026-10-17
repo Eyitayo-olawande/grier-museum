@@ -7,7 +7,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Grier House History',
   description:
-    'A series of articles on the history of Grier House, Government College Ibadan, from its founding in 1929 to the present day. Includes an interactive timeline.',
+    'A series of articles on the history of Grier House, Government College Ibadan, from its founding in 1930 to the present day. Includes an interactive timeline.',
 };
 
 const CATEGORY_COLOURS: Record<string, string> = {
@@ -29,7 +29,7 @@ export default async function HistoryPage() {
           <p className={styles.eyebrow}>Grier House Museum &amp; Library</p>
           <h1 className={styles.title}>Grier House History</h1>
           <p className={styles.subtitle}>
-            Articles and an interactive timeline tracing the story of Grier House from its founding in 1929 to the present day.
+            Articles and an interactive timeline tracing the story of Grier House from its founding in 1930 to the present day.
           </p>
         </div>
       </section>

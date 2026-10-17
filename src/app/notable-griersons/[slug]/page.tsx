@@ -5,6 +5,7 @@ import ProfileHero from '@/components/profile/ProfileHero';
 import ProfileBody from '@/components/profile/ProfileBody';
 import PullQuote from '@/components/profile/PullQuote';
 import ProfileNav from '@/components/profile/ProfileNav';
+import ProfileGallery from '@/components/profile/ProfileGallery';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -41,6 +42,9 @@ export default async function ProfilePage({ params }: Props) {
           attribution={profile.pullQuote.attribution}
           source={profile.pullQuote.source}
         />
+      )}
+      {profile.gallery && profile.gallery.length > 0 && (
+        <ProfileGallery name={profile.shortName} photos={profile.gallery} />
       )}
       <ProfileNav prev={prev} next={next} />
     </>

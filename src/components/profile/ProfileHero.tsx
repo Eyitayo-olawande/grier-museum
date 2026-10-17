@@ -34,8 +34,8 @@ export default function ProfileHero({ profile }: { profile: Profile }) {
           </div>
           <h1 className={styles.name}>{profile.fullName}</h1>
           <div className={styles.school}>
-            <span>School No. #{profile.meta.schoolNumber}</span>
-            <span>{profile.meta.set} Set</span>
+            {profile.meta.schoolNumber && <span>School No. #{profile.meta.schoolNumber}</span>}
+            {profile.meta.set > 0 && <span>{profile.meta.set} Set</span>}
             {profile.meta.distinctions.map((d) => (
               <span key={d}>{d}</span>
             ))}

@@ -26,14 +26,14 @@ export const PUBLICATION_HUBS: PublicationHub[] = [
   {
     id: 'dare-to-learn',
     title: 'Dare to Learn',
-    tagline: 'The intellectual journal of Grier House',
+    tagline: 'The Grier House story',
     description:
-      'Long-form essays, academic writing and reflections on education, public life and the Nigerian experience — by Old Griersons and invited contributors.',
+      'Excerpts from the forthcoming book on the history of Grier House by O. Olusanya and A. Tewe, arranged in alphabetical order by title.',
     href: '/publications/dare-to-learn',
     icon: '✍️',
     colour: '#1A365D',
-    since: '1985',
-    frequency: 'Biannual',
+    since: '2026',
+    frequency: 'Book excerpts',
   },
   {
     id: 'newsletter',
@@ -92,24 +92,6 @@ export const MUSTARD_SEED_ISSUES: MustardSeedIssue[] = [
 ];
 
 /* ─── Dare to Learn ─── */
-export interface DareToLearnIssue {
-  year: number;
-  volume: number;
-  season: string;
-  theme: string;
-  excerpt: string;
-  essays: number;
-}
-
-export const DARE_TO_LEARN_ISSUES: DareToLearnIssue[] = [
-  { year: 2024, volume: 39, season: 'First Half', theme: 'Education and the Nigerian State', excerpt: 'A critical examination of the relationship between elite secondary education, national identity and the formation of public leadership in Nigeria since Independence.', essays: 6 },
-  { year: 2023, volume: 38, season: 'Second Half', theme: 'Law, Justice and the Nigerian Bench', excerpt: 'Old Griersons who have served on Nigeria\'s courts reflect on the practice of law, the pursuit of justice, and the enduring meaning of their GCI education.', essays: 5 },
-  { year: 2023, volume: 37, season: 'First Half', theme: 'Science and the Public Good', excerpt: 'On scientific education, research capacity and the responsibility of the technically educated towards a country that needs their skills.', essays: 7 },
-  { year: 2022, volume: 36, season: 'Second Half', theme: 'The Literature of Formation', excerpt: "From Achebe to Soyinka to the contemporary novel — how Nigerian literature has been shaped by the mission-school tradition and its alumni.", essays: 5 },
-  { year: 2022, volume: 35, season: 'First Half', theme: 'Business and the Common Wealth', excerpt: 'On entrepreneurship, corporate responsibility and the idea that commercial success carries a social obligation — especially for those educated at public expense.', essays: 6 },
-];
-
-/* ─── Newsletter ─── */
 export interface NewsletterIssue {
   slug: string;
   season: string;

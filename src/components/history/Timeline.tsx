@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { TimelineMilestone } from '@/data/timeline';
+import type { TimelineMilestone } from '@/lib/content';
 import styles from './Timeline.module.css';
 
 const CATEGORY_COLOURS: Record<TimelineMilestone['category'], string> = {

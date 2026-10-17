@@ -107,8 +107,12 @@ export default async function NotableGriersonsPage() {
                       <h2 className={styles.cardName}>{profile.shortName}</h2>
                       <p className={styles.cardFull}>{profile.fullName}</p>
                       <div className={styles.cardDetails}>
-                        <span>No. {profile.meta.schoolNumber}</span>
-                        <span className={styles.dot}>&middot;</span>
+                        {profile.meta.schoolNumber && (
+                          <>
+                            <span>No. {profile.meta.schoolNumber}</span>
+                            <span className={styles.dot}>&middot;</span>
+                          </>
+                        )}
                         <span>{profile.meta.set} Set</span>
                       </div>
                       {profile.meta.distinctions[0] && (
