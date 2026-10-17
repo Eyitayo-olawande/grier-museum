@@ -36,7 +36,7 @@ export default function Header() {
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setMenuOpen((v) => !v)}
           >
-            {menuOpen ? '✕' : '☰'}
+            {menuOpen ? '✕ Close' : '☰ Menu'}
           </button>
         </div>
 

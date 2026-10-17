@@ -6,8 +6,9 @@
   z-index: 100;
 }
 
+/* A little wider than the page content so the nine menu tabs fit on one row */
 .inner {
-  max-width: var(--container);
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: flex;
@@ -63,7 +64,9 @@
   padding: 6px 11px;
   border-radius: 3px;
   color: var(--slate);
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 800;
+  gap: 6px;
   line-height: 1;
   margin-left: auto;
   flex-shrink: 0;
@@ -71,33 +74,29 @@
 }
 .menuBtn:hover { color: var(--crimson); border-color: var(--crimson); }
 
-/* ── Row 2: nav ── */
+/* ── Row 2: nav, always a single row ── */
 .nav {
   display: flex;
   align-items: center;
-  /* nine menu tabs: wrap onto a second row rather than scroll out of sight */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   border-top: 1px solid var(--border);
+  /* first tab starts flush with the logo */
+  margin-left: -11px;
 }
-.nav::-webkit-scrollbar { display: none; }
 
-/* Same typeface and weight as the GRIER HOUSE title, sized for easy reading */
+/* Same typeface and weight as the GRIER HOUSE title, in mixed case for easy reading */
 .navLink {
   color: var(--slate-dark);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
   text-decoration: none;
-  padding: 11px 14px;
+  padding: 11px 11px;
   white-space: nowrap;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   transition: color 0.15s;
   position: relative;
 }
 
-/* every row starts flush with the logo: pull the nav left by one link's padding */
-.nav { margin-left: -14px; }
 .navLink:hover { color: var(--crimson); }
 .navLink.active {
   color: var(--crimson);
@@ -106,43 +105,44 @@
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 0; right: 0;
+  left: 11px; right: 11px;
   height: 3px;
   background: var(--crimson);
   border-radius: 2px 2px 0 0;
 }
 
-@media (max-width: 767px) {
+/* Below the width the single row needs, use the menu button instead of wrapping */
+@media (max-width: 1239px) {
   .menuBtn { display: flex; align-items: center; justify-content: center; }
-  .titleMain { font-size: 18px; }
-  .titleSub { font-size: 10px; letter-spacing: 3px; }
-  .logo { height: 60px; }
 
-  /* Nav hidden by default on mobile */
+  /* Nav hidden until the menu button is pressed */
   .nav {
     display: none;
+    margin-left: 0;
   }
 
-  /* Nav open — JS sets data-open="true"; attribute selector beats .nav alone (specificity 20 vs 10) */
-  .nav { margin-left: 0; }
-
+  /* Nav open: JS sets data-open="true"; attribute selector beats .nav alone (specificity 20 vs 10) */
   .nav[data-open="true"] {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    overflow-x: visible;
     padding-bottom: 10px;
   }
 
   .navLink {
-    font-size: 16px;
+    font-size: 17px;
     padding: 14px 0;
     border-bottom: 1px solid var(--border);
     white-space: normal;
   }
-  .navLink:first-child { padding-left: 0; }
   .navLink:last-child { border-bottom: none; }
 
-  /* Remove underline active indicator on mobile — use colour only */
+  /* Remove underline active indicator in the drop-down list; use colour only */
   .navLink.active::after { display: none; }
+}
+
+@media (max-width: 767px) {
+  .titleMain { font-size: 18px; }
+  .titleSub { font-size: 10px; letter-spacing: 3px; }
+  .logo { height: 60px; }
 }
