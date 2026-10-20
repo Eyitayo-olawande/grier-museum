@@ -190,10 +190,13 @@ export interface Tradition {
   icon: string;
   featured: boolean;
   order: number;
+  audio?: Media;
 }
 
 export const getTraditions = once(async () =>
-  (await collection<Tradition>('api::tradition.tradition', 'traditions')).sort((a, b) => a.order - b.order)
+  (await collection<Omit<Tradition, 'audio'> & { audio?: StrapiMedia | null }>('api::tradition.tradition', 'traditions'))
+    .sort((a, b) => a.order - b.order)
+    .map<Tradition>((t) => ({ ...t, audio: toMedia(t.audio) }))
 );
 
 /* ---------- Dare to Learn ---------- */
@@ -283,6 +286,14 @@ export interface HomePage {
   welcomeText: string;
   featuredPhotos: Media[];
   introVideo?: Media;
+  /* "Please support" appeal */
+  supportTitle?: string | null;
+  supportIntro?: string | null;
+  /* Markdown */
+  supportBooks?: string | null;
+  supportMoney?: string | null;
+  supportBank?: { accountName: string; bankName: string; accountNumber: string } | null;
+  supportSignature?: string | null;
 }
 
 export const getHomePage = once(async () => {

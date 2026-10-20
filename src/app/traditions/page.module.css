@@ -179,3 +179,15 @@
   .featuredCard { padding: 24px 20px; }
   .ctaInner { flex-direction: column; align-items: flex-start; }
 }
+
+/* House Song recording, above the lyrics so visitors can read along */
+.audio {
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  background: var(--linen);
+  border-left: 4px solid var(--crimson);
+}
+.audioCaption {
+  font-size: 13px; font-weight: 800; color: var(--slate-dark); margin-bottom: 8px;
+}
+.audioPlayer { width: 100%; display: block; }

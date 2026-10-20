@@ -28,7 +28,7 @@ const sharp = require('sharp');
 const { createStrapi, compileStrapi } = require('@strapi/strapi');
 
 const MAX_IMAGE_SIZE = 2000;
-const MIME = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.mp4': 'video/mp4', '.pdf': 'application/pdf' };
+const MIME = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.mp4': 'video/mp4', '.mp3': 'audio/mpeg', '.pdf': 'application/pdf' };
 
 function createUploader(app, mediaRoot) {
   const files = app.db.query('plugin::upload.file');

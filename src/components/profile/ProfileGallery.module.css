@@ -32,6 +32,10 @@
 
 .item:hover .img { border-color: var(--crimson); }
 
+/* videos take two grid columns so the player is usable */
+.videoItem { margin: 0; grid-column: span 2; }
+.video { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #000; display: block; }
+
 .caption {
   font-size: 12px; color: var(--text-muted); line-height: 1.4;
 }

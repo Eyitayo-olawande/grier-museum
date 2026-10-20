@@ -33,6 +33,27 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "supportTitle": {
+      "type": "string",
+      "default": "Please Support the Grier Museum & Library"
+    },
+    "supportIntro": {
+      "type": "text"
+    },
+    "supportBooks": {
+      "type": "richtext"
+    },
+    "supportMoney": {
+      "type": "richtext"
+    },
+    "supportBank": {
+      "type": "component",
+      "component": "shared.bank-account",
+      "repeatable": false
+    },
+    "supportSignature": {
+      "type": "text"
     }
   }
 }

@@ -139,6 +139,9 @@ PORTRAITS = {
 }
 
 
+PROFILE_VIDEOS = {"PROFILE WOLE SOYINKA": ["Wole Soyinka interview after detention.mp4"]}
+
+
 def photo_files():
     files = sorted(f for f in os.listdir(os.path.join(SRC, PHOTOS)) if re.search(r"\.(jpe?g|png)$", f, re.I))
     seen, unique = {}, []
@@ -196,7 +199,8 @@ def parse_profile(key, meta, photos):
         "bio": "\n\n".join(body),
         "pullQuote": meta.get("pullQuote"),
         "photo": media(f"{PHOTOS}/{portrait}", meta["shortName"]) if portrait else None,
-        "gallery": [media(f"{PHOTOS}/{f}", caption(f)) for f in gallery],
+        "gallery": [media(f"{PHOTOS}/{f}", caption(f)) for f in gallery]
+                   + [media(f"{VIDEOS}/{v}", VIDEO_INFO[v]["title"]) for v in PROFILE_VIDEOS.get(key, [])],
     }
     return entry
 
@@ -279,6 +283,11 @@ TRADITION_INFO = {
 TRADITION_ERAS = {"Moonlight stories": "Since about 1933", "Red Letter Day": "1935", "The Cairn": "1945"}
 
 
+# Choir recording forwarded by the committee on 2026-10-19; performers and date still to be confirmed
+HOUSE_SONG_AUDIO = media("Traditions/Grier House Song choir rendition.mp3",
+                         "Grier House Song, choir rendition (performers and date to be confirmed)")
+
+
 def traditions():
     out = []
     verses = [
@@ -290,7 +299,8 @@ def traditions():
         lines = docx_lines(rel)[1:]
         out.append({"title": title, "slug": slugify(title), "category": "Cultural", "era": None,
                     "description": lines[0] + " " + lines[1], "body": "\n".join(lines),
-                    "icon": icon, "featured": featured, "order": len(out)})
+                    "icon": icon, "featured": featured, "order": len(out),
+                    "audio": HOUSE_SONG_AUDIO if title == "The House Song" else None})
     for part in (1, 2, 3):
         lines = docx_lines(f"Traditions/GRIER MUSEUM - TRADITIONS {part}.docx")[1:]
         current = None
@@ -371,6 +381,9 @@ def home_page():
         "welcomeText": "\n\n".join(blocks),
         "featuredPhotos": [media(f"{PHOTOS}/{f}", caption(f)) for f in
                            ["Grier House 1940.jpg", "Grier House Football Team 1931.jpg", "New Grier House Building.jpg"]],
+        # "Please support" appeal from the chairman (content/sources/support-appeal.json)
+        **{k: v for k, v in json.load(open(os.path.join(HERE, "sources", "support-appeal.json"))).items()
+           if not k.startswith("_")},
     }
 
 
@@ -479,6 +492,27 @@ def caption(filename):
     return name.strip(" _")
 
 
+SOYINKA_INTERVIEW = "Wole Soyinka interview after detention.mp4"
+# Narrative supplied by the committee on 2026-10-19. The interview date and the
+# rights to the footage are still to be confirmed (the note says "August 1967
+# interview ... following his release", but he was released in October 1969).
+VIDEO_INFO = {
+    SOYINKA_INTERVIEW: {
+        "title": "Wole Soyinka interview following his release from detention (date to be confirmed)",
+        "era": "Independence",
+        "year": None,
+        "description": "Interview of Wole Soyinka, following his release from detention for his unsanctioned talks "
+                       "with the secessionist Biafran rebel leader Col. Chukwuemeka Odumegwu Ojukwu.\n\n"
+                       "Arrest date: August 17, 1967. Release date: October 8, 1969.\n\n"
+                       "Charges: He was not formally charged or tried; he was detained without trial by the federal "
+                       "military government under General Yakubu Gowon after meeting with Biafran leaders and calling "
+                       "for a cease-fire during the Nigerian Civil War, leading to accusations of being a Biafran "
+                       "sympathizer, spy, or conspiring with rebels.",
+        "credit": "Source of footage to be confirmed",
+    },
+}
+
+
 def archive_items(photos):
     items, titles = [], {}
     for f in photos:
@@ -494,7 +528,11 @@ def archive_items(photos):
                       "description": None, "credit": "Grier House Museum and Library", "collection": "Photo Archives",
                       "media": media(f"{PHOTOS}/{f}", title)})
     videos = sorted(f for f in os.listdir(os.path.join(SRC, VIDEOS)) if f.endswith(".mp4"))
-    for i, f in enumerate(videos, 1):
+    for f in videos:
+        if f in VIDEO_INFO:
+            items.append({**VIDEO_INFO[f], "type": "Video", "collection": "Video Archives",
+                          "media": media(f"{VIDEOS}/{f}", VIDEO_INFO[f]["title"])})
+    for i, f in enumerate((v for v in videos if v not in VIDEO_INFO), 1):
         if True:
             items.append({"title": f"Grier House Video, September 2026 ({i})", "type": "Video", "era": "Modern",
                           "year": "2026", "credit": "Grier House Museum and Library", "collection": "Video Archives",

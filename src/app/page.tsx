@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getArchiveItems, getHomePage, getProfiles } from '@/lib/content';
 import Prose from '@/components/common/Prose';
+import SupportAppeal from '@/components/home/SupportAppeal';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -43,6 +44,9 @@ export default async function HomePage() {
             <div className={styles.heroActions}>
               <Link href="/notable-griersons" className={styles.btnPrimary}>Notable Griersons</Link>
               <Link href="/history" className={styles.btnSecondary}>Explore History</Link>
+              {home?.supportBank && (
+                <a href="#support" className={styles.btnSecondary}>Support the Museum</a>
+              )}
             </div>
           </div>
           {home?.introVideo && (
@@ -113,6 +117,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* PLEASE SUPPORT THE GRIER MUSEUM & LIBRARY */}
+      {home && <SupportAppeal home={home} />}
     </>
   );
 }

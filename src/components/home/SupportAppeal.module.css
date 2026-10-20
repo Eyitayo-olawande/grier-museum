@@ -1,0 +1,118 @@
+.support {
+  background: var(--linen);
+  border-top: 4px solid var(--crimson);
+  /* keep the title clear of the sticky header when jumped to from the hero */
+  scroll-margin-top: 140px;
+}
+
+.inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 64px var(--gutter);
+}
+
+.eyebrow {
+  font-size: 11px; font-weight: 800; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--crimson); margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  color: var(--crimson-dark);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.intro {
+  font-size: 17px; font-weight: 600; color: var(--slate-dark); margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: 28px;
+}
+
+.cardTitle {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 20px; font-weight: 800; color: var(--slate-dark);
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--crimson); color: #fff; font-size: 15px;
+}
+
+/* slightly larger text for the appeal, which older Griersons will read closely */
+.prose { font-size: 16px; }
+
+.bank {
+  margin-top: 32px;
+  background: var(--crimson-dark);
+  color: #fff;
+  padding: 28px 32px;
+}
+
+.bankLabel {
+  font-size: 16px; font-weight: 600; color: rgba(255, 255, 255, 0.85); margin-bottom: 18px;
+}
+
+.bankDetails {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 16px 56px;
+}
+
+.bankDetails dt {
+  font-size: 11px; font-weight: 800; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(255, 255, 255, 0.6); margin-bottom: 4px;
+}
+
+.bankDetails dd {
+  font-size: 20px; font-weight: 800; letter-spacing: 0.5px;
+}
+
+.accountNumber {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  font-variant-numeric: tabular-nums; letter-spacing: 2px !important;
+}
+
+.copy {
+  font: inherit; font-size: 13px; font-weight: 700; letter-spacing: 0.5px;
+  color: var(--crimson-dark); background: #fff;
+  border: 0; border-radius: 3px; padding: 7px 12px; cursor: pointer;
+}
+.copy:hover { background: var(--linen); }
+
+.signature {
+  margin-top: 24px;
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 15px; color: var(--text-muted);
+}
+
+.signName { font-weight: 800; color: var(--slate-dark); }
+
+@media (max-width: 1023px) {
+  .grid { grid-template-columns: 1fr; }
+  .bankDetails { grid-template-columns: 1fr; gap: 14px; }
+}
+
+@media (max-width: 767px) {
+  .inner { padding: 44px var(--gutter); }
+  .title { font-size: var(--text-2xl); }
+  .card { padding: 22px; }
+  .bank { padding: 24px; }
+}

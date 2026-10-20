@@ -60,6 +60,14 @@ export default async function TraditionsPage() {
                 </div>
 
                 <div className={styles.featuredRight}>
+                  {featured.audio && (
+                    <figure className={styles.audio}>
+                      <figcaption className={styles.audioCaption}>
+                        Listen: {featured.audio.alt || featured.title}
+                      </figcaption>
+                      <audio src={featured.audio.url} controls preload="metadata" className={styles.audioPlayer} />
+                    </figure>
+                  )}
                   <Prose markdown={featured.body} className={styles.featuredDetail} />
                 </div>
               </div>

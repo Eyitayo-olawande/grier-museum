@@ -28,6 +28,7 @@ export interface Media {
   thumb: string;
   alt: string;
   isVideo: boolean;
+  isAudio: boolean;
 }
 
 export interface StrapiLabel {
@@ -98,6 +99,7 @@ export function toMedia(media?: StrapiMedia | null, fallbackAlt = ''): Media | u
     thumb: absolute((f.small ?? f.medium ?? media).url),
     alt: media.alternativeText || fallbackAlt,
     isVideo: Boolean(media.mime?.startsWith('video/')),
+    isAudio: Boolean(media.mime?.startsWith('audio/')),
   };
 }
 

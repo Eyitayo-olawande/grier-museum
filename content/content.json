@@ -1806,6 +1806,10 @@
         {
           "$file": "Photo Archives /Soyinka Wole and Drama Group.jpg",
           "alt": "Wole Soyinka and Drama Group"
+        },
+        {
+          "$file": "Video Archives/Wole Soyinka interview after detention.mp4",
+          "alt": "Wole Soyinka interview following his release from detention (date to be confirmed)"
         }
       ]
     },
@@ -2012,7 +2016,11 @@
       "body": "O Grier House, let us for thy dear honour yearn.\nLet us from experience past this lesson learn,\nThat discipline leads but to our one true goal,\nDevotion true must be our unfailing role.\nWe dare to learn both from victory and defeat.\nIf once our best is done, then we all can meet\nTo sing loud in praise of Thy untarnished fame,\nThat both past and present cherish just the same.\nUnited in spirit, we uphold Thy Grace\nOf unbroken justice taught in every race.\nGriersons, thy true greatness must strive sure to shield\nWe dare to learn always and we’ll never yield.",
       "icon": "🎵",
       "featured": true,
-      "order": 0
+      "order": 0,
+      "audio": {
+        "$file": "Traditions/Grier House Song choir rendition.mp3",
+        "alt": "Grier House Song, choir rendition (performers and date to be confirmed)"
+      }
     },
     {
       "title": "The House Pledge",
@@ -2023,7 +2031,8 @@
       "body": "I pledge with all my heart,\nThat wherever I am,\nAnd whatever I do,\nIn duty bound,\nI will be a worthy and honourable member\nof Grier House in particular\nand Government College in general.\nMay God be my guide!",
       "icon": "✋",
       "featured": false,
-      "order": 1
+      "order": 1,
+      "audio": null
     },
     {
       "title": "The House Prayer",
@@ -2034,7 +2043,8 @@
       "body": "O God, who, despite the many imperfections\nOf all human creeds and religions,\nDoth reveal unto this House the Excellency of Thy grace.\nWe dedicate our young lives to Thy service,\nSo, rule our hearts, and direct our aspirations\nThat we may see in every aspect of our daily duties,\nThe real attributes of Thy true Religion and Virtues,\nAnd in our humble endeavour,\nTo be the best that we can be.\nMay so discipline our lives\nTo fit ourselves for the services of our brethren\nAnd the furtherance of Thy kingdom,\nhere on earth.\nHear our prayers, O Heavenly Father.\nAmen",
       "icon": "🙏",
       "featured": false,
-      "order": 2
+      "order": 2,
+      "audio": null
     },
     {
       "title": "The House Test",
@@ -4200,6 +4210,19 @@
       }
     },
     {
+      "title": "Wole Soyinka interview following his release from detention (date to be confirmed)",
+      "era": "Independence",
+      "year": null,
+      "description": "Interview of Wole Soyinka, following his release from detention for his unsanctioned talks with the secessionist Biafran rebel leader Col. Chukwuemeka Odumegwu Ojukwu.\n\nArrest date: August 17, 1967. Release date: October 8, 1969.\n\nCharges: He was not formally charged or tried; he was detained without trial by the federal military government under General Yakubu Gowon after meeting with Biafran leaders and calling for a cease-fire during the Nigerian Civil War, leading to accusations of being a Biafran sympathizer, spy, or conspiring with rebels.",
+      "credit": "Source of footage to be confirmed",
+      "type": "Video",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/Wole Soyinka interview after detention.mp4",
+        "alt": "Wole Soyinka interview following his release from detention (date to be confirmed)"
+      }
+    },
+    {
       "title": "Grier House Video, September 2026 (1)",
       "type": "Video",
       "era": "Modern",
@@ -4244,7 +4267,17 @@
         "$file": "Photo Archives /New Grier House Building.jpg",
         "alt": "The new Grier House building"
       }
-    ]
+    ],
+    "supportTitle": "Please Support the Grier Museum & Library",
+    "supportIntro": "To maintain the Grier Museum and Library we need both books and cash donations:",
+    "supportBooks": "We need BOOKS at all times to keep the Library well stocked. The books we have are of the highest quality and we want to maintain this standard. It is fair to say that there is no major or important book published in Western literature in the past 400 years that is not represented in our collection - from Shakespeare (3 different volumes of his Complete Works) and Chaucer (The Canterbury Tales) to Milton (Paradise Lost & Paradise Regained), Dickens (Tale of Two Cities, Great Expectations) and Thomas Hardy (The Mayor of Casterbridge). We have such rare original books as ‘The Origin of Species’ by Charles Darwin, Dante’s ‘Inferno’, ‘Das Kapital’ by Karl Marx (English translation ‘Capital’) and Leo Tolstoy’s ‘War and Peace.’ All major Nigerian writers are represented - Wole Soyinka, Chinua Achebe, Cyprian Ekwensi, Elechi Amadi and others. Also the historical classics like Wole Ademoyega’s ‘Why we struck’ and other Civil War epics like ‘Reluctant Rebel.’ We want our future fiction and historical book donations to approach this high standard.\n\nThis is a reference library for rare books not just for our students but for our old boys and other visitors. We also want to appeal to reputable bookshops in Nigeria to donate books that our children can use in the classroom and for test review and preparations for the Senior and Junior Secondary School certificate exams.",
+    "supportMoney": "And we always need cash donations because we are not just setting up a Museum and Library. Grier House is expanding the spectrum of extracurricular activities for its students in the following areas:\n\n- Audiovisual learning system based in the library and museum, with computers, monitors, speakers and printers with WiFi connectivity\n- Grier House Marching Band with trumpet, drums and other instruments to galvanize our boys and players during interhouse competitions - a first in GCI\n- Mustard Seed editorial team\n- Chess club\n- Radio and digital music to be blared out from wall mounted speakers for Saturday night social nights and other social events in the Museum/Library and adjoining reading room (prep room)\n- Board games for our students including Monopoly, Ludo, Draughts, Scrabble and our traditional ‘ayo.’\n- Money for the upkeep, maintenance and replacement of Museum and Library equipment, books and supplies",
+    "supportBank": {
+      "accountName": "GRIERSONS ACCOUNT 2",
+      "bankName": "Zenith Bank",
+      "accountNumber": "1310948651"
+    },
+    "supportSignature": "Oladele Olusanya ’65\nChairman, Grier House History and Traditions Committee"
   },
   "api::museum-library-page.museum-library-page": {
     "intro": "The Grier Museum and Library, established in October 2026, is a legacy project that encapsulates the narratives and aspirations of generations of Griersons.",

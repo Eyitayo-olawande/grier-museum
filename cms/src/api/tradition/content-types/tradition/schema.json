@@ -57,6 +57,13 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "audio": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "audios"
+      ]
     }
   }
 }
