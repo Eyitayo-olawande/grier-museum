@@ -52,6 +52,22 @@ export default async function MuseumLibraryPage() {
         </div>
       </section>
 
+      {/* INTRODUCTORY VIDEOS: a tour of the Museum and Library */}
+      {museum && museum.introVideos.length > 0 && (
+        <section className={styles.introVideos}>
+          <div className={styles.container}>
+            <div className={styles.introVideoGrid}>
+              {museum.introVideos.map((v) => (
+                <figure key={v.url} className={styles.introVideo}>
+                  <video src={`${v.url}#t=1`} controls preload="metadata" playsInline className={styles.introVideoPlayer} />
+                  {v.alt && <figcaption className={styles.introVideoCaption}>{v.alt}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* MISSION */}
       <section className={styles.mission}>
         <div className={styles.container}>

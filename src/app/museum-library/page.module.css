@@ -196,3 +196,14 @@
 @media (max-width: 1023px) {
   .libraryGrid { grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* INTRODUCTORY VIDEOS (room for a second tour beside the first) */
+.introVideos { padding: 40px 0 0; }
+.introVideoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+  gap: 24px;
+}
+.introVideo { margin: 0; }
+.introVideoPlayer { width: 100%; display: block; background: #000; border: 1px solid var(--border); }
+.introVideoCaption { font-size: 14px; color: var(--text-muted); margin-top: 8px; }

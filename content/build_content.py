@@ -113,7 +113,7 @@ PORTRAITS = {
     "PROFILE ADEYEMI-WILSON": ("Adeyemi Wilson.jpg", ["Adeyemi Wilson"]),
     "PROFILE AJOMALE": (None, ["Ajomale"]),
     "PROFILE AKIN-DEKO": ("Akin Deko3.jpg", ["Akin Deko"]),
-    "PROFILE AKINGBOLA AKINOLA": (None, []),
+    "PROFILE AKINGBOLA AKINOLA": ("Akingbola Akinola.jpg", []),
     "PROFILE ANDU": ("Andu pic.jpg", ["Andu"]),
     "PROFILE ARUBAYI": (None, []),
     "PROFILE BADEMOSI": ("Bademosi2.jpg", ["Bademosi"]),
@@ -412,6 +412,9 @@ def museum_page(gallery):
         "history": "## Why a Library for Students in Grier House?\n\n" + "\n\n".join(why)
                    + (f"\n\n\u2014 {signature}" if signature else ""),
         "goals": "## Examples of Rare Hardcover Volumes in the Grier Library\n" + "\n".join(volumes),
+        # introductory videos in the Museum & Library folder; a better tour is to follow
+        "introVideos": [media(f"{MUSEUM}/{f}", "A tour of the Grier Museum and Library")
+                        for f in sorted(os.listdir(os.path.join(SRC, MUSEUM))) if f.lower().startswith("introductory video")],
         "galleryImages": [media(f"{MUSEUM}/{f}", re.sub(r"\d*\.(jpe?g|png)$", "", f, flags=re.I).strip()) for f in gallery],
         "creatingTheMuseumTitle": "Creating the Museum, October 2026",
         "creatingTheMuseumMedia": [media(f"{CREATING}/{f}") for f in sorted(os.listdir(os.path.join(SRC, CREATING)))
@@ -419,30 +422,62 @@ def museum_page(gallery):
     }
 
 
+TV_PHOTO = "Grier House students watching a TV program in the Reading Room.jpg"
+BAND_VIDEOS = [f"Grier House Marching Band video {n}.mp4" for n in (1, 2, 3)]
+
+
 def extracurricular():
+    """Six sections in the order the chairman listed them (message of 2026-10-20),
+    filled from his "Promoting extracurricular activities" document and the
+    donation appeal. Only the Chess Club has no description yet."""
     lines = docx_lines(f"{MUSEUM}/PROMOTING EXTRACURRICULAR ACTIVITIES FOR STUDENTS.docx")[1:]
     intro = lines[0]
     activities = [l.lstrip("- ").strip() for l in lines if l.startswith("-")]
-    roles = [re.sub(r"^[abc]\)\s*", "", l) for l in lines if re.match(r"[abc]\)", l)]
+    roles = {l[0]: l[3:].strip() for l in lines if re.match(r"[abc]\)", l)}
     closing = lines[-1]
-    band = next(a for a in activities if a.startswith("Grier House Marching Band"))
-    leadership = activities[-1] + "\n\n" + "\n".join(f"- {r[0].upper() + r[1:]}" for r in roles) + "\n\n" + closing
-    others = [a for a in activities[:-1] if a is not band] + [leadership]
+    find = lambda start: next(a for a in activities if a.startswith(start))
+    band, editorial, honors, leadership = (find("Grier House Marching Band"), find("An Editorial team"),
+                                           find("The yearly Grier Honors Board"), find("Extra-curricular Student Leadership"))
+    cap = lambda t: t[0].upper() + t[1:]
+
+    appeal = json.load(open(os.path.join(HERE, "sources", "support-appeal.json")))["supportMoney"]
+    wanted = [i[2:] for i in appeal.splitlines() if i.startswith("- ")]
+    appeal_item = lambda start: next(i for i in wanted if i.startswith(start))
     socials = next(l for l in docx_lines("Traditions/GRIER MUSEUM - TRADITIONS 2.docx")
                    if l.startswith("An occasion for students"))
+
+    section = lambda order, title, slug, summary, body, **extra: {
+        "title": title, "slug": slug, "order": order, "summary": summary, "body": body,
+        "photos": extra.get("photos", []), "videos": extra.get("videos", [])}
     return [
-        {"title": "About Extracurricular Activities", "slug": "about", "order": 0,
-         "summary": "The wider mission of the Grier History and Traditions Committee beyond the Museum and Library.",
-         "body": intro, "videos": []},
-        {"title": "Marching Band", "slug": "marching-band", "order": 1,
-         "summary": "Parade drums, trumpets and flutes to galvanize Grier House teams at interhouse sports.",
-         "body": band, "photos": [media(f"{PHOTOS}/Grier House Marching Band.jpg", "Grier House Marching Band")]},
-        {"title": "Saturday Night Socials", "slug": "saturday-night-socials", "order": 2,
-         "summary": "A fun-filled evening in the prep room with debates, recitations, drama and music.",
-         "body": socials},
-        {"title": "Others", "slug": "others", "order": 3,
-         "summary": "The Mustard Seed editorial team, the Grier Honors Board and extracurricular student leadership.",
-         "body": "\n\n".join(others)},
+        section(0, "About Extracurricular Activities", "about",
+                "The wider mission of the Grier History and Traditions Committee beyond the Museum and Library.",
+                intro,
+                photos=[media(f"{EXTRA}/{TV_PHOTO}", "Grier House students watching a TV program in the Reading Room "
+                                                    "section of the Grier Museum and Library, Oct 16, 2026")]),
+        section(1, "Grier Museum & Library Student Coordinators", "museum-library-student-coordinators",
+                "Student Librarian, Deputy Librarian, custodian and janitor of the Museum and Library.",
+                leadership + "\n\n- " + cap(roles["a"]) + "\n\n" + closing),
+        section(2, "Grier House Marching Band", "marching-band",
+                "Parade drums, trumpets and flutes to galvanize Grier House teams at interhouse sports.",
+                band + "\n\n- " + cap(roles["b"]),
+                photos=[media(f"{PHOTOS}/Grier House Marching Band.jpg", "Grier House Marching Band")],
+                videos=[media(f"{EXTRA}/{v}", f"Grier House Marching Band, video {n}") for n, v in enumerate(BAND_VIDEOS, 1)]),
+        section(3, "Mustard Seed Editorial Board", "mustard-seed-editorial-board",
+                "Students restarting the Mustard Seed House magazine as an online publication.",
+                editorial + "\n\n- " + cap(roles["c"])),
+        section(4, "Honors Board Students Committee", "honors-board-students-committee",
+                "Students compiling the yearly Grier Honors Board.",
+                honors),
+        section(5, "Grier House Chess Club", "chess-club",
+                "Chess for Grier House students in the Museum and Library.",
+                # placeholder until the committee describes the club
+                "The Grier House Chess Club is one of the extracurricular activities supported by the Grier Museum "
+                "and Library. More details will be added by the Grier History and Traditions Committee."),
+        section(6, "Others", "others",
+                "Saturday Night Socials, board games, music and the audiovisual learning system.",
+                "**Saturday Night Socials**\n\n" + socials + "\n\n**Also supported by the Museum and Library**\n\n"
+                + "\n".join("- " + appeal_item(k) for k in ("Audiovisual learning", "Radio and digital music", "Board games"))),
     ]
 
 
@@ -553,9 +588,11 @@ def main():
         "api::archive-item.archive-item": archive_items(photos),
         "api::home-page.home-page": home_page(),
         "api::museum-library-page.museum-library-page": museum_page(museum_gallery),
+        "api::contact-page.contact-page": {k: v for k, v in json.load(open(os.path.join(HERE, "sources", "contact.json"))).items()
+                                           if not k.startswith("_")},
         "api::dare-to-learn-book.dare-to-learn-book": {
             "title": "Dare to Learn: the Grier House Story",
-            "description": "A forthcoming book on the history of Grier House by O. Olusanya and A. Tewe, copyright 2026. The excerpts below are arranged in alphabetical order by title.",
+            "description": "A book on the history of Grier House by O. Olusanya and A. Tewe, copyright 2026. Book in press. The excerpts below are arranged in alphabetical order by title.",
             "purchaseLinks": [],
         },
     }

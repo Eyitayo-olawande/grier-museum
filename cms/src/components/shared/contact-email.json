@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_contact_emails",
+  "info": {
+    "displayName": "Contact Email",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "email",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "purpose": {
+      "type": "text"
+    },
+    "handledBy": {
+      "type": "string"
+    }
+  }
+}

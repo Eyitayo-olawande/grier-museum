@@ -30,8 +30,15 @@ export default async function ExtracurricularPage() {
       </section>
 
       <div className={styles.container}>
-        {intro && intro.videos.length > 0 && (
+        {intro && (intro.photos.length > 0 || intro.videos.length > 0) && (
           <section className={styles.featured}>
+            {intro.photos.map((photo) => (
+              <figure key={photo.url} className={styles.featuredVideo}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={photo.url} alt={photo.alt} className={styles.video} />
+                {photo.alt && <figcaption className={styles.videoCaption}>{photo.alt}</figcaption>}
+              </figure>
+            ))}
             {intro.videos.map((video) => (
               <figure key={video.url} className={styles.featuredVideo}>
                 <video src={video.url} controls preload="metadata" className={styles.video} />
@@ -47,11 +54,17 @@ export default async function ExtracurricularPage() {
               <p className={styles.summary}>{activity.summary}</p>
               <Prose markdown={activity.body} />
             </div>
-            {activity.photos.length > 0 && (
+            {(activity.photos.length > 0 || activity.videos.length > 0) && (
               <div className={styles.photos}>
                 {activity.photos.map((photo) => (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img key={photo.url} src={photo.url} alt={photo.alt} className={styles.photo} loading="lazy" />
+                ))}
+                {activity.videos.map((video) => (
+                  <figure key={video.url} className={styles.sectionVideo}>
+                    <video src={`${video.url}#t=0.5`} controls preload="metadata" playsInline className={styles.photo} />
+                    {video.alt && <figcaption className={styles.videoCaption}>{video.alt}</figcaption>}
+                  </figure>
                 ))}
               </div>
             )}

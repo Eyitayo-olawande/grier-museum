@@ -1,0 +1,32 @@
+{
+  "_source": "Chairman's answers forwarded 2026-10-20. Wording kept; 'Librsry' corrected.",
+  "intro": "We welcome questions and comments from Old Griersons, current students, researchers and visitors. Please write to the address that matches your question.",
+  "emails": [
+    {
+      "address": "admin@griermuseum.org",
+      "title": "The website",
+      "purpose": "General questions regarding the website and problems with access.",
+      "handledBy": "Kenny Oladipo, for onward transmission to the people managing the website"
+    },
+    {
+      "address": "museum@griermuseum.org",
+      "title": "The Museum and Library",
+      "purpose": "Questions relating to the content of the Museum and Library, including errors or comments on the articles, profiles, images, photos and videos.",
+      "handledBy": "Dr. Dele Olusanya and Yemi Adegoke"
+    },
+    {
+      "address": "editor@griermuseum.org",
+      "title": "The Mustard Seed and other publications",
+      "purpose": "Questions regarding the Mustard Seed House magazine and other publications, forwarded to the Head of House and the student Editor of the Mustard Seed.",
+      "handledBy": "Oladele Jegede"
+    }
+  ],
+  "address": "Grier Museum & Library\nGovernment College Ibadan\nAbeokuta Rd\nApata Ganga\nIbadan, Oyo State, Nigeria",
+  "openingHours": "**Open to the public**\n\n- Monday to Friday: 4pm to 6pm\n- Saturday and Sunday: 12 noon to 6pm\n\nGrier House students have access to the Museum and Library at other hours determined by the house schedule for the various class sets.",
+  "officers": [
+    { "name": "Oladele Olusanya", "set": "Grierson ’65 set", "role": "Chairman, Grier House History and Traditions Committee" },
+    { "name": "Kenny Oladipo", "set": "Grierson ’91 set", "role": "Webpage Manager" },
+    { "name": "Gboyega Akin-Deko", "set": "Grierson ’70 set", "role": "Governor, Grier House" }
+  ],
+  "mapQuery": "Government College Ibadan, Abeokuta Road, Apata Ganga, Ibadan, Oyo State, Nigeria"
+}

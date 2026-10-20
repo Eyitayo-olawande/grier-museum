@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_officers",
+  "info": {
+    "displayName": "Officer",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "set": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

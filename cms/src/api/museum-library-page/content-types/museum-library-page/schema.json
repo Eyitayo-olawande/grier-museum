@@ -41,6 +41,13 @@
         "images",
         "videos"
       ]
+    },
+    "introVideos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "videos"
+      ]
     }
   }
 }

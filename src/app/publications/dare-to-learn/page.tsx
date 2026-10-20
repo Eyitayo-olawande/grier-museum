@@ -17,7 +17,7 @@ export default async function DareToLearnPage() {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <Link href="/publications" className={styles.backLink}>&larr; News &amp; Publications</Link>
-          <div className={styles.pubLabel}>✍️ Book &middot; O. Olusanya and A. Tewe &middot; 2026</div>
+          <div className={styles.pubLabel}>✍️ Book in press &middot; O. Olusanya and A. Tewe &middot; 2026</div>
           <h1 className={styles.title}>{book?.title ?? 'Dare to Learn'}</h1>
           {book?.description && <p className={styles.subtitle}>{book.description}</p>}
         </div>
@@ -53,9 +53,7 @@ export default async function DareToLearnPage() {
                 </a>
               ))
             ) : (
-              <p className={styles.submitBody}>
-                Dare to Learn is forthcoming. Links to buy the book will be added here when it is published.
-              </p>
+              <p className={styles.submitBody}>Book in press.</p>
             )}
           </div>
         </div>

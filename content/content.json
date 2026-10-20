@@ -386,7 +386,10 @@
       ],
       "bio": "James Akingbola Akinola was born on April 9, 1961 in Ilesa. His father, Venerable Festus Akinyele Akinola, was a clergyman and educationist, while his mother, Beatrice Modupe, was a schoolteacher. He started his primary education at Government School, Owo, which he continued at UMC Demonstration School, Oke Ado, Ibadan.\n\nIn 1972, Akingbola Akinola was admitted into GCI and assigned to Grier House. His defining activity in GCI was his membership of the school’s Cadet Unit, which he joined in 1973. He took part in army drills at the Nigerian Army cantonment in Mokola and in time he was the leader and trainer of fellow students who he led in numerous march-past parades both in and outside GCI grounds. We are indeed proud to say that under his leadership, the GCI Cadet marching team regularly excelled at the annual Children's Day and Independence Day celebrations at the Liberty Stadium. Akinola also embraced the full range of sporting activities that GCI offered in his time. He was an outstanding member of the Grier House and GCI basketball teams. He also found expression in music, being the vocalist for the Sound Incorporated Band (SI 3) and  a singer in the School Choir, which at that time was a joint ensemble with Queen's School, Ibadan.\n\nAfter completing his A Levels, he left GCI in June 1979 for the University of Ibadan where he read Political Science. On graduating in 1982, he served with the National Youth Service Corps in Lagos. Utilizing his training with the GCI cadet unit, he proved his worth and was appointed the overall Parade Commander for the NYSC passing-out ceremony at the Tafawa Balewa Square, Lagos in June 1983. This was a very colorful parade that was reviewed by President Shehu Shagari. He then embarked on the study of law. He enrolled at the University of Lagos, where he earned his LL.B in 1986. He proceeded to the Nigerian Law School and was called to the Nigerian Bar in 1987.\n\nAkinola began his law practice at the Civil Litigation Department of the Federal Ministry of Justice, Lagos in November 1987. A year later, he moved into private practice, where he has remained for four decades. In the middle of this however, he had a spell of public service as a Special Assistant to the Attorney General and Federal Minister of Justice, Chief Bola Ige. He held this position until December 2001, when Bola Ige was tragically assassinated.\n\nIn January 2002, Akinola returned to private practice at the Law Union in Lagos. His professional standing grew steadily, culminating in his elevation to the Inner Bar as a Senior Advocate of Nigeria (SAN) in 2021. In 2024, he was admitted as a member of the Body of Benchers, the apex legal body charged with regulating the legal profession in Nigeria and for admitting practitioners of the highest distinction.\n\nAkinola also built a distinguished career in arbitration, becoming a recognized authority in commercial and maritime dispute resolution within Nigeria and internationally. He is a Fellow and Chartered Arbitrator of the Chartered Institute of Arbitration of the United Kingdom, and served as Chairman of the Institute's Nigerian branch. He was also a past President of the Maritime Arbitrators Association of Nigeria and a member of the London Maritime Arbitrators Association (LMAA). His international standing in the field is reflected in his membership of the Board of the African Arbitration Association (AfAA), the Lagos Chamber of Commerce International Arbitration Centre (LACIAC), and the Council of the International Federation of Commercial Arbitration Institutions (IFCAI).\n\nToday, Akinola is being honored as a Grierson who has embodied, to the fullest degree, the ethos of GCI and Grier House of discipline, excellence in whatever one does, and a firm commitment to the public good.",
       "pullQuote": null,
-      "photo": null,
+      "photo": {
+        "$file": "Photo Archives /Akingbola Akinola.jpg",
+        "alt": "Akingbola Akinola"
+      },
       "gallery": []
     },
     {
@@ -2293,34 +2296,85 @@
       "order": 0,
       "summary": "The wider mission of the Grier History and Traditions Committee beyond the Museum and Library.",
       "body": "The responsibilities of the Grier History and Traditions Committee go beyond establishing and maintaining the Grier Museum and Library. The wider mission of this Committee is to organize students living in the Grier House dormitory so they can engage in various activities (outside sports) outside the classroom. Therefore, the Museum and Library also oversees the following activities for the students:",
+      "photos": [
+        {
+          "$file": "Extracurricular Activities /Grier House students watching a TV program in the Reading Room.jpg",
+          "alt": "Grier House students watching a TV program in the Reading Room section of the Grier Museum and Library, Oct 16, 2026"
+        }
+      ],
       "videos": []
     },
     {
-      "title": "Marching Band",
-      "slug": "marching-band",
+      "title": "Grier Museum & Library Student Coordinators",
+      "slug": "museum-library-student-coordinators",
       "order": 1,
+      "summary": "Student Librarian, Deputy Librarian, custodian and janitor of the Museum and Library.",
+      "body": "Extra-curricular Student Leadership: Apart from the Head of House and other house prefects chosen formally each year by the house and school authorities, capable leaders among the students will be chosen for the extracurricular activities initiated or reintroduced from old traditions by the Grier House History and Traditions Committee. These student positions and tasks include:\n\n- The maintenance of the physical space of the Museum and Library in the positions of Librarian, Deputy Librarian, custodian and janitor.\n\nThese students assigned to the above positions and tasks will be excused from some of the chores required of students in the House.",
+      "photos": [],
+      "videos": []
+    },
+    {
+      "title": "Grier House Marching Band",
+      "slug": "marching-band",
+      "order": 2,
       "summary": "Parade drums, trumpets and flutes to galvanize Grier House teams at interhouse sports.",
-      "body": "Grier House Marching Band for which parade drums, trumpets, flutes and other musical instruments have been made available. This group will perform at all interhouse sports events to galvanize our Grier House teams to the highest level of performance. Their role will be similar those of ‘cheerleading’ teams in school sports in the United States. This Grier House Marching will be at the forefront of the efforts to teach other Griersons in the proper rendition of our House Song, our Grier House pep song and other lively tunes they have composed or have been taught. Beyond Grier House, they will also entertain at other school events both on the field and in the Assembly Hall.",
+      "body": "Grier House Marching Band for which parade drums, trumpets, flutes and other musical instruments have been made available. This group will perform at all interhouse sports events to galvanize our Grier House teams to the highest level of performance. Their role will be similar those of ‘cheerleading’ teams in school sports in the United States. This Grier House Marching will be at the forefront of the efforts to teach other Griersons in the proper rendition of our House Song, our Grier House pep song and other lively tunes they have composed or have been taught. Beyond Grier House, they will also entertain at other school events both on the field and in the Assembly Hall.\n\n- Officers of the Grier House Marching Band which now include the Band Major, 5 drummers (on bass, tenor, snare drums, and cymbals), and 4 singers.",
       "photos": [
         {
           "$file": "Photo Archives /Grier House Marching Band.jpg",
           "alt": "Grier House Marching Band"
         }
+      ],
+      "videos": [
+        {
+          "$file": "Extracurricular Activities /Grier House Marching Band video 1.mp4",
+          "alt": "Grier House Marching Band, video 1"
+        },
+        {
+          "$file": "Extracurricular Activities /Grier House Marching Band video 2.mp4",
+          "alt": "Grier House Marching Band, video 2"
+        },
+        {
+          "$file": "Extracurricular Activities /Grier House Marching Band video 3.mp4",
+          "alt": "Grier House Marching Band, video 3"
+        }
       ]
     },
     {
-      "title": "Saturday Night Socials",
-      "slug": "saturday-night-socials",
-      "order": 2,
-      "summary": "A fun-filled evening in the prep room with debates, recitations, drama and music.",
-      "body": "An occasion for students to come together for a fun-filled evening in the prep room with debates, recitations, drama sketches, song competitions and even physical sports like boxing with gloves and pillow fights. The highlight of the evening is always music (played in the old days on the gramophone) and dancing."
+      "title": "Mustard Seed Editorial Board",
+      "slug": "mustard-seed-editorial-board",
+      "order": 3,
+      "summary": "Students restarting the Mustard Seed House magazine as an online publication.",
+      "body": "An Editorial team has set to work to restart the “Mustard Seed” House magazine as an online publication on our website. This magazine which will be solely created, edited, published and managed by Grier House students, is planned to be published twice a year, December and June.\n\n- Aforementioned Editorial Board of The Mustard Seed.",
+      "photos": [],
+      "videos": []
+    },
+    {
+      "title": "Honors Board Students Committee",
+      "slug": "honors-board-students-committee",
+      "order": 4,
+      "summary": "Students compiling the yearly Grier Honors Board.",
+      "body": "The yearly Grier Honors Board, an old tradition, will be compiled by the students to honor those who have distinguished themselves in various arenas in the previous school year, including sports and student leadership. This will also be an online project accessible from the website",
+      "photos": [],
+      "videos": []
+    },
+    {
+      "title": "Grier House Chess Club",
+      "slug": "chess-club",
+      "order": 5,
+      "summary": "Chess for Grier House students in the Museum and Library.",
+      "body": "The Grier House Chess Club is one of the extracurricular activities supported by the Grier Museum and Library. More details will be added by the Grier History and Traditions Committee.",
+      "photos": [],
+      "videos": []
     },
     {
       "title": "Others",
       "slug": "others",
-      "order": 3,
-      "summary": "The Mustard Seed editorial team, the Grier Honors Board and extracurricular student leadership.",
-      "body": "An Editorial team has set to work to restart the “Mustard Seed” House magazine as an online publication on our website. This magazine which will be solely created, edited, published and managed by Grier House students, is planned to be published twice a year, December and June.\n\nThe yearly Grier Honors Board, an old tradition, will be compiled by the students to honor those who have distinguished themselves in various arenas in the previous school year, including sports and student leadership. This will also be an online project accessible from the website\n\nExtra-curricular Student Leadership: Apart from the Head of House and other house prefects chosen formally each year by the house and school authorities, capable leaders among the students will be chosen for the extracurricular activities initiated or reintroduced from old traditions by the Grier House History and Traditions Committee. These student positions and tasks include:\n\n- The maintenance of the physical space of the Museum and Library in the positions of Librarian, Deputy Librarian, custodian and janitor.\n- Officers of the Grier House Marching Band which now include the Band Major, 5 drummers (on bass, tenor, snare drums, and cymbals), and 4 singers.\n- Aforementioned Editorial Board of The Mustard Seed.\n\nThese students assigned to the above positions and tasks will be excused from some of the chores required of students in the House."
+      "order": 6,
+      "summary": "Saturday Night Socials, board games, music and the audiovisual learning system.",
+      "body": "**Saturday Night Socials**\n\nAn occasion for students to come together for a fun-filled evening in the prep room with debates, recitations, drama sketches, song competitions and even physical sports like boxing with gloves and pillow fights. The highlight of the evening is always music (played in the old days on the gramophone) and dancing.\n\n**Also supported by the Museum and Library**\n\n- Audiovisual learning system based in the library and museum, with computers, monitors, speakers and printers with WiFi connectivity\n- Radio and digital music to be blared out from wall mounted speakers for Saturday night social nights and other social events in the Museum/Library and adjoining reading room (prep room)\n- Board games for our students including Monopoly, Ludo, Draughts, Scrabble and our traditional ‘ayo.’",
+      "photos": [],
+      "videos": []
     }
   ],
   "api::archive-item.archive-item": [
@@ -2569,6 +2623,19 @@
       "media": {
         "$file": "Photo Archives /Akin Deko3.jpg",
         "alt": "Akin Deko (3)"
+      }
+    },
+    {
+      "title": "Akingbola Akinola",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Akingbola Akinola.jpg",
+        "alt": "Akingbola Akinola"
       }
     },
     {
@@ -4283,6 +4350,12 @@
     "intro": "The Grier Museum and Library, established in October 2026, is a legacy project that encapsulates the narratives and aspirations of generations of Griersons.",
     "history": "## Why a Library for Students in Grier House?\n\nWhat are the advantages to our young Griersons in having all these books at their disposal in the library section of the GRIER MUSEUM AND LIBRARY. These books range from story books on adventure to textbooks, exam reviews books, atlases, dictionaries and encyclopedias.\n\nThere are indeed many. For instance, from the hardcover book “Encyclopedia of Africa”, our students will learn that the country in Southern Africa now called Zambia was named after its largest river, the Zambezi. And that Lake Victoria, the famous source of the Nile River has nothing to do with Victoria Falls, which is on the Zambezi River. Zambia was the former Northern Rhodesia. River Zambezi forms the border between this country and its neighbor Southern Rhodesia which is now known as Zimbabwe after the ancient civilization and ruins of that name.\n\nIndeed, many older Griersons now in their 70s and 80s are going back to the Grier Museum and Library anytime they are in Ibadan for the pleasure of poring over these books to refresh their learning in the ambience of framed iconic photos on the walls, original oil paintings, and trophies in glassed cabinets reminding us of all of our Grier House legacy.\n\nAs Akin Tewe. ‘72 said, “We can never stop learning new things.” For our students, the motto of this Library, quoting Diderot’s famous Encyclopedia (completed in France in 1772) is “if you know something, share it; And if you don’t know search for it.”\n\nWe want our students to know that no knowledge is useless. Knowledge indeed is power. It brings light into our personal lives and understanding into the wider world. It leads to a more progressive, cooperative and understanding society. It is the first thing a man acquires that leads to wisdom and understanding!\n\n— Oladele Olusanya ‘65",
     "goals": "## Examples of Rare Hardcover Volumes in the Grier Library\n\n**Encyclopedias**\n\n- Africa - the definitive visual history of a continent, DK\n- Students World Atlas, National Geographic\n- Countries of the world, DK\n- Encyclopedia of Everything, DK\n- TREASURY of Greek Mythology, Nat Geographic\n- World History, Knowledge Encyclopedia, Wonder House\n- Science, Knowledge Encyclopedia, Wonder House\n- CHILDRENS ILLUSTRATED BIBLE, DK\n- THE STORY OF ART\n- Concise Oxford Dictionary\n- BARTLETT’s Familiar Quotations\n\n**Collected Works**\n\n- James Bond collection\n- Vintage Book of Contemporary World Poetry\n- Iliad, Fitzgerald\n- Odyssey, Fitzgerald\n- Sherlock Holmes collection\n- Charles Dickens collection\n- William Shakespeare collection\n- Jeffrey Archer collection\n- JOHN MILTON: Paradise Lost & Paradise Regained\n\n**Others**\n\n- THINGS FALL APART\n- IVANHOE\n- THE BLACK ARROW\n- DANTE’s INFERNO\n- THE JUNGLE BOOK, Rudyard Kipling\n- DRACULA, Bram Stoker\n- FRANKENSTEIN, Mary Shelley\n- History of Nigeria, Falola\n- The Yoruba People, Captivating History\n- The Age of Reason, Jean-Paul Sartre\n- To kill a mockingbird, Harper Lee\n- Gods and heroes (2)\n- A time of troubles (2)\n- A new age (2)\n- Cry, the beloved country\n- Weep not child\n- Hunchback of Notre Dame\n- The Iliad, retold\n- The Odyssey, retold\n- Adventures of Sherlock Holmes\n- The Time Machine\n- The call of the wild\n- Adventures of Robin Hood\n- Adventures of Huckleberry Finn\n- Greek myths\n- Oliver Twist\n- King Arthur and his knights\n- Adventures of Tom Sawyer\n- Treasure Island\n- AKE, Wole Soyinka\n- ISARA, Wole Soyinka\n- IBADAN, Wole Soyinka\n- Moonfleet\n- Animal Farm\n- Arabian Nights\n- Gulliver Travels\n- The African Child\n- The Autobiography of Malcolm X\n- Dreams of my father - Barack Obama\n- Why Nations Fail\n- AWO - The autography of Obafemi Awolowo\n- The autobiography of Martin Luther King\n- Long walk to Freedom - the autobiography of Nelson Mandela\n- Holy Bible, King James Version.\n- Cowries of Blood, Lasisi Olagunju\n- The Age of Reason - Thomas Paine\n- King Solomon’s Mines - Sir H. Ryder Haggard\n- The Carpetbaggers, Harold Robbins",
+    "introVideos": [
+      {
+        "$file": "Museum & Library /Introductory video - museum tour.mp4",
+        "alt": "A tour of the Grier Museum and Library"
+      }
+    ],
     "galleryImages": [
       {
         "$file": "Museum & Library /Donor Plaque.jpg",
@@ -4385,9 +4458,52 @@
       }
     ]
   },
+  "api::contact-page.contact-page": {
+    "intro": "We welcome questions and comments from Old Griersons, current students, researchers and visitors. Please write to the address that matches your question.",
+    "emails": [
+      {
+        "address": "admin@griermuseum.org",
+        "title": "The website",
+        "purpose": "General questions regarding the website and problems with access.",
+        "handledBy": "Kenny Oladipo, for onward transmission to the people managing the website"
+      },
+      {
+        "address": "museum@griermuseum.org",
+        "title": "The Museum and Library",
+        "purpose": "Questions relating to the content of the Museum and Library, including errors or comments on the articles, profiles, images, photos and videos.",
+        "handledBy": "Dr. Dele Olusanya and Yemi Adegoke"
+      },
+      {
+        "address": "editor@griermuseum.org",
+        "title": "The Mustard Seed and other publications",
+        "purpose": "Questions regarding the Mustard Seed House magazine and other publications, forwarded to the Head of House and the student Editor of the Mustard Seed.",
+        "handledBy": "Oladele Jegede"
+      }
+    ],
+    "address": "Grier Museum & Library\nGovernment College Ibadan\nAbeokuta Rd\nApata Ganga\nIbadan, Oyo State, Nigeria",
+    "openingHours": "**Open to the public**\n\n- Monday to Friday: 4pm to 6pm\n- Saturday and Sunday: 12 noon to 6pm\n\nGrier House students have access to the Museum and Library at other hours determined by the house schedule for the various class sets.",
+    "officers": [
+      {
+        "name": "Oladele Olusanya",
+        "set": "Grierson ’65 set",
+        "role": "Chairman, Grier House History and Traditions Committee"
+      },
+      {
+        "name": "Kenny Oladipo",
+        "set": "Grierson ’91 set",
+        "role": "Webpage Manager"
+      },
+      {
+        "name": "Gboyega Akin-Deko",
+        "set": "Grierson ’70 set",
+        "role": "Governor, Grier House"
+      }
+    ],
+    "mapQuery": "Government College Ibadan, Abeokuta Road, Apata Ganga, Ibadan, Oyo State, Nigeria"
+  },
   "api::dare-to-learn-book.dare-to-learn-book": {
     "title": "Dare to Learn: the Grier House Story",
-    "description": "A forthcoming book on the history of Grier House by O. Olusanya and A. Tewe, copyright 2026. The excerpts below are arranged in alphabetical order by title.",
+    "description": "A book on the history of Grier House by O. Olusanya and A. Tewe, copyright 2026. Book in press. The excerpts below are arranged in alphabetical order by title.",
     "purchaseLinks": []
   }
 }

@@ -41,7 +41,9 @@
 }
 .summary { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
 .photos { display: grid; gap: 12px; }
-.photo { width: 100%; object-fit: cover; border: 1px solid var(--border); }
+.photo { width: 100%; object-fit: cover; border: 1px solid var(--border); display: block; }
+.sectionVideo { margin: 0; }
+.sectionVideo .photo { max-height: 560px; object-fit: contain; background: #000; }
 
 @media (max-width: 1023px) {
   .activity { grid-template-columns: 1fr; gap: 24px; }

@@ -313,6 +313,7 @@ export interface MuseumPage {
   /* Markdown */
   history: string;
   goals: string;
+  introVideos: Media[];
   galleryImages: Media[];
   creatingTheMuseumTitle: string;
   creatingTheMuseumMedia: Media[];
@@ -320,7 +321,8 @@ export interface MuseumPage {
 
 export const getMuseumPage = once(async () => {
   const raw = await single<
-    Omit<MuseumPage, 'galleryImages' | 'creatingTheMuseumMedia'> & {
+    Omit<MuseumPage, 'galleryImages' | 'creatingTheMuseumMedia' | 'introVideos'> & {
+      introVideos: StrapiMedia[] | null;
       galleryImages: StrapiMedia[] | null;
       creatingTheMuseumMedia: StrapiMedia[] | null;
     }
@@ -328,8 +330,24 @@ export const getMuseumPage = once(async () => {
   return raw
     ? {
         ...raw,
+        introVideos: toMediaList(raw.introVideos),
         galleryImages: toMediaList(raw.galleryImages),
         creatingTheMuseumMedia: toMediaList(raw.creatingTheMuseumMedia),
       }
     : null;
 });
+
+/* ---------- Contact page ---------- */
+
+export interface ContactPage {
+  intro: string | null;
+  emails: { address: string; title: string; purpose: string | null; handledBy: string | null }[];
+  address: string | null;
+  /* Markdown */
+  openingHours: string | null;
+  officers: { name: string; set: string | null; role: string }[];
+  mapQuery: string | null;
+}
+
+export const getContactPage = once(async () => single<ContactPage>('api::contact-page.contact-page', 'contact-page'));
+
