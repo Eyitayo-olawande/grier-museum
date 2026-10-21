@@ -270,7 +270,7 @@
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 24px;
 }
 .featuredPhoto {
-  width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--border);
+  width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--linen); border: 1px solid var(--border);
 }
 
 .missionAttr {

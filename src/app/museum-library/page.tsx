@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getMuseumPage } from '@/lib/content';
+import { getContactPage, getMuseumPage } from '@/lib/content';
 import Prose from '@/components/common/Prose';
 import type { Media } from '@/lib/strapi';
 import styles from './page.module.css';
@@ -12,12 +12,6 @@ export const metadata: Metadata = {
     'The Grier House Museum and Library preserves the history, traditions and achievements of Grier House, Government College Ibadan. Visit us, explore the collections, or contribute to the archive.',
 };
 
-const VISIT_INFO = [
-  { label: 'Location', value: 'Grier House, Government College Ibadan, Ibadan, Oyo State, Nigeria' },
-  { label: 'Opening Hours', value: 'By appointment — contact us to arrange a visit' },
-  { label: 'Research Access', value: 'Archives available to researchers and journalists by prior arrangement' },
-  { label: 'Digital Access', value: 'Selected collections available online at griermuseum.org' },
-];
 
 function MediaGrid({ items }: { items: Media[] }) {
   return (
@@ -37,7 +31,7 @@ function MediaGrid({ items }: { items: Media[] }) {
 }
 
 export default async function MuseumLibraryPage() {
-  const museum = await getMuseumPage();
+  const [museum, contact] = await Promise.all([getMuseumPage(), getContactPage()]);
   const volumes = (museum?.goals.match(/^- /gm) ?? []).length;
 
   return (
@@ -147,17 +141,23 @@ export default async function MuseumLibraryPage() {
           <div className={styles.visitInner}>
             <div className={styles.visitText}>
               <h2 className={styles.sectionTitle}>Visit &amp; Access</h2>
-              <p className={styles.visitDesc}>
-                The Grier House Museum is located within the grounds of Government College Ibadan. Visits are by appointment; researchers, journalists and members of the Grier House family are welcome to arrange access to the collections.
-              </p>
+              {/* address and opening hours as given by the committee (Contact Page entry) */}
               <table className={styles.visitTable}>
                 <tbody>
-                  {VISIT_INFO.map((row) => (
-                    <tr key={row.label}>
-                      <td className={styles.visitLabel}>{row.label}</td>
-                      <td className={styles.visitValue}>{row.value}</td>
+                  {contact?.address && (
+                    <tr>
+                      <td className={styles.visitLabel}>Address</td>
+                      <td className={styles.visitValue}>
+                        {contact.address.split('\n').map((line, i) => <span key={i} style={{ display: 'block' }}>{line}</span>)}
+                      </td>
                     </tr>
-                  ))}
+                  )}
+                  {contact?.openingHours && (
+                    <tr>
+                      <td className={styles.visitLabel}>Opening hours</td>
+                      <td className={styles.visitValue}><Prose markdown={contact.openingHours} /></td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
               <Link href="/contact" className={styles.visitBtn}>
@@ -167,16 +167,14 @@ export default async function MuseumLibraryPage() {
 
             <div className={styles.visitContrib}>
               <div className={styles.contribBox}>
-                <p className={styles.contribEyebrow}>Contribute to the Archive</p>
-                <h3 className={styles.contribTitle}>Do you have something to share?</h3>
+                {/* the chairman's appeal for books and cash donations is on the Home page */}
+                <p className={styles.contribEyebrow}>Donations</p>
+                <h3 className={styles.contribTitle}>Please Support the Grier Museum &amp; Library</h3>
                 <p className={styles.contribBody}>
-                  Old Griersons and their families are invited to donate or loan items to the museum — photographs, documents, publications, artefacts or any material relating to Grier House and Government College Ibadan.
+                  To maintain the Grier Museum and Library we need both books and cash donations.
                 </p>
-                <p className={styles.contribBody}>
-                  Your contribution helps us build the most comprehensive record of Grier House history ever assembled. All donations are gratefully acknowledged and properly attributed in the collection.
-                </p>
-                <Link href="/contact" className={styles.contribBtn}>
-                  Make a contribution
+                <Link href="/#support" className={styles.contribBtn}>
+                  How to support the Museum
                 </Link>
               </div>
             </div>

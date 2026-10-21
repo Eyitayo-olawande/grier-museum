@@ -85,8 +85,9 @@
   position: relative;
 }
 .thumbIcon { font-size: 32px; opacity: .55; }
-.thumb { height: 160px; overflow: hidden; background: var(--linen); }
-.thumbMedia { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* whole photograph, never cropped, so faces and heads are always visible */
+.thumb { height: 230px; overflow: hidden; background: var(--linen); padding: 6px; }
+.thumbMedia { width: 100%; height: 100%; object-fit: contain; display: block; }
 .player { width: 100%; margin-bottom: 8px; background: #000; }
 .fullLink { display: inline-block; font-size: 12px; font-weight: 700; color: var(--crimson); margin: 4px 0 6px; }
 

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { getArchiveItems } from '@/lib/content';
 import ArchiveBrowser, { ERA_LABELS } from '@/components/archives/ArchiveBrowser';
 import styles from './page.module.css';
@@ -110,43 +109,16 @@ export default async function ArchivesPage() {
         </div>
       </section>
 
-      {/* ACCESS & CONTRIBUTE */}
+      {/* QUESTIONS AND CONTRIBUTIONS */}
       <section className={styles.access}>
         <div className={styles.container}>
-          <div className={styles.accessGrid}>
-
-            <div className={styles.accessBox}>
-              <h2 className={styles.accessTitle}>Research Access</h2>
-              <p className={styles.accessBody}>
-                Researchers, journalists and members of the public may apply for access to materials in the physical archive that are not yet available digitally. Access is granted at the discretion of the Grier History and Traditions Committee.
-              </p>
-              <ul className={styles.accessList}>
-                <li>In-person access at the Grier House Museum, Government College Ibadan</li>
-                <li>High-resolution digital copies available for academic use</li>
-                <li>Citation guidelines provided on request</li>
-                <li>Response within 10 working days</li>
-              </ul>
-              <Link href="/contact" className={styles.accessBtn}>
-                Request research access
-              </Link>
-            </div>
-
-            <div className={styles.accessBox}>
-              <h2 className={styles.accessTitle}>Donate to the Archive</h2>
-              <p className={styles.accessBody}>
-                Old Griersons and their families are invited to donate or loan items to the museum — photographs, documents, publications, artefacts, or any material relating to Grier House and Government College Ibadan.
-              </p>
-              <ul className={styles.accessList}>
-                <li>All donations are acknowledged and permanently attributed</li>
-                <li>Items are professionally catalogued and conserved</li>
-                <li>Loans can be arranged for items not available for permanent donation</li>
-                <li>High-resolution scans returned for all donated paper items</li>
-              </ul>
-              <Link href="/contact" className={styles.accessBtnOutline}>
-                Donate an item
-              </Link>
-            </div>
-
+          <div className={styles.accessBox}>
+            <h2 className={styles.accessTitle}>Questions, corrections and contributions</h2>
+            <p className={styles.accessBody}>
+              Questions relating to the content of the Museum and Library, including errors or comments on the
+              articles, profiles, images, photos and videos, are handled by Dr. Dele Olusanya and Yemi Adegoke.
+            </p>
+            <a href="mailto:museum@griermuseum.org" className={styles.accessBtn}>museum@griermuseum.org</a>
           </div>
         </div>
       </section>

@@ -1819,6 +1819,10 @@
           "alt": "Wole Soyinka and Drama Group"
         },
         {
+          "$file": "Photo Archives /Wole Soyinka inspecting Cadet Boys.jpg",
+          "alt": "Wole Soyinka inspecting Cadet Boys"
+        },
+        {
           "$file": "Video Archives/Wole Soyinka interview after detention.mp4",
           "alt": "Wole Soyinka interview following his release from detention (date to be confirmed)"
         }
@@ -2889,6 +2893,19 @@
       }
     },
     {
+      "title": "Cadet Boys",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Cadet Boys.jpg",
+        "alt": "Cadet Boys"
+      }
+    },
+    {
       "title": "Cadet member",
       "type": "Photo",
       "era": null,
@@ -2912,6 +2929,19 @@
       "media": {
         "$file": "Photo Archives /College Cricket Team.jpg",
         "alt": "College Cricket Team"
+      }
+    },
+    {
+      "title": "Current Griersons",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Current Griersons.jpg",
+        "alt": "Current Griersons"
       }
     },
     {
@@ -3578,19 +3608,6 @@
       }
     },
     {
-      "title": "The new Grier House building",
-      "type": "Photo",
-      "era": null,
-      "year": null,
-      "description": null,
-      "credit": "Grier House Museum and Library",
-      "collection": "Photo Archives",
-      "media": {
-        "$file": "Photo Archives /New Grier House Building.jpg",
-        "alt": "The new Grier House building"
-      }
-    },
-    {
       "title": "New Grier House Building",
       "type": "Photo",
       "era": null,
@@ -3599,8 +3616,34 @@
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
-        "$file": "Photo Archives /New Grier House Building3.jpg",
+        "$file": "Photo Archives /New Grier House Building.jpg",
         "alt": "New Grier House Building"
+      }
+    },
+    {
+      "title": "New Grier House Building (2)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /New Grier House Building2.jpg",
+        "alt": "New Grier House Building (2)"
+      }
+    },
+    {
+      "title": "New Grier House Building (3)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /New Grier House Building3.jpg",
+        "alt": "New Grier House Building (3)"
       }
     },
     {
@@ -4293,6 +4336,19 @@
       }
     },
     {
+      "title": "Wole Soyinka inspecting Cadet Boys",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Wole Soyinka inspecting Cadet Boys.jpg",
+        "alt": "Wole Soyinka inspecting Cadet Boys"
+      }
+    },
+    {
       "title": "Wole Soyinka interview following his release from detention (date to be confirmed)",
       "era": "Independence",
       "year": null,
@@ -4532,7 +4588,7 @@
       },
       {
         "$file": "Photo Archives /New Grier House Building.jpg",
-        "alt": "The new Grier House building"
+        "alt": "New Grier House Building"
       }
     ],
     "supportTitle": "Please Support the Grier Museum & Library",

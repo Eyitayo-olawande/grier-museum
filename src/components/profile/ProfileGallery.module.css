@@ -26,7 +26,7 @@
 }
 
 .img {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+  width: 100%; aspect-ratio: 4 / 5; object-fit: contain; padding: 4px;
   background: var(--linen); border: 1px solid var(--border);
 }
 

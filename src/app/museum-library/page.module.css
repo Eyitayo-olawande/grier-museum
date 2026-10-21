@@ -184,9 +184,10 @@
   gap: 12px;
 }
 .mediaItem {
-  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+  width: 100%; aspect-ratio: 4 / 3; object-fit: contain; display: block;
   background: var(--black); border: 1px solid var(--border);
 }
+img.mediaItem { background: var(--linen); padding: 4px; }
 
 /* LIBRARY */
 .library { padding: 56px 0; background: var(--bg-surface); }

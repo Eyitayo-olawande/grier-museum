@@ -144,6 +144,8 @@ PROFILE_VIDEOS = {"PROFILE WOLE SOYINKA": ["Wole Soyinka interview after detenti
 
 def photo_files():
     files = sorted(f for f in os.listdir(os.path.join(SRC, PHOTOS)) if re.search(r"\.(jpe?g|png)$", f, re.I))
+    # of two identical files keep the one with a descriptive name, not the unnamed copy
+    files.sort(key=lambda f: bool(re.match(r"[0-9a-f]{8}-", f)))
     seen, unique = {}, []
     for f in files:
         digest = hashlib.md5(open(os.path.join(SRC, PHOTOS, f), "rb").read()).hexdigest()
@@ -510,10 +512,9 @@ REPLACE = [("GCI", "Government College Ibadan"), ("NYC", "Nigerian Youth Congres
 CAPTIONS = {
     "1930 Boys.png": "Government College Ibadan students, 1930",
     "1930 Boys2.png": "Government College Ibadan students, 1930 (archive record)",
-    "Current Griersons.jpg": "Current Griersons at the House Supper",
-    "Cadet Boys.jpg": "Cadets at the new Grier House",
-    "Wole Soyinka inspecting Cadet Boys.jpg": "Wole Soyinka inspecting Grier House cadets",
-    "New Grier House Building.jpg": "The new Grier House building",
+    "Current Griersons.jpg": "Current Griersons",
+    "Cadet Boys.jpg": "Cadet Boys",
+    "Wole Soyinka inspecting Cadet Boys.jpg": "Wole Soyinka inspecting Cadet Boys",
     "Odiase Gentlemen 1944.jpg": "Odiase Gentlemen, 1944",
     "A Grierson Pose.jpg": "A Grierson pose",
 }
