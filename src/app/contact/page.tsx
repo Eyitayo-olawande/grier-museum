@@ -3,6 +3,7 @@ import ContactForm from '@/components/contact/ContactForm';
 import Prose from '@/components/common/Prose';
 import { getContactPage } from '@/lib/content';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -108,6 +109,9 @@ export default async function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={10} />
     </>
   );
 }

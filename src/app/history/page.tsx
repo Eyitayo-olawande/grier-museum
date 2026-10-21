@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getHistoryArticles, getTimeline } from '@/lib/content';
 import Timeline from '@/components/history/Timeline';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Grier House History',
@@ -65,6 +66,9 @@ export default async function HistoryPage() {
           </div>
         </div>
       </section>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={3} />
 
       {/* DIVIDER */}
       <div className={styles.divider}>

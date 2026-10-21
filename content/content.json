@@ -764,6 +764,14 @@
         {
           "$file": "Photo Archives /Ekperigin4.jpg",
           "alt": "Harding Ekperigin"
+        },
+        {
+          "$file": "Museum & Library /Original Art Works/04 Ekperigin Captain of all Games.jpg",
+          "alt": "Ekperigin '32, “Captain of all Games” (painting)"
+        },
+        {
+          "$file": "Museum & Library /Original Art Works/05 Ekperigin running.jpg",
+          "alt": "Ekperigin (painting)"
         }
       ]
     },
@@ -2023,7 +2031,13 @@
       "audio": {
         "$file": "Traditions/Grier House Song choir rendition.mp3",
         "alt": "Grier House Song, choir rendition (performers and date to be confirmed)"
-      }
+      },
+      "videos": [
+        {
+          "$file": "Extracurricular Activities /Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
+          "alt": "Grier House song by Old Griersons and current students at the 2026 Reunion, October 17, 2026"
+        }
+      ]
     },
     {
       "title": "The House Pledge",
@@ -2035,7 +2049,8 @@
       "icon": "✋",
       "featured": false,
       "order": 1,
-      "audio": null
+      "audio": null,
+      "videos": []
     },
     {
       "title": "The House Prayer",
@@ -2047,7 +2062,8 @@
       "icon": "🙏",
       "featured": false,
       "order": 2,
-      "audio": null
+      "audio": null,
+      "videos": []
     },
     {
       "title": "The House Test",
@@ -4314,11 +4330,195 @@
       }
     }
   ],
+  "api::artwork.artwork": [
+    {
+      "title": "Victor Ludorum",
+      "slug": "victor-ludorum",
+      "order": 0,
+      "medium": "Painting",
+      "artist": null,
+      "year": null,
+      "description": "A Grierson in a Grier House shirt holding the Victor Ludorum trophy, with a cricketer and a football team behind him. Subject and artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/01 Victor Ludorum.jpg",
+        "alt": "Victor Ludorum"
+      }
+    },
+    {
+      "title": "Grierson in Traditional Attire",
+      "slug": "grierson-in-traditional-attire",
+      "order": 1,
+      "medium": "Painting",
+      "artist": null,
+      "year": null,
+      "description": "Portrait in agbada and coral beads against a patterned background. Subject and artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/02 Grierson in traditional attire.jpg",
+        "alt": "Grierson in Traditional Attire"
+      }
+    },
+    {
+      "title": "With the Mustard Seed and The Rock",
+      "slug": "grierson-with-the-mustard-seed-and-the-rock",
+      "order": 2,
+      "medium": "Painting",
+      "artist": null,
+      "year": null,
+      "description": "Portrait in front of a bookshelf holding the GCI Year Book, the Mustard Seed and The Rock, beside the Grier House crest with the motto Sapere Aude. Subject and artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/03 Grierson with the Mustard Seed and The Rock.jpg",
+        "alt": "With the Mustard Seed and The Rock"
+      }
+    },
+    {
+      "title": "Ekperigin '32, “Captain of all Games”",
+      "slug": "ekperigin-captain-of-all-games",
+      "order": 3,
+      "medium": "Painting",
+      "artist": "Dele Olusanya / Chinex",
+      "year": null,
+      "description": "Harding Ekperigin of the 1932 set in his Government College blazer on the running track, inscribed “Captain of all Games”.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/04 Ekperigin Captain of all Games.jpg",
+        "alt": "Ekperigin '32, “Captain of all Games”"
+      }
+    },
+    {
+      "title": "Ekperigin",
+      "slug": "ekperigin-running",
+      "order": 4,
+      "medium": "Painting",
+      "artist": "Dele Olusanya / Chinex",
+      "year": null,
+      "description": "Harding Ekperigin running barefoot in a Grier House vest.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/05 Ekperigin running.jpg",
+        "alt": "Ekperigin"
+      }
+    },
+    {
+      "title": "Oba of Benin",
+      "slug": "oba-of-benin",
+      "order": 5,
+      "medium": "Painting",
+      "artist": null,
+      "year": null,
+      "description": "Portrait in coral regalia before palace columns and Benin figures. Subject and artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/06 Oba of Benin.jpg",
+        "alt": "Oba of Benin"
+      }
+    },
+    {
+      "title": "Untitled",
+      "slug": "pen-and-ink-drawing",
+      "order": 6,
+      "medium": "Pen and ink drawing",
+      "artist": null,
+      "year": null,
+      "description": "Figures with musical instruments drawn in pattern and line. Title and artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/07 Pen and ink drawing.jpg",
+        "alt": "Untitled"
+      }
+    },
+    {
+      "title": "Untitled",
+      "slug": "ink-drawing-of-women-with-pots",
+      "order": 7,
+      "medium": "Ink drawing",
+      "artist": null,
+      "year": null,
+      "description": "Women in patterned cloth with decorated pots. Title and artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/08 Ink drawing of women with pots.jpg",
+        "alt": "Untitled"
+      }
+    },
+    {
+      "title": "Grier House",
+      "slug": "new-grier-house-building",
+      "order": 8,
+      "medium": "Painting",
+      "artist": null,
+      "year": null,
+      "description": "The new Grier House building, completed in 2024. Artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/09 New Grier House building.jpg",
+        "alt": "Grier House"
+      }
+    },
+    {
+      "title": "Head",
+      "slug": "green-head",
+      "order": 9,
+      "medium": "Coloured pencil drawing",
+      "artist": "Dele Olusanya",
+      "year": null,
+      "description": "A head drawn in green on a red and yellow ground.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/10 Green head.jpg",
+        "alt": "Head"
+      }
+    },
+    {
+      "title": "Head",
+      "slug": "yellow-head",
+      "order": 10,
+      "medium": "Coloured pencil drawing",
+      "artist": "Dele Olusanya",
+      "year": "2006",
+      "description": "A head with a blue headwrap on a patterned ground, signed “del ’06”.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/11 Yellow head.jpg",
+        "alt": "Head"
+      }
+    },
+    {
+      "title": "Faces",
+      "slug": "faces-by-dipo-alao",
+      "order": 11,
+      "medium": "Ink drawing",
+      "artist": "Dipo Alao",
+      "year": null,
+      "description": "Overlapping faces built from line and pattern.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/12 Faces by Dipo Alao.jpg",
+        "alt": "Faces"
+      }
+    },
+    {
+      "title": "Grierson",
+      "slug": "grierson-with-footballer",
+      "order": 12,
+      "medium": "Painting",
+      "artist": null,
+      "year": null,
+      "description": "A Grierson in white uniform, with students at work and a Grier House footballer behind him. Subject and artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/13 Grierson with footballer.jpg",
+        "alt": "Grierson"
+      }
+    },
+    {
+      "title": "Grier House, 1952",
+      "slug": "grier-house-1952",
+      "order": 13,
+      "medium": "Painting",
+      "artist": null,
+      "year": null,
+      "description": "Grier House as it stood after its move in 1952 to the site near Field House. Artist to be confirmed.",
+      "image": {
+        "$file": "Museum & Library /Original Art Works/14 Grier House 1952.jpg",
+        "alt": "Grier House, 1952"
+      }
+    }
+  ],
   "api::home-page.home-page": {
     "welcomeTitle": "Welcome to the Grier House Museum and Library",
     "introVideo": {
-      "$file": "Extracurricular Activities /Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
-      "alt": "Grier House song by Old Griersons and current students at the 2026 Reunion, October 17, 2026"
+      "$file": "Extracurricular Activities /Grier House Marching Band at the GCIOBA Reunion Gala.mp4",
+      "alt": "The Grier House Marching Band performing at the GCIOBA Reunion Gala Oct 17, 2026"
     },
     "welcomeText": "Grier House, founded in 1930, is one of the 2 foundational boarding Houses of Government College Ibadan, one of the most renowned historically elite boarding secondary schools in Africa. Boys who have passed through Grier House call themselves Griersons. Through the generations, Griersons have played leading roles in the cultural, academic and political development of Nigeria and the African continent.\n\nThe Grier Museum and Library, established in October 2026, is a legacy project that encapsulates the narratives and aspirations of generations of Griersons.\n\nWelcome to the online platform of the Grier House Museum and Library, a living repository of the history, achievements and legacy of generations of Griersons. Here are the stories, photographs, experiences and contributions of past and current students who have passed through the walls of Grier House, ensuring that future generations know what Grier House has stood for since it was founded in 1930.\n\n> “Through this initiative, the story of Grier House has been given a permanent place in the historical records of Government College Ibadan.”\n> — Wilfred Ighodaro ‘61\n\n> “If you know anything, share it. If you don’t know something, search for it.”\n> — motto of the Grier Museum and Library\n\nThis platform is not just about the past. Click on the menu contents to learn what is going on currently in Grier House, what the  House Governor has to say, and what current students have to say through their narratives published in the iconic Grier House magazine, The Mustard Seed.",
     "featuredPhotos": [

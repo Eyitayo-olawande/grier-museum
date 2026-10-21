@@ -191,12 +191,18 @@ export interface Tradition {
   featured: boolean;
   order: number;
   audio?: Media;
+  videos: Media[];
 }
 
 export const getTraditions = once(async () =>
-  (await collection<Omit<Tradition, 'audio'> & { audio?: StrapiMedia | null }>('api::tradition.tradition', 'traditions'))
+  (
+    await collection<Omit<Tradition, 'audio' | 'videos'> & { audio?: StrapiMedia | null; videos?: StrapiMedia[] | null }>(
+      'api::tradition.tradition',
+      'traditions'
+    )
+  )
     .sort((a, b) => a.order - b.order)
-    .map<Tradition>((t) => ({ ...t, audio: toMedia(t.audio) }))
+    .map<Tradition>((t) => ({ ...t, audio: toMedia(t.audio), videos: toMediaList(t.videos) }))
 );
 
 /* ---------- Dare to Learn ---------- */
@@ -350,4 +356,27 @@ export interface ContactPage {
 }
 
 export const getContactPage = once(async () => single<ContactPage>('api::contact-page.contact-page', 'contact-page'));
+
+/* ---------- Original art works in the Grier Museum ---------- */
+
+export interface Artwork {
+  slug: string;
+  title: string;
+  medium: string | null;
+  artist: string | null;
+  year: string | null;
+  description: string | null;
+  image?: Media;
+}
+
+export const getArtworks = once(async () =>
+  (
+    await collection<Omit<Artwork, 'image'> & { order: number; image: StrapiMedia | null }>(
+      'api::artwork.artwork',
+      'artworks'
+    )
+  )
+    .sort((a, b) => a.order - b.order)
+    .map<Artwork>(({ order: _order, image, ...a }) => ({ ...a, image: toMedia(image, a.title) }))
+);
 

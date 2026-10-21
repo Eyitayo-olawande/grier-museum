@@ -4,6 +4,7 @@ import { getMuseumPage } from '@/lib/content';
 import Prose from '@/components/common/Prose';
 import type { Media } from '@/lib/strapi';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Museum & Library',
@@ -126,6 +127,9 @@ export default async function MuseumLibraryPage() {
           </div>
         </section>
       )}
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={1} />
 
       {/* THE LIBRARY */}
       <section className={styles.library}>

@@ -64,6 +64,13 @@
       "allowedTypes": [
         "audios"
       ]
+    },
+    "videos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "videos"
+      ]
     }
   }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PUBLICATION_HUBS } from '@/data/publications';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'News & Publications',
@@ -49,6 +50,9 @@ export default function PublicationsPage() {
           </div>
         </div>
       </section>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={7} />
 
       {/* SUBMIT CTA */}
       <section className={styles.cta}>

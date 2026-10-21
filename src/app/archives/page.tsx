@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getArchiveItems } from '@/lib/content';
 import ArchiveBrowser, { ERA_LABELS } from '@/components/archives/ArchiveBrowser';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Archives',
@@ -93,6 +94,9 @@ export default async function ArchivesPage() {
           <ArchiveBrowser items={items} />
         </div>
       </section>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={12} />
 
       {/* NOTICE — DIGITISATION IN PROGRESS */}
       <section className={styles.notice}>

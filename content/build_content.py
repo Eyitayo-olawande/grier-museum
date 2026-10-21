@@ -200,6 +200,8 @@ def parse_profile(key, meta, photos):
         "pullQuote": meta.get("pullQuote"),
         "photo": media(f"{PHOTOS}/{portrait}", meta["shortName"]) if portrait else None,
         "gallery": [media(f"{PHOTOS}/{f}", caption(f)) for f in gallery]
+                   + [media(f"{ART}/{w['file']}", f"{w['title']} (painting)") for w in load_artworks()["works"]
+                      if w.get("person") == key]
                    + [media(f"{VIDEOS}/{v}", VIDEO_INFO[v]["title"]) for v in PROFILE_VIDEOS.get(key, [])],
     }
     return entry
@@ -288,6 +290,11 @@ HOUSE_SONG_AUDIO = media("Traditions/Grier House Song choir rendition.mp3",
                          "Grier House Song, choir rendition (performers and date to be confirmed)")
 
 
+# title given by the project owner; shown on the Home page until 2026-10-21
+HOUSE_SONG_REUNION = media(f"{EXTRA}/Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
+                           "Grier House song by Old Griersons and current students at the 2026 Reunion, October 17, 2026")
+
+
 def traditions():
     out = []
     verses = [
@@ -300,7 +307,8 @@ def traditions():
         out.append({"title": title, "slug": slugify(title), "category": "Cultural", "era": None,
                     "description": lines[0] + " " + lines[1], "body": "\n".join(lines),
                     "icon": icon, "featured": featured, "order": len(out),
-                    "audio": HOUSE_SONG_AUDIO if title == "The House Song" else None})
+                    "audio": HOUSE_SONG_AUDIO if title == "The House Song" else None,
+                    "videos": [HOUSE_SONG_REUNION] if title == "The House Song" else []})
     for part in (1, 2, 3):
         lines = docx_lines(f"Traditions/GRIER MUSEUM - TRADITIONS {part}.docx")[1:]
         current = None
@@ -376,8 +384,8 @@ def home_page():
     return {
         "welcomeTitle": "Welcome to the Grier House Museum and Library",
         # title given by the project owner
-        "introVideo": media(f"{EXTRA}/Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
-                            "Grier House song by Old Griersons and current students at the 2026 Reunion, October 17, 2026"),
+        "introVideo": media(f"{EXTRA}/Grier House Marching Band at the GCIOBA Reunion Gala.mp4",
+                            "The Grier House Marching Band performing at the GCIOBA Reunion Gala Oct 17, 2026"),
         "welcomeText": "\n\n".join(blocks),
         "featuredPhotos": [media(f"{PHOTOS}/{f}", caption(f)) for f in
                            ["Grier House 1940.jpg", "Grier House Football Team 1931.jpg", "New Grier House Building.jpg"]],
@@ -548,6 +556,20 @@ VIDEO_INFO = {
 }
 
 
+ART = f"{MUSEUM}/Original Art Works"
+
+
+def load_artworks():
+    return json.load(open(os.path.join(HERE, "sources", "artworks.json")))
+
+
+def artworks():
+    return [{"title": w["title"], "slug": slugify(os.path.splitext(w["file"])[0][3:]), "order": i,
+             "medium": w.get("medium"), "artist": w.get("artist"), "year": w.get("year"),
+             "description": w.get("description"), "image": media(f"{ART}/{w['file']}", w["title"])}
+            for i, w in enumerate(load_artworks()["works"])]
+
+
 def archive_items(photos):
     items, titles = [], {}
     for f in photos:
@@ -586,6 +608,7 @@ def main():
         "api::dare-to-learn-excerpt.dare-to-learn-excerpt": dare_to_learn(),
         "api::extracurricular-activity.extracurricular-activity": extracurricular(),
         "api::archive-item.archive-item": archive_items(photos),
+        "api::artwork.artwork": artworks(),
         "api::home-page.home-page": home_page(),
         "api::museum-library-page.museum-library-page": museum_page(museum_gallery),
         "api::contact-page.contact-page": {k: v for k, v in json.load(open(os.path.join(HERE, "sources", "contact.json"))).items()

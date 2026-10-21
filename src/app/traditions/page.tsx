@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTraditions } from '@/lib/content';
 import Prose from '@/components/common/Prose';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Traditions',
@@ -68,6 +69,12 @@ export default async function TraditionsPage() {
                       <audio src={featured.audio.url} controls preload="metadata" className={styles.audioPlayer} />
                     </figure>
                   )}
+                  {featured.videos.map((video) => (
+                    <figure key={video.url} className={styles.audio}>
+                      <figcaption className={styles.audioCaption}>Watch: {video.alt || featured.title}</figcaption>
+                      <video src={`${video.url}#t=0.5`} controls preload="metadata" playsInline className={styles.audioPlayer} />
+                    </figure>
+                  ))}
                   <Prose markdown={featured.body} className={styles.featuredDetail} />
                 </div>
               </div>
@@ -114,6 +121,9 @@ export default async function TraditionsPage() {
           </div>
         </div>
       </section>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={6} />
 
       {/* CALL TO ACTION */}
       <section className={styles.cta}>

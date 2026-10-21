@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getProfiles, profileInitial } from '@/lib/content';
 import type { Era, Field } from '@/types';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Notable Griersons',
@@ -128,6 +129,9 @@ export default async function NotableGriersonsPage() {
           ))}
         </div>
       </section>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={9} />
     </>
   );
 }

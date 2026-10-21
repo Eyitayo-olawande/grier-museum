@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getActivities } from '@/lib/content';
 import Prose from '@/components/common/Prose';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Extracurricular Activities',
@@ -71,6 +72,9 @@ export default async function ExtracurricularPage() {
           </section>
         ))}
       </div>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={4} />
     </>
   );
 }

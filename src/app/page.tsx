@@ -4,6 +4,7 @@ import { getArchiveItems, getHomePage, getProfiles } from '@/lib/content';
 import Prose from '@/components/common/Prose';
 import SupportAppeal from '@/components/home/SupportAppeal';
 import styles from './page.module.css';
+import ArtStrip from '@/components/art/ArtStrip';
 
 export const metadata: Metadata = {
   title: 'Grier House Museum & Library',
@@ -18,7 +19,8 @@ const QUICK_LINKS = [
   { href: '/publications', label: 'News & Publications', desc: 'Dare to Learn, the Mustard Seed and Stories of Griersons' },
   { href: '/archives', label: 'Archives', desc: 'Photos, videos and historical documents' },
   { href: '/museum-library', label: 'Museum & Library', desc: 'About the Museum and its collection' },
-  { href: '/extracurricular-activities', label: 'Extracurricular Activities', desc: 'Marching Band, Saturday Night Socials and more' },
+  { href: '/extracurricular-activities', label: 'Extracurricular Activities', desc: 'Marching Band, Mustard Seed Editorial Board, Chess Club and more' },
+  { href: '/museum-library/original-art-works', label: 'Original Art Works', desc: 'Paintings and drawings in the Grier Museum' },
 ];
 
 export default async function HomePage() {
@@ -89,6 +91,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
+      <ArtStrip start={0} />
 
       {/* WELCOME */}
       <section className={styles.about}>
