@@ -64,3 +64,6 @@
 .aboutLink:hover { color: #0F2E1A; }
 
 @media (max-width: 767px) { .title { font-size: 26px; } }
+
+/* published entries, or an empty state until the committee publishes */
+.entries { padding: 48px 0 64px; }

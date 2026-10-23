@@ -242,17 +242,21 @@ Titles, artists and years only where written on the work. Descriptions describe 
 - Archives: "Questions, corrections and contributions" box, using the museum@ address and the people named by the Chairman.
 - Captions: "A tour of the Grier Museum and Library"; "Grier House Marching Band, video 1 to 3"; placeholders "(date to be confirmed)" on the Soyinka interview and "(performers and date to be confirmed)" on the choir recording.
 
-## 7. Left over from the earlier build (not supplied by the committee)
+## 7. News & Publications pages
 
-These were on the site before the committee's content arrived. They are invented samples and should be replaced or removed before launch:
+The Mustard Seed, Newsletter, From the Desk of the House Governor and Stories of Griersons pages now show only what editors publish in Strapi. Until then each shows one plain line:
 
-- **Mustard Seed page:** sample issues and the statement that it was founded in 1962 (the book excerpt "Bisiriyu and the Mustard Seed" places it in the 1930s).
-- **Newsletter page:** sample newsletter issues and news items.
-- **From the Desk of the House Governor page:** sample addresses attributed to the House Governor.
-- **Stories of Griersons page:** sample stories and authors.
-- **News & Publications page:** descriptions of the Mustard Seed, Newsletter, Stories and House Governor sections.
+- "No issues of the Mustard Seed have been published on the website yet."
+- "No newsletters have been published yet."
+- "Nothing has been published from the desk of the House Governor yet."
+- "No stories have been published yet."
+
+Their introductions use the committee's words: the Mustard Seed paragraph from "Promoting Extracurricular Activities for Students", the brief's sentences on Stories of Griersons and on the House Governor, and the officers list (Gboyega Akin-Deko, Grierson ’70 set, Governor). The committee gave no description of the Newsletter, so it is described only as "Newsletters of Grier House"; please supply a sentence if wanted.
+
+## 8. Still left over from the earlier build (not supplied by the committee)
+
 - **Traditions page:** "Share a Grier House Tradition" invitation at the bottom.
 - **Hero subtitles** on History, Traditions, Notable Griersons, Archives and Museum & Library, and the "Nature of enquiry" options on the contact form.
 - **Footer tagline** "The Voice of Grier House", which is from the approved Template D.
 
-Removed this week because they were not from the committee: the Archives page promises ("Response within 10 working days", "High-resolution scans returned"), the "By appointment" visiting hours on the Museum & Library page (now the Chairman's hours), the invented contact email addresses and chapters list, and three archive captions that added details not in the file names.
+Removed because they were not from the committee: the sample Mustard Seed issues (and the claim that it was founded in 1962), sample newsletters, sample House Governor addresses (which also wrongly called the Governor a student), sample stories and the invented submission guidelines; the publication "since" years and frequencies; the Archives page promises ("Response within 10 working days", "High-resolution scans returned"); the "By appointment" visiting hours on the Museum & Library page (now the Chairman's hours); the invented contact email addresses and chapters list; and three archive captions that added details not in the file names.

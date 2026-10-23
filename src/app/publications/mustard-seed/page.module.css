@@ -105,3 +105,6 @@
   .archiveGrid { grid-template-columns: 1fr; }
   .latestYear { font-size: 36px; }
 }
+
+/* published entries, or an empty state until the committee publishes */
+.entries { padding: 48px 0 64px; }

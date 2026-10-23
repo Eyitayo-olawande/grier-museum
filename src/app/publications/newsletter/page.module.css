@@ -47,3 +47,6 @@
   .archiveGrid { grid-template-columns: 1fr; }
   .subscribeInner { flex-direction: column; align-items: flex-start; }
 }
+
+/* published entries, or an empty state until the committee publishes */
+.entries { padding: 48px 0 64px; }

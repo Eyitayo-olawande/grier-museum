@@ -50,3 +50,6 @@
 
 @media (max-width: 1023px) { .submitLayout { grid-template-columns: 1fr; gap: 32px; } }
 @media (max-width: 767px) { .title { font-size: 28px; } }
+
+/* published entries, or an empty state until the committee publishes */
+.entries { padding: 48px 0 64px; }

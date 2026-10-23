@@ -380,3 +380,106 @@ export const getArtworks = once(async () =>
     .map<Artwork>(({ order: _order, image, ...a }) => ({ ...a, image: toMedia(image, a.title) }))
 );
 
+/* ---------- News & Publications (filled by editors in Strapi) ---------- */
+
+/* One entry on a publication page: Mustard Seed issue, newsletter issue,
+   House Governor post or story. Pages show nothing until entries are published. */
+export interface PublicationEntry {
+  key: string;
+  title: string;
+  /* small line above the title: date, season, volume, author */
+  meta: string[];
+  summary: string | null;
+  /* Markdown */
+  body: string | null;
+  image?: Media;
+  pdfUrl?: string;
+}
+
+const byNewest = (a: { sortKey: string }, b: { sortKey: string }) => b.sortKey.localeCompare(a.sortKey);
+const strip = <T extends { sortKey: string }>({ sortKey: _s, ...rest }: T) => rest;
+
+export const getMustardSeedIssues = once(async () =>
+  (
+    await collection<{
+      title: string | null; year: number; volume: number | null; excerpt: string | null; pieces: number | null;
+      pdf: StrapiMedia | null; cover: StrapiMedia | null;
+    }>('api::mustard-seed-issue.mustard-seed-issue', 'mustard-seed-issues')
+  )
+    .map((i) => ({
+      sortKey: String(i.year).padStart(4, '0') + String(i.volume ?? 0).padStart(4, '0'),
+      key: `${i.year}-${i.volume ?? ''}`,
+      title: i.title || `The Mustard Seed, ${i.year}`,
+      meta: [String(i.year), i.volume ? `Volume ${i.volume}` : '', i.pieces ? `${i.pieces} pieces` : ''].filter(Boolean),
+      summary: i.excerpt,
+      body: null,
+      image: toMedia(i.cover),
+      pdfUrl: toMedia(i.pdf)?.url,
+    }))
+    .sort(byNewest)
+    .map<PublicationEntry>(strip)
+);
+
+export const getNewsletterIssues = once(async () =>
+  (
+    await collection<{ headline: string; slug: string; season: string | null; year: number | null; body: string | null; pdf: StrapiMedia | null }>(
+      'api::newsletter-issue.newsletter-issue',
+      'newsletter-issues'
+    )
+  )
+    .map((i) => ({
+      sortKey: String(i.year ?? 0).padStart(4, '0') + (i.season ?? ''),
+      key: i.slug,
+      title: i.headline,
+      meta: [i.season, i.year ? String(i.year) : null].filter((m): m is string => Boolean(m)),
+      summary: null,
+      body: i.body,
+      pdfUrl: toMedia(i.pdf)?.url,
+    }))
+    .sort(byNewest)
+    .map<PublicationEntry>(strip)
+);
+
+const longDate = (d: string | null) =>
+  d ? new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : null;
+
+export const getDeskPosts = once(async () =>
+  (
+    await collection<{ title: string; slug: string; date: string | null; author: string | null; body: string; photo: StrapiMedia | null }>(
+      'api::desk-post.desk-post',
+      'desk-posts'
+    )
+  )
+    .map((p) => ({
+      sortKey: p.date ?? '',
+      key: p.slug,
+      title: p.title,
+      meta: [longDate(p.date), p.author].filter((m): m is string => Boolean(m)),
+      summary: null,
+      body: p.body,
+      image: toMedia(p.photo),
+    }))
+    .sort(byNewest)
+    .map<PublicationEntry>(strip)
+);
+
+export const getStories = once(async () =>
+  (
+    await collection<{
+      title: string; slug: string; author: string; set: number | null; excerpt: string | null; body: string;
+      photo: StrapiMedia | null; publishedAt?: string;
+    }>('api::story.story', 'stories')
+  )
+    .map((s) => ({
+      sortKey: s.publishedAt ?? '',
+      key: s.slug,
+      title: s.title,
+      meta: [s.author, s.set ? `Grierson \u2019${String(s.set).slice(-2)} set` : null].filter((m): m is string => Boolean(m)),
+      summary: s.excerpt,
+      body: s.body,
+      image: toMedia(s.photo),
+    }))
+    .sort(byNewest)
+    .map<PublicationEntry>(strip)
+);
+

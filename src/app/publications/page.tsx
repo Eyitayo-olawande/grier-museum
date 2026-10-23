@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { PUBLICATION_HUBS } from '@/data/publications';
 import styles from './page.module.css';
 import ArtStrip from '@/components/art/ArtStrip';
 
@@ -9,6 +8,57 @@ export const metadata: Metadata = {
   description:
     'News and publications from the Grier House Museum — including the Mustard Seed literary magazine, the Dare to Learn journal, the quarterly newsletter, alumni stories and messages from the House Governor.',
 };
+
+/* Descriptions use the wording of the project brief and the committee's documents */
+const PUBLICATION_HUBS = [
+  {
+    id: 'mustard-seed',
+    title: 'The Mustard Seed',
+    tagline: 'The Grier House magazine',
+    description:
+      'Restarted as an online publication, created, edited, published and managed by Grier House students, planned for December and June.',
+    href: '/publications/mustard-seed',
+    icon: '📖',
+    colour: '#800000',
+  },
+  {
+    id: 'dare-to-learn',
+    title: 'Dare to Learn',
+    tagline: 'The Grier House story',
+    description: 'Excerpts from the book on the history of Grier House by O. Olusanya and A. Tewe. Book in press.',
+    href: '/publications/dare-to-learn',
+    icon: '✍️',
+    colour: '#1A365D',
+  },
+  {
+    id: 'newsletter',
+    title: 'Newsletter',
+    tagline: 'Grier House Newsletter',
+    description: 'Newsletters of Grier House.',
+    href: '/publications/newsletter',
+    icon: '📰',
+    colour: '#4A5568',
+  },
+  {
+    id: 'stories',
+    title: 'Stories of Griersons',
+    tagline: 'Submitted by individual Griersons',
+    description:
+      'Articles submitted by Griersons to the webpage editor, Mr Kenny Oladipo, for review and editing before they are uploaded.',
+    href: '/publications/stories',
+    icon: '💬',
+    colour: '#5C3317',
+  },
+  {
+    id: 'from-the-desk',
+    title: 'From the Desk of the House Governor',
+    tagline: 'Gboyega Akin-Deko, Grierson \u201970 set',
+    description: 'Latest news and developments by the House Governor.',
+    href: '/publications/from-the-desk',
+    icon: '🏛️',
+    colour: '#1B4D2E',
+  },
+];
 
 export default function PublicationsPage() {
   return (
@@ -19,7 +69,7 @@ export default function PublicationsPage() {
           <p className={styles.eyebrow}>Grier House Museum &amp; Library</p>
           <h1 className={styles.title}>News &amp; Publications</h1>
           <p className={styles.subtitle}>
-            Writing, journalism and the living record of Grier House — five publications across literary, intellectual, news and community voices.
+            The Mustard Seed, Dare to Learn, the Newsletter, Stories of Griersons and From the Desk of the House Governor.
           </p>
         </div>
       </section>
@@ -32,10 +82,6 @@ export default function PublicationsPage() {
               <Link key={pub.id} href={pub.href} className={styles.card}>
                 <div className={styles.cardTop}>
                   <span className={styles.icon}>{pub.icon}</span>
-                  <div className={styles.meta}>
-                    <span className={styles.frequency}>{pub.frequency}</span>
-                    <span className={styles.since}>Since {pub.since}</span>
-                  </div>
                 </div>
 
                 <div className={styles.stripe} style={{ background: pub.colour }} />
@@ -59,18 +105,20 @@ export default function PublicationsPage() {
         <div className={styles.container}>
           <div className={styles.ctaInner}>
             <div>
-              <h2 className={styles.ctaTitle}>Contribute to our publications</h2>
+              <h2 className={styles.ctaTitle}>Stories of Griersons</h2>
               <p className={styles.ctaDesc}>
-                Old Griersons, current students, and members of the Government College Ibadan community are invited to submit writing, photographs and memories across all our publications.
+                Individual Griersons submit articles to the webpage editor, Mr Kenny Oladipo, for review and editing
+                before any story or article is uploaded. Questions about the Mustard Seed and other publications go
+                to editor@griermuseum.org.
               </p>
             </div>
             <div className={styles.ctaBtns}>
               <Link href="/publications/stories" className={styles.ctaBtnPrimary}>
-                Share your story
+                Submit a story
               </Link>
-              <Link href="/contact" className={styles.ctaBtnSecondary}>
-                Other submissions
-              </Link>
+              <a href="mailto:editor@griermuseum.org" className={styles.ctaBtnSecondary}>
+                editor@griermuseum.org
+              </a>
             </div>
           </div>
         </div>
