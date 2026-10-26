@@ -117,7 +117,7 @@ PORTRAITS = {
     "PROFILE ANDU": ("Andu pic.jpg", ["Andu"]),
     "PROFILE ARUBAYI": (None, []),
     "PROFILE BADEMOSI": ("Bademosi2.jpg", ["Bademosi"]),
-    "PROFILE BECKLEY": (None, ["Beckley"]),
+    "PROFILE BECKLEY": ("Beckley1.jpg", ["Beckley"]),
     "PROFILE BIOBAKU": ("Biobaku1.jpg", ["Biobaku"]),
     "PROFILE EKPERIGIN": ("Ekperigin1.jpg", ["Ekperigin"]),
     "PROFILE ENOBAKHARE CORRECTED": ("Enobhakare2.jpg", ["Enobhakare"]),
@@ -127,7 +127,7 @@ PORTRAITS = {
     "PROFILE OGUNMOYELA I": (None, []),
     "PROFILE OJUTALAYO": ("Ojutalayo.jpg", ["Ojutalayo"]),
     "PROFILE OLUNLOYO": ("Olunloyo.jpg", []),
-    "PROFILE ONAJIN III": (None, []),
+    "PROFILE ONAJIN III": ("Onajin1.png", ["Onajin"]),
     "PROFILE OTEGBEYE": ("Otegbeye Pic4.jpg", ["Otegbeye", "Grier House Prefects 1945", "Grier House Relay Team 1944",
                                                "Grier House Athletics Team 1944", "GCI Cricket Team 1946", "NYC Protest"]),
     "PROFILE PRINCE AKENZUA": ("Prince Akenzua2.jpg", ["Prince Akenzua", "Oba of Benin Akenzua"]),
@@ -434,6 +434,7 @@ def museum_page(gallery):
 
 TV_PHOTO = "Grier House students watching a TV program in the Reading Room.jpg"
 BAND_VIDEOS = [f"Grier House Marching Band video {n}.mp4" for n in (1, 2, 3)]
+CRICKET_VIDEO = "Grier House Cricket Team interhouse competition 2025.mp4"
 
 
 def extracurricular():
@@ -473,18 +474,23 @@ def extracurricular():
                 band + "\n\n- " + cap(roles["b"]),
                 photos=[media(f"{PHOTOS}/Grier House Marching Band.jpg", "Grier House Marching Band")],
                 videos=[media(f"{EXTRA}/{v}", f"Grier House Marching Band, video {n}") for n, v in enumerate(BAND_VIDEOS, 1)]),
-        section(3, "Mustard Seed Editorial Board", "mustard-seed-editorial-board",
+        section(3, "Grier House Cricket", "cricket",
+                "The victorious Grier House cricket team celebrating their win at the interhouse competition in 2025.",
+                "The victorious Grier House cricket team celebrating their win at the interhouse competition in 2025.",
+                videos=[media(f"{EXTRA}/{CRICKET_VIDEO}",
+                              "The victorious Grier House cricket team celebrating their win at the interhouse competition in 2025")]),
+        section(4, "Mustard Seed Editorial Board", "mustard-seed-editorial-board",
                 "Students restarting the Mustard Seed House magazine as an online publication.",
                 editorial + "\n\n- " + cap(roles["c"])),
-        section(4, "Honors Board Students Committee", "honors-board-students-committee",
+        section(5, "Honors Board Students Committee", "honors-board-students-committee",
                 "Students compiling the yearly Grier Honors Board.",
                 honors),
-        section(5, "Grier House Chess Club", "chess-club",
+        section(6, "Grier House Chess Club", "chess-club",
                 "Chess for Grier House students in the Museum and Library.",
                 # placeholder until the committee describes the club
                 "The Grier House Chess Club is one of the extracurricular activities supported by the Grier Museum "
                 "and Library. More details will be added by the Grier History and Traditions Committee."),
-        section(6, "Others", "others",
+        section(7, "Others", "others",
                 "Saturday Night Socials, board games, music and the audiovisual learning system.",
                 "**Saturday Night Socials**\n\n" + socials + "\n\n**Also supported by the Museum and Library**\n\n"
                 + "\n".join("- " + appeal_item(k) for k in ("Audiovisual learning", "Radio and digital music", "Board games"))),
@@ -537,22 +543,22 @@ def caption(filename):
 
 
 SOYINKA_INTERVIEW = "Wole Soyinka interview after detention.mp4"
-# Narrative supplied by the committee on 2026-10-19. The interview date and the
-# rights to the footage are still to be confirmed (the note says "August 1967
-# interview ... following his release", but he was released in October 1969).
+# Interview date confirmed by committee: arrest 17 August 1967, release and interview October 8, 1969.
+# Footage confirmed as not copyrighted.
 VIDEO_INFO = {
     SOYINKA_INTERVIEW: {
-        "title": "Wole Soyinka interview following his release from detention (date to be confirmed)",
+        "title": "Wole Soyinka interview following his release from detention, October 8, 1969",
         "era": "Independence",
-        "year": None,
-        "description": "Interview of Wole Soyinka, following his release from detention for his unsanctioned talks "
-                       "with the secessionist Biafran rebel leader Col. Chukwuemeka Odumegwu Ojukwu.\n\n"
+        "year": "1969",
+        "description": "Interview of Wole Soyinka, following his release from detention on October 8, 1969, "
+                       "for his unsanctioned talks with the secessionist Biafran rebel leader "
+                       "Col. Chukwuemeka Odumegwu Ojukwu.\n\n"
                        "Arrest date: August 17, 1967. Release date: October 8, 1969.\n\n"
                        "Charges: He was not formally charged or tried; he was detained without trial by the federal "
                        "military government under General Yakubu Gowon after meeting with Biafran leaders and calling "
                        "for a cease-fire during the Nigerian Civil War, leading to accusations of being a Biafran "
                        "sympathizer, spy, or conspiring with rebels.",
-        "credit": "Source of footage to be confirmed",
+        "credit": "Grier House Museum and Library collection",
     },
 }
 

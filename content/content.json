@@ -616,7 +616,10 @@
       ],
       "bio": "Joseph Morakinyo Beckley was born in Lagos on June 6,  1914. His Egba family who were originally from Abeokuta, had settled in an area of extensive rich farmland in a place known as  Ojokoro near Agege. He attended primary school at the African Church Primary School, Ojokoro, from where he passed the entrance exam to be admitted to GCI in 1930. He was in that historic first set of students assigned to Grier House.\n\nHe did well in the classroom and in sports. Under the direction and training of V. B. V. Powell, his Grier House Master, he shone in athletics, becoming a champion long-distance runner for the house and the school. In the Grier Cup competition in 1933, he came first place in the mile race. After leaving GCI, he undertook further studies to achieve his ambition of being an educationist, by attending the Yaba Higher College and accumulating experience in teaching and administration. After this, he entered the service of the Northern Region Department of Education. He was one of the first indigenous Nigerian tutors at Government College Zaria, which at that time was known as Kaduna College before it moved to Zaria; later still, it was  renamed Barewa College. This is a school that is now famous for having produced many  national leaders including Nigeria’s first Prime Minister, Abubakar Tafawa Balewa and the military heads of state, Yakubu Gowon, Murtala Mohammed and Umaru Musa Yar’Adua.\n\nLike many of his exceptional classmates from the 1930 set, Beckley did not stay in one place for long. He had caught the bug for high academic achievement from his years in GCI and Grier House. We are therefore not surprised that he soon left to go overseas for postgraduate studies. This was at Edinburgh University in Scotland where he bagged a Master of Arts degree in History. He came back to serve with the Western Region with whom he enjoyed a fruitful and distinguished decades-long career in the civil service.\n\nAmong the many honors and awards bestowed on him for meritorious service to his country were the Order of the Niger (OON) and the Award of Recognition from the Ogun State Public Service . On retirement, he led a peaceful family-oriented life in his residence at Bodija Estate, Ibadan. He  died in Ibadan on August 14, 1975 after a short illness.",
       "pullQuote": null,
-      "photo": null,
+      "photo": {
+        "$file": "Photo Archives /Beckley1.jpg",
+        "alt": "Joseph Beckley"
+      },
       "gallery": [
         {
           "$file": "Photo Archives /Beckley Morakinyo1.jpg",
@@ -1313,7 +1316,10 @@
       ],
       "bio": "Abimbola Onajin was born in Ibadan. His father, Samuel Olaniyi Onajin, hailed from Ondo but settled in Ibadan after securing employment with the Western Region Agriculture Department in Moor Plantation where he became Station Manager. Thus, as a boy, Onajin lived next door to GCI. The primary school he attended was the N.A. Practicing School which abutted the GCI Main Field. There was never any doubt which secondary school he was going to attend - especially since 2 of his older brothers attended GCI and were Griersons.\n\nOnajin was admitted to GCI in January 1958.  Living in the dormitory in Grier House for the next seven years, he became known as a cheerful and intelligent student, who lived the life of a super talented Grierson. A leader in the classroom, the house grounds and on the sports field, he was very good in several sports especially football, athletics and cricket. As a recognized generational talent, he became captain of cricket not only for Grier House but GCI. He was active in many students’ clubs including being the president of the Science Society. In his final year in Sixth form, he was made a school prefect and Head of House. But Onajin transferred to Swanston House in the middle of his tenure as Head of Grier House because of a controversial fallout he had with his Housemaster over the discipline of erring junior boys.\n\nAfter leaving GCI, Onajin won an academic scholarship to study Electrical Engineering at the G Chalmers University, Guttenberg in Sweden. On his return to Nigeria, he worked in various companies including SCOA to spearhead many landmark innovations in motor vehicle manufacturing and  assembly.\n\nToday, Onajin is remembered as a sports icon and leader - the prototypical Grierson and GCI old boy who would stoutly defend truth and honor in the face of pressure to do what he knows to be wrong.",
       "pullQuote": null,
-      "photo": null,
+      "photo": {
+        "$file": "Photo Archives /Onajin1.png",
+        "alt": "Abimbola Onajin"
+      },
       "gallery": []
     },
     {
@@ -1824,7 +1830,7 @@
         },
         {
           "$file": "Video Archives/Wole Soyinka interview after detention.mp4",
-          "alt": "Wole Soyinka interview following his release from detention (date to be confirmed)"
+          "alt": "Wole Soyinka interview following his release from detention, October 8, 1969"
         }
       ]
     },
@@ -2361,9 +2367,23 @@
       ]
     },
     {
+      "title": "Grier House Cricket",
+      "slug": "cricket",
+      "order": 3,
+      "summary": "The victorious Grier House cricket team celebrating their win at the interhouse competition in 2025.",
+      "body": "The victorious Grier House cricket team celebrating their win at the interhouse competition in 2025.",
+      "photos": [],
+      "videos": [
+        {
+          "$file": "Extracurricular Activities /Grier House Cricket Team interhouse competition 2025.mp4",
+          "alt": "The victorious Grier House cricket team celebrating their win at the interhouse competition in 2025"
+        }
+      ]
+    },
+    {
       "title": "Mustard Seed Editorial Board",
       "slug": "mustard-seed-editorial-board",
-      "order": 3,
+      "order": 4,
       "summary": "Students restarting the Mustard Seed House magazine as an online publication.",
       "body": "An Editorial team has set to work to restart the “Mustard Seed” House magazine as an online publication on our website. This magazine which will be solely created, edited, published and managed by Grier House students, is planned to be published twice a year, December and June.\n\n- Aforementioned Editorial Board of The Mustard Seed.",
       "photos": [],
@@ -2372,7 +2392,7 @@
     {
       "title": "Honors Board Students Committee",
       "slug": "honors-board-students-committee",
-      "order": 4,
+      "order": 5,
       "summary": "Students compiling the yearly Grier Honors Board.",
       "body": "The yearly Grier Honors Board, an old tradition, will be compiled by the students to honor those who have distinguished themselves in various arenas in the previous school year, including sports and student leadership. This will also be an online project accessible from the website",
       "photos": [],
@@ -2381,7 +2401,7 @@
     {
       "title": "Grier House Chess Club",
       "slug": "chess-club",
-      "order": 5,
+      "order": 6,
       "summary": "Chess for Grier House students in the Museum and Library.",
       "body": "The Grier House Chess Club is one of the extracurricular activities supported by the Grier Museum and Library. More details will be added by the Grier History and Traditions Committee.",
       "photos": [],
@@ -2390,7 +2410,7 @@
     {
       "title": "Others",
       "slug": "others",
-      "order": 6,
+      "order": 7,
       "summary": "Saturday Night Socials, board games, music and the audiovisual learning system.",
       "body": "**Saturday Night Socials**\n\nAn occasion for students to come together for a fun-filled evening in the prep room with debates, recitations, drama sketches, song competitions and even physical sports like boxing with gloves and pillow fights. The highlight of the evening is always music (played in the old days on the gramophone) and dancing.\n\n**Also supported by the Museum and Library**\n\n- Audiovisual learning system based in the library and museum, with computers, monitors, speakers and printers with WiFi connectivity\n- Radio and digital music to be blared out from wall mounted speakers for Saturday night social nights and other social events in the Museum/Library and adjoining reading room (prep room)\n- Board games for our students including Monopoly, Ludo, Draughts, Scrabble and our traditional ‘ayo.’",
       "photos": [],
@@ -2799,6 +2819,19 @@
       "media": {
         "$file": "Photo Archives /Beckley Morakinyo3.jpg",
         "alt": "Joseph Beckley (3)"
+      }
+    },
+    {
+      "title": "Beckley",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Beckley1.jpg",
+        "alt": "Beckley"
       }
     },
     {
@@ -3985,6 +4018,19 @@
       }
     },
     {
+      "title": "Onajin",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Onajin1.png",
+        "alt": "Onajin"
+      }
+    },
+    {
       "title": "Tunji Otegbeye 1942 (colourised)",
       "type": "Photo",
       "era": "Colonial",
@@ -4349,16 +4395,16 @@
       }
     },
     {
-      "title": "Wole Soyinka interview following his release from detention (date to be confirmed)",
+      "title": "Wole Soyinka interview following his release from detention, October 8, 1969",
       "era": "Independence",
-      "year": null,
-      "description": "Interview of Wole Soyinka, following his release from detention for his unsanctioned talks with the secessionist Biafran rebel leader Col. Chukwuemeka Odumegwu Ojukwu.\n\nArrest date: August 17, 1967. Release date: October 8, 1969.\n\nCharges: He was not formally charged or tried; he was detained without trial by the federal military government under General Yakubu Gowon after meeting with Biafran leaders and calling for a cease-fire during the Nigerian Civil War, leading to accusations of being a Biafran sympathizer, spy, or conspiring with rebels.",
-      "credit": "Source of footage to be confirmed",
+      "year": "1969",
+      "description": "Interview of Wole Soyinka, following his release from detention on October 8, 1969, for his unsanctioned talks with the secessionist Biafran rebel leader Col. Chukwuemeka Odumegwu Ojukwu.\n\nArrest date: August 17, 1967. Release date: October 8, 1969.\n\nCharges: He was not formally charged or tried; he was detained without trial by the federal military government under General Yakubu Gowon after meeting with Biafran leaders and calling for a cease-fire during the Nigerian Civil War, leading to accusations of being a Biafran sympathizer, spy, or conspiring with rebels.",
+      "credit": "Grier House Museum and Library collection",
       "type": "Video",
       "collection": "Video Archives",
       "media": {
         "$file": "Video Archives/Wole Soyinka interview after detention.mp4",
-        "alt": "Wole Soyinka interview following his release from detention (date to be confirmed)"
+        "alt": "Wole Soyinka interview following his release from detention, October 8, 1969"
       }
     },
     {
@@ -4650,7 +4696,31 @@
         "alt": "Images from the museum"
       },
       {
+        "$file": "Museum & Library /Images from the museum17.jpg",
+        "alt": "Images from the museum"
+      },
+      {
+        "$file": "Museum & Library /Images from the museum18.jpg",
+        "alt": "Images from the museum"
+      },
+      {
+        "$file": "Museum & Library /Images from the museum19.jpg",
+        "alt": "Images from the museum"
+      },
+      {
         "$file": "Museum & Library /Images from the museum2.jpg",
+        "alt": "Images from the museum"
+      },
+      {
+        "$file": "Museum & Library /Images from the museum20.jpg",
+        "alt": "Images from the museum"
+      },
+      {
+        "$file": "Museum & Library /Images from the museum21.jpg",
+        "alt": "Images from the museum"
+      },
+      {
+        "$file": "Museum & Library /Images from the museum22.jpg",
         "alt": "Images from the museum"
       },
       {
