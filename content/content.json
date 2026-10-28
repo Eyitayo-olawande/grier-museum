@@ -4859,6 +4859,19 @@
       }
     },
     {
+      "title": "Book launch of Chief Akin-Deko",
+      "era": "Modern",
+      "year": "2026",
+      "description": "Book launch event for Chief Akin-Deko.",
+      "credit": "Grier House Museum and Library",
+      "type": "Video",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/Book Launch of Chief Akin Deko .mp4",
+        "alt": "Book launch of Chief Akin-Deko"
+      }
+    },
+    {
       "title": "The uncommon brilliance of Omololu Olunloyo — in his own words",
       "era": "Modern",
       "year": "2026",
@@ -4943,20 +4956,8 @@
       "credit": "Grier House Museum and Library",
       "collection": "Video Archives",
       "media": {
-        "$file": "Video Archives/VIDEO-2026-09-25-17-09-23.mp4",
-        "alt": "Grier House video 2"
-      }
-    },
-    {
-      "title": "Grier House Video, September 2026 (3)",
-      "type": "Video",
-      "era": "Modern",
-      "year": "2026",
-      "credit": "Grier House Museum and Library",
-      "collection": "Video Archives",
-      "media": {
         "$file": "Video Archives/VIDEO-2026-09-25-17-09-28.mp4",
-        "alt": "Grier House video 3"
+        "alt": "Grier House video 2"
       }
     }
   ],
