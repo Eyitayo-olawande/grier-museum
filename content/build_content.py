@@ -640,6 +640,13 @@ VIDEO_INFO = {
         "description": "A video montage of the Grier House Museum and Library.",
         "credit": "Grier House Museum and Library",
     },
+    "Keynote address delivered by Dr Adeshina for the book title and a narration by Prof. Taiwo.mp4": {
+        "title": "Keynote address by Dr Adeshina, with narration by Prof. Taiwo",
+        "era": "Modern",
+        "year": "2026",
+        "description": "Keynote address delivered by Dr Adeshina for the book launch, with a narration by Prof. Taiwo.",
+        "credit": "Grier House Museum and Library",
+    },
 }
 
 
