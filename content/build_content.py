@@ -124,7 +124,7 @@ PORTRAITS = {
     "PROFILE FEYIDE": ("Feyide Secretary General OPEC 1975.jpg", ["Feyide", "Efuwape and Feyide"]),
     "PROFILE GBENGA JEGEDE CORRECTED": ("Gbenga Jegede.jpg", []),
     "PROFILE IFATUROTI": ("Ifaturoti1.jpg", ["Ifaturoti"]),
-    "PROFILE OGUNMOYELA I": (None, []),
+    "PROFILE OGUNMOYELA I": ("Ogunmoyela1.jpg", ["Ogunmoyela"]),
     "PROFILE OJUTALAYO": ("Ojutalayo.jpg", ["Ojutalayo"]),
     "PROFILE OLUNLOYO": ("Olunloyo.jpg", []),
     "PROFILE ONAJIN III": ("Onajin1.png", ["Onajin"]),
@@ -132,14 +132,17 @@ PORTRAITS = {
                                                "Grier House Athletics Team 1944", "GCI Cricket Team 1946", "NYC Protest"]),
     "PROFILE PRINCE AKENZUA": ("Prince Akenzua2.jpg", ["Prince Akenzua", "Oba of Benin Akenzua"]),
     "PROFILE ROSIJI": ("Rosiji2.jpg", ["Rosiji"]),
-    "PROFILE SAGAY": (None, []),
+    "PROFILE SAGAY": ("Sagay B&W.jpg", ["Sagay", "Andrew Sagay"]),
     "PROFILE T M ALUKO": ("Aluko TM.jpg", []),
     "PROFILE WOLE SOYINKA": ("Soyinka Wole.jpg", ["Soyinka Wole", "Wole Soyinka"]),
     "ROTIMI JAIYESIMI PROFILE": ("Jaiyesimi Professor of OBGYN.jpg", ["Jaiyesimi", "Jayesimi"]),
 }
 
 
-PROFILE_VIDEOS = {"PROFILE WOLE SOYINKA": ["Wole Soyinka interview after detention.mp4"]}
+PROFILE_VIDEOS = {
+    "PROFILE WOLE SOYINKA": ["Wole Soyinka interview after detention.mp4"],
+    "PROFILE OLUNLOYO": ["Dr Omololu Olunloyo showing his library.mp4"],
+}
 
 
 def photo_files():
@@ -287,9 +290,8 @@ TRADITION_INFO = {
 TRADITION_ERAS = {"Moonlight stories": "Since about 1933", "Red Letter Day": "1935", "The Cairn": "1945"}
 
 
-# Choir recording forwarded by the committee on 2026-10-19; performers and date still to be confirmed
 HOUSE_SONG_AUDIO = media("Traditions/Grier House Song choir rendition.mp3",
-                         "Grier House Song, choir rendition (performers and date to be confirmed)")
+                         "Members of the Grier House Marching Band with an impromptu rendering of the House Song, October 12, 2026")
 
 
 # title given by the project owner; shown on the Home page until 2026-10-21
@@ -507,6 +509,7 @@ PEOPLE = {
     "Andu Pic": "Jibril Andu", "Ekperigin": "Harding Ekperigin", "Feyide": "Otokiti Feyide",
     "Ifaturoti": "Michael Ifaturoti", "Otegbeye": "Tunji Otegbeye", "Rosiji": "Ayo Rosiji",
     "Bullock": "Derek John Bullock", "Jaiyesimi": "Rotimi Jaiyesimi", "Olunloyo": "Omololu Olunloyo",
+    "Ogunmoyela": "Joseph Kayode Ogunmoyela", "Fadahunsi": "Olatunde Fadahunsi", "IFATUROTI": "Michael Ifaturoti",
     "Bademosi": "Jide Bademosi", "Biobaku": "Saburi Biobaku", "Akin Deko": "Akin Deko",
     "Prince Akenzua": "Prince Solomon Akenzua", "Oba of Benin Akenzua": "Oba Erediauwa of Benin",
     "Efuwape and Feyide": "Efuwape and Otokiti Feyide",
@@ -523,6 +526,29 @@ CAPTIONS = {
     "Wole Soyinka inspecting Cadet Boys.jpg": "Wole Soyinka inspecting Cadet Boys",
     "Odiase Gentlemen 1944.jpg": "Odiase Gentlemen, 1944",
     "A Grierson Pose.jpg": "A Grierson pose",
+    # Otegbeye 1942 portrait
+    "Otegbeye 1942.png": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes.",
+    "Otegbeye 1942.jpg": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes.",
+    "Otegbeye 1942 color.jpg": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (colourised)",
+    # Samuel Victor Ayodele Ajomale (SN 227, set 1936) — identified by the committee
+    "Ajomale B&W.jpg": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right",
+    "Ajomale color.jpg": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right (colourised)",
+    "Ajomale 41 and Grier Athletic team.jpg": "Grier House athletics team, 1941. Samuel Victor Ayodele Ajomale (SN 227, set 1936) seated 3rd from right.",
+    # Andrew A.E. Sagay (SN 16, set 1930)
+    "Sagay B&W.jpg": "Andrew A.E. Sagay (SN 16, set 1930), Head of School 1932",
+    "Sagay color.jpg": "Andrew A.E. Sagay (SN 16, set 1930), Head of School 1932 (colourised)",
+    "Andrew Sagay and Brother.jpg": "Andrew A.E. Sagay (SN 16, set 1930) and his brother Gabriel Amone Sagay (SN 93, set 1932)",
+    "The Head of School in Blue School Jacket is Andrew A.E Sagay, his Brother Gabriel Amone Sagay 1932 seated extreme right.jpg": (
+        "Andrew A.E. Sagay (SN 16, set 1930) as Head of School, in blue school jacket. "
+        "His brother Gabriel Amone Sagay (SN 93, set 1932) seated extreme right."
+    ),
+    # 1965 School Prefects — title kept under 255 chars; full identification in DESCRIPTIONS below
+    "Bullock and 1965 Prefects.png": "The 1965 School Prefects of Government College Ibadan",
+    # Wole Soyinka on release
+    "Soyinka released in 1969.png": "Wole Soyinka following his release from detention, October 8, 1969",
+    # Ifaturoti new photos (uppercase filename variant)
+    "IFATUROTI B&W.jpg": "Michael Ifaturoti",
+    "IFATUROTI Color.jpg": "Michael Ifaturoti (colourised)",
 }
 
 
@@ -542,6 +568,18 @@ def caption(filename):
     return name.strip(" _")
 
 
+DESCRIPTIONS = {
+    "Bullock and 1965 Prefects.png": (
+        "Photographed officially in 1965; printed 20 November 1966.\n\n"
+        "Standing L to R: Edun (C), Nwaesei (F), Joseph (C), Osofisan (F), Adelakun (C), Badejoko (G), "
+        "Williams (S), Akinbola (S), Johnson (G).\n\n"
+        "Seated L to R, Heads of Houses: Odukoya (C), Ishmael (S), Bullock (P), Smith (F) — Head of School, "
+        "Akanji (G), Jerome (F).\n\n"
+        "Only Ogunsona (G) is missing — he dropped his badge before the photograph was taken."
+    ),
+}
+
+
 SOYINKA_INTERVIEW = "Wole Soyinka interview after detention.mp4"
 # Interview date confirmed by committee: arrest 17 August 1967, release and interview October 8, 1969.
 # Footage confirmed as not copyrighted.
@@ -559,6 +597,48 @@ VIDEO_INFO = {
                        "for a cease-fire during the Nigerian Civil War, leading to accusations of being a Biafran "
                        "sympathizer, spy, or conspiring with rebels.",
         "credit": "Grier House Museum and Library collection",
+    },
+    "Book Launch of Chief Akin Deko .mp4": {
+        "title": "Book launch of Chief Akin-Deko",
+        "era": "Modern",
+        "year": "2026",
+        "description": "Book launch event for Chief Akin-Deko.",
+        "credit": "Grier House Museum and Library",
+    },
+    "Dr Omololu Olunloyo showing his library.mp4": {
+        "title": "The uncommon brilliance of Omololu Olunloyo — in his own words",
+        "era": "Modern",
+        "year": "2026",
+        "description": "Dr Omololu Olunloyo presents his library and shares reflections on his intellectual life. Courtesy the Olunloyo family.",
+        "credit": "Olunloyo family",
+    },
+    "Enobhakare video biography.mp4": {
+        "title": "Gilbert Enobakhare — video biography",
+        "era": "Modern",
+        "year": "2026",
+        "description": "Video biography of Notable Grierson Gilbert Enobakhare.",
+        "credit": "Grier House Museum and Library",
+    },
+    "Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4": {
+        "title": "Old Griersons and current students singing the House Song at the 2026 Reunion",
+        "era": "Modern",
+        "year": "2026",
+        "description": "Old Griersons join current students in singing the Grier House Song at the 2026 Reunion, October 17, 2026.",
+        "credit": "Grier House Museum and Library",
+    },
+    "Tour of Dr Omololu Olunloyo's Father in Oke Ado built in 1945. Courtesy the family.mp4": {
+        "title": "Tour of Dr Omololu Olunloyo's father's house in Oke Ado, built 1945",
+        "era": "Modern",
+        "year": "2026",
+        "description": "A tour of the house of Dr Omololu Olunloyo's father in Oke Ado, Ibadan, built in 1945. Courtesy the Olunloyo family.",
+        "credit": "Olunloyo family",
+    },
+    "VIDEO Montage of the museum.mp4": {
+        "title": "Grier House Museum and Library — video montage",
+        "era": "Modern",
+        "year": "2026",
+        "description": "A video montage of the Grier House Museum and Library.",
+        "credit": "Grier House Museum and Library",
     },
 }
 
@@ -588,8 +668,9 @@ def archive_items(photos):
             title = f"{title} ({titles[title]})"
         year = re.search(r"(19\d{2}|20\d{2})", f)
         y = int(year.group(1)) if year else None
+        desc = DESCRIPTIONS.get(f)
         items.append({"title": title, "type": "Photo", "era": era_for(y), "year": str(y) if y else None,
-                      "description": None, "credit": "Grier House Museum and Library", "collection": "Photo Archives",
+                      "description": desc, "credit": "Grier House Museum and Library", "collection": "Photo Archives",
                       "media": media(f"{PHOTOS}/{f}", title)})
     videos = sorted(f for f in os.listdir(os.path.join(SRC, VIDEOS)) if f.endswith(".mp4"))
     for f in videos:

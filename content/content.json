@@ -262,7 +262,15 @@
       "gallery": [
         {
           "$file": "Photo Archives /Ajomale 41 and Grier Athletic team.jpg",
-          "alt": "Ajomale 41 and Grier Athletic team"
+          "alt": "Grier House athletics team, 1941. Samuel Victor Ayodele Ajomale (SN 227, set 1936) seated 3rd from right."
+        },
+        {
+          "$file": "Photo Archives /Ajomale B&W.jpg",
+          "alt": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right"
+        },
+        {
+          "$file": "Photo Archives /Ajomale color.jpg",
+          "alt": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right (colourised)"
         }
       ]
     },
@@ -622,6 +630,10 @@
       },
       "gallery": [
         {
+          "$file": "Photo Archives /Beckley Morakinyo.jpg",
+          "alt": "Joseph Beckley"
+        },
+        {
           "$file": "Photo Archives /Beckley Morakinyo1.jpg",
           "alt": "Joseph Beckley"
         },
@@ -756,6 +768,14 @@
         "alt": "Harding Ekperigin"
       },
       "gallery": [
+        {
+          "$file": "Photo Archives /Ekperigin passing announcement.png",
+          "alt": "Harding Ekperigin passing announcement"
+        },
+        {
+          "$file": "Photo Archives /Ekperigin passing to glory newspaper announcement.jpg",
+          "alt": "Harding Ekperigin passing to glory newspaper announcement"
+        },
         {
           "$file": "Photo Archives /Ekperigin2.jpg",
           "alt": "Harding Ekperigin"
@@ -1094,8 +1114,28 @@
       ],
       "bio": "Kayode Ogunmoyela was born in Ifon, in present day Ondo State on December 1, 1950. He attended St. Barnabas (later renamed St. Paul’s) Primary School in Ifon, He then briefly enrolled in the District Council School. Idi-Ope, Oyo, before gaining admission into Government College, Ibadan.\n\nDuring his time in Grier House from January 1963 to December 1969, Ogunmoyela made his mark. He was bright academically. And he shone in sports at a very high level. While in Form 4 in 1966, he won a tightly contested school table tennis championship against the previously undefeated Adewale Thomas ’62 of Carr House. He played multiple other sports, including football, hockey and cricket for the house and school. He was captain of the house table tennis team which won several interhouse trophies on behalf of Grier House. He was a member of the GCI Football and Table Tennis teams. A confident leader who combined strictness with a loving disposition towards his mates and juniors, he was made Head of House in his final year in Sixth Form in 1969.\n\nAfter leaving GCI, Ogunmoyela read Mathematics at the University of Ife. In 1973, while serving in his national youth service year in the former East Central State of Nigeria, he won the maiden Head of State Award which was given to the 12 most outstanding NYSC members from each of the twelve states of the Federation. After this, Ogunmoyela proceeded to Exeter University, UK where he obtained his PhD in 1980. After a stellar academic career teaching at the University of Ife and later at the Polytechnic, Ibadan, he settled at the Federal University of Technology, Akure where he became a Professor of Applied Mathematics. He also had time for public service. He was a well-known figure in Ondo State politics. One of Ogunmoyela’s lasting contributions was in his position as the Chairman of Ondo State Universal Primary Education Board between 1994 and 1999. For his leadership and service to his community, Ogunmoyela was the recipient of several chieftaincy titles including those of Gbobaniyi of Uso and Ajiroba of Ifon, Ondo State.\n\nOgunmoyela was serving his people in these various academic and public service roles when he was involved in a ghastly motor vehicle accident that eventually led to his death in 2015. Today, he is remembered as a worthy Grierson and Head of House whose leadership qualities and sterling performance in multiple areas, including sports, made him one of the most celebrated Griersons of his generation of the mid to late 1960s.",
       "pullQuote": null,
-      "photo": null,
-      "gallery": []
+      "photo": {
+        "$file": "Photo Archives /Ogunmoyela1.jpg",
+        "alt": "Kayode Ogunmoyela"
+      },
+      "gallery": [
+        {
+          "$file": "Photo Archives /Ogunmoyela2.jpg",
+          "alt": "Joseph Kayode Ogunmoyela"
+        },
+        {
+          "$file": "Photo Archives /Ogunmoyela3.jpg",
+          "alt": "Joseph Kayode Ogunmoyela"
+        },
+        {
+          "$file": "Photo Archives /Ogunmoyela4.jpg",
+          "alt": "Joseph Kayode Ogunmoyela"
+        },
+        {
+          "$file": "Photo Archives /Ogunmoyela6.jpg",
+          "alt": "Joseph Kayode Ogunmoyela"
+        }
+      ]
     },
     {
       "slug": "victor-ojutalayo",
@@ -1269,7 +1309,12 @@
         "$file": "Photo Archives /Olunloyo.jpg",
         "alt": "Omololu Olunloyo"
       },
-      "gallery": []
+      "gallery": [
+        {
+          "$file": "Video Archives/Dr Omololu Olunloyo showing his library.mp4",
+          "alt": "The uncommon brilliance of Omololu Olunloyo — in his own words"
+        }
+      ]
     },
     {
       "slug": "abimbola-onajin",
@@ -1320,7 +1365,24 @@
         "$file": "Photo Archives /Onajin1.png",
         "alt": "Abimbola Onajin"
       },
-      "gallery": []
+      "gallery": [
+        {
+          "$file": "Photo Archives /Onajin1.jpg",
+          "alt": "Onajin"
+        },
+        {
+          "$file": "Photo Archives /Onajin2.jpg",
+          "alt": "Onajin"
+        },
+        {
+          "$file": "Photo Archives /Onajin3.jpg",
+          "alt": "Onajin"
+        },
+        {
+          "$file": "Photo Archives /Onajin4.jpg",
+          "alt": "Onajin"
+        }
+      ]
     },
     {
       "slug": "tunji-otegbeye",
@@ -1423,15 +1485,15 @@
         },
         {
           "$file": "Photo Archives /Otegbeye 1942 color.jpg",
-          "alt": "Tunji Otegbeye 1942 (colourised)"
+          "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (colourised)"
         },
         {
           "$file": "Photo Archives /Otegbeye 1942.jpg",
-          "alt": "Tunji Otegbeye, 1942"
+          "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes."
         },
         {
           "$file": "Photo Archives /Otegbeye 1942.png",
-          "alt": "Tunji Otegbeye, 1942"
+          "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes."
         },
         {
           "$file": "Photo Archives /Otegbeye Cricket B&W.jpg",
@@ -1694,8 +1756,20 @@
       ],
       "bio": "Andrew Esanjumi Sagay was born in a small village outside Sapele on February 22, 1912. This was before Nigeria became a nation as a British colony and protectorate in 1914. His parents were of Itsekiri and Bini stock. He had 10 siblings. His eldest sister was the mother of 2 distinguished GCI old boys, Banwo Smith ’59 and Zai Smith ’63, both of Field House. Sagay had his primary education at Government School, Sapele. He did very well and passed the entrance examination and interview for admission into Government College Ibadan in 1930.\n\nOnce he arrived in GCI, he was assigned to the newly created Grier House where he shared a dormitory with Akin Deko, who became his life-long best friend. He came under the wings of the charismatic House Master, V. B. V. Powell, who would become his life-long mentor and friend. In sports, Sagay was said to have been a long-distance runner. But his skills were mainly exercised in the classroom where he was a much-acknowledged master of many subjects.\n\nAfter 4 years in GCI, Sagay was one of the lucky few to be admitted to the newly established Yaba Higher College, on the basis of a highly competitive exam in which he placed first among all candidates. He was selected for the elite pre-medical course. But Sagay discovered he could not stand seeing dead bodies being dissected in the Anatomy class. He therefore switched to Botany. On graduation from Yaba Higher College in 1935, Sagay returned to his alma mater GCI as a tutor in Science and Agriculture. His responsibilities included managing the school farm. He was very popular with the mostly white staff and was admired by his students who were happy to have a Nigerian tutor.  He also earned a deserved reputation as a disciplinarian. The story is told of how Sagay as a tutor once administered 54 strokes of the cane to an erring T. M. Aluko when the latter was a student. Despite this, he was fair, and he set a good example to his students. Like his mentor, V. B. V. Powell, he later became House Master of Grier House for a very short period after Akin-Deko left the position to travel to England for further studies.\n\nEager to advance his career, Sagay travelled to England in 1948, His flat mate in his London digs was a fellow Grierson, S. B. Biobaku ‘32. With the encouragement of V. B. V. Powell, he was admitted to Oxford University on a scholarship and obtained his bachelor’s degree in 1951.\n\nOn returning to Nigeria, he worked as a botanist at the Federal Ministry of Agriculture,  based in Ikeja. He then transferred to the Ministry of Education of the Western Region and was posted to Government College Ughelli as a Science Master. He also served as an Inspector of Education for the Ministry, and in 1958, was Principal, Government Teachers Training College, Ibadan.  After this, he went on a sabbatical leave to the U.S.A. working for the United States Agency for International Development (USAID). He also earned a Master’s degree in Education Psychology from Ohio University. When the Midwest Region was created in 1963, Sagay moved to the Midwest civil service as Principal, Edo College Benin until 1968. Between 1969 and 1972, he was the Assistant Director, Adeyemi College of Education, Ondo, a position that afforded him a rewarding academic affiliation with the University of Ife.\n\nLike many other Griersons of the earliest generation, Sagay took pleasure in public service. He was Chairman, Board of Trustees, College of Education, Abraka, and Chairmanship of the Bendel State Public Service Commission. He resigned these appointments after the military overthrow of the civilian government of the Second Republic headed by Shehu Shagari on December 31, 1983. Sagay then went into private business in the agronomic sector. He managed his family farm on a land that had belonged to the Bini maternal side of his family as a gift from an Oba of Benin in the 19th century. On retirement, Sagay lived the rest of his life peacefully in his home in his maternal hometown of Benin-City, where he passed away at the age of 86 in July 1998.\n\nToday, Sagay is remembered as a unique Grierson, like Deko ’30 and Enobakhare ’33, who was a student, tutor and Housemaster in Grier House. He is also famous as the first Head of School of GCI.",
       "pullQuote": null,
-      "photo": null,
-      "gallery": []
+      "photo": {
+        "$file": "Photo Archives /Sagay B&W.jpg",
+        "alt": "Andrew Sagay"
+      },
+      "gallery": [
+        {
+          "$file": "Photo Archives /Andrew Sagay and Brother.jpg",
+          "alt": "Andrew A.E. Sagay (SN 16, set 1930) and his brother Gabriel Amone Sagay (SN 93, set 1932)"
+        },
+        {
+          "$file": "Photo Archives /Sagay color.jpg",
+          "alt": "Andrew A.E. Sagay (SN 16, set 1930), Head of School 1932 (colourised)"
+        }
+      ]
     },
     {
       "slug": "t-m-aluko",
@@ -2040,7 +2114,7 @@
       "order": 0,
       "audio": {
         "$file": "Traditions/Grier House Song choir rendition.mp3",
-        "alt": "Grier House Song, choir rendition (performers and date to be confirmed)"
+        "alt": "Members of the Grier House Marching Band with an impromptu rendering of the House Song, October 12, 2026"
       },
       "videos": [
         {
@@ -2601,7 +2675,7 @@
       }
     },
     {
-      "title": "Ajomale 41 and Grier Athletic team",
+      "title": "Grier House athletics team, 1941. Samuel Victor Ayodele Ajomale (SN 227, set 1936) seated 3rd from right.",
       "type": "Photo",
       "era": null,
       "year": null,
@@ -2610,7 +2684,33 @@
       "collection": "Photo Archives",
       "media": {
         "$file": "Photo Archives /Ajomale 41 and Grier Athletic team.jpg",
-        "alt": "Ajomale 41 and Grier Athletic team"
+        "alt": "Grier House athletics team, 1941. Samuel Victor Ayodele Ajomale (SN 227, set 1936) seated 3rd from right."
+      }
+    },
+    {
+      "title": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ajomale B&W.jpg",
+        "alt": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right"
+      }
+    },
+    {
+      "title": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right (colourised)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ajomale color.jpg",
+        "alt": "Samuel Victor Ayodele Ajomale (SN 227, set 1936), 2nd row standing, 4th from right (colourised)"
       }
     },
     {
@@ -2679,6 +2779,19 @@
       }
     },
     {
+      "title": "Akinola",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Akinola.jpg",
+        "alt": "Akinola"
+      }
+    },
+    {
       "title": "T. M. Aluko",
       "type": "Photo",
       "era": null,
@@ -2689,6 +2802,19 @@
       "media": {
         "$file": "Photo Archives /Aluko TM.jpg",
         "alt": "T. M. Aluko"
+      }
+    },
+    {
+      "title": "Andrew A.E. Sagay (SN 16, set 1930) and his brother Gabriel Amone Sagay (SN 93, set 1932)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Andrew Sagay and Brother.jpg",
+        "alt": "Andrew A.E. Sagay (SN 16, set 1930) and his brother Gabriel Amone Sagay (SN 93, set 1932)"
       }
     },
     {
@@ -2791,7 +2917,7 @@
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
-        "$file": "Photo Archives /Beckley Morakinyo1.jpg",
+        "$file": "Photo Archives /Beckley Morakinyo.jpg",
         "alt": "Joseph Beckley"
       }
     },
@@ -2804,7 +2930,7 @@
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
-        "$file": "Photo Archives /Beckley Morakinyo2.jpg",
+        "$file": "Photo Archives /Beckley Morakinyo1.jpg",
         "alt": "Joseph Beckley (2)"
       }
     },
@@ -2817,8 +2943,21 @@
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
-        "$file": "Photo Archives /Beckley Morakinyo3.jpg",
+        "$file": "Photo Archives /Beckley Morakinyo2.jpg",
         "alt": "Joseph Beckley (3)"
+      }
+    },
+    {
+      "title": "Joseph Beckley (4)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Beckley Morakinyo3.jpg",
+        "alt": "Joseph Beckley (4)"
       }
     },
     {
@@ -2861,16 +3000,16 @@
       }
     },
     {
-      "title": "Derek John Bullock and 1965 Prefects",
+      "title": "The 1965 School Prefects of Government College Ibadan",
       "type": "Photo",
       "era": "Independence",
       "year": "1965",
-      "description": null,
+      "description": "Photographed officially in 1965; printed 20 November 1966.\n\nStanding L to R: Edun (C), Nwaesei (F), Joseph (C), Osofisan (F), Adelakun (C), Badejoko (G), Williams (S), Akinbola (S), Johnson (G).\n\nSeated L to R, Heads of Houses: Odukoya (C), Ishmael (S), Bullock (P), Smith (F) — Head of School, Akanji (G), Jerome (F).\n\nOnly Ogunsona (G) is missing — he dropped his badge before the photograph was taken.",
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
         "$file": "Photo Archives /Bullock and 1965 Prefects.png",
-        "alt": "Derek John Bullock and 1965 Prefects"
+        "alt": "The 1965 School Prefects of Government College Ibadan"
       }
     },
     {
@@ -3030,6 +3169,32 @@
       }
     },
     {
+      "title": "Harding Ekperigin passing announcement",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ekperigin passing announcement.png",
+        "alt": "Harding Ekperigin passing announcement"
+      }
+    },
+    {
+      "title": "Harding Ekperigin passing to glory newspaper announcement",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ekperigin passing to glory newspaper announcement.jpg",
+        "alt": "Harding Ekperigin passing to glory newspaper announcement"
+      }
+    },
+    {
       "title": "Harding Ekperigin",
       "type": "Photo",
       "era": null,
@@ -3121,6 +3286,45 @@
       }
     },
     {
+      "title": "Olatunde Fadahunsi Olatunde",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Fadahunsi Olatunde1.jpg",
+        "alt": "Olatunde Fadahunsi Olatunde"
+      }
+    },
+    {
+      "title": "Olatunde Fadahunsi Olatunde (2)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Fadahunsi Olatunde2.jpg",
+        "alt": "Olatunde Fadahunsi Olatunde (2)"
+      }
+    },
+    {
+      "title": "Olatunde Fadahunsi Olatunde (3)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Fadahunsi Olatunde3.jpg",
+        "alt": "Olatunde Fadahunsi Olatunde (3)"
+      }
+    },
+    {
       "title": "Folorunso Famuyiwa",
       "type": "Photo",
       "era": null,
@@ -3170,6 +3374,19 @@
       "media": {
         "$file": "Photo Archives /Feyide2.jpg",
         "alt": "Otokiti Feyide (2)"
+      }
+    },
+    {
+      "title": "Government College Ibadan Cricket Team, 1945",
+      "type": "Photo",
+      "era": "Colonial",
+      "year": "1945",
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /GCI Cricket Team 1945.jpg",
+        "alt": "Government College Ibadan Cricket Team, 1945"
       }
     },
     {
@@ -3235,6 +3452,32 @@
       "media": {
         "$file": "Photo Archives /GCI from Ondo Province 1944.jpg",
         "alt": "Government College Ibadan from Ondo Province, 1944"
+      }
+    },
+    {
+      "title": "Government College Ibadan students from Ondo Province 1941",
+      "type": "Photo",
+      "era": "Colonial",
+      "year": "1941",
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /GCI students from Ondo Province 1941  B&W.jpg",
+        "alt": "Government College Ibadan students from Ondo Province 1941"
+      }
+    },
+    {
+      "title": "Government College Ibadan students from Ondo Province 1941 (colourised)",
+      "type": "Photo",
+      "era": "Colonial",
+      "year": "1941",
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /GCI students from Ondo Province 1941 color.jpg",
+        "alt": "Government College Ibadan students from Ondo Province 1941 (colourised)"
       }
     },
     {
@@ -3459,6 +3702,19 @@
       }
     },
     {
+      "title": "Grier House football team, 1943",
+      "type": "Photo",
+      "era": "Colonial",
+      "year": "1943",
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Grier House football team 1943.png",
+        "alt": "Grier House football team, 1943"
+      }
+    },
+    {
       "title": "Grier House sportsmen and trophy",
       "type": "Photo",
       "era": null,
@@ -3519,8 +3775,21 @@
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
-        "$file": "Photo Archives /Ifaturoti1.jpg",
+        "$file": "Photo Archives /IFATUROTI B&W.jpg",
         "alt": "Michael Ifaturoti"
+      }
+    },
+    {
+      "title": "Michael Ifaturoti (colourised)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /IFATUROTI Color.jpg",
+        "alt": "Michael Ifaturoti (colourised)"
       }
     },
     {
@@ -3532,8 +3801,21 @@
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
-        "$file": "Photo Archives /Ifaturoti2.jpg",
+        "$file": "Photo Archives /Ifaturoti1.jpg",
         "alt": "Michael Ifaturoti (2)"
+      }
+    },
+    {
+      "title": "Michael Ifaturoti (3)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ifaturoti2.jpg",
+        "alt": "Michael Ifaturoti (3)"
       }
     },
     {
@@ -3716,6 +3998,71 @@
       "media": {
         "$file": "Photo Archives /Odiase Gentlemen 1944.jpg",
         "alt": "Odiase Gentlemen, 1944"
+      }
+    },
+    {
+      "title": "Joseph Kayode Ogunmoyela",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ogunmoyela1.jpg",
+        "alt": "Joseph Kayode Ogunmoyela"
+      }
+    },
+    {
+      "title": "Joseph Kayode Ogunmoyela (2)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ogunmoyela2.jpg",
+        "alt": "Joseph Kayode Ogunmoyela (2)"
+      }
+    },
+    {
+      "title": "Joseph Kayode Ogunmoyela (3)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ogunmoyela3.jpg",
+        "alt": "Joseph Kayode Ogunmoyela (3)"
+      }
+    },
+    {
+      "title": "Joseph Kayode Ogunmoyela (4)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ogunmoyela4.jpg",
+        "alt": "Joseph Kayode Ogunmoyela (4)"
+      }
+    },
+    {
+      "title": "Joseph Kayode Ogunmoyela (5)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Ogunmoyela6.jpg",
+        "alt": "Joseph Kayode Ogunmoyela (5)"
       }
     },
     {
@@ -4026,12 +4373,64 @@
       "credit": "Grier House Museum and Library",
       "collection": "Photo Archives",
       "media": {
-        "$file": "Photo Archives /Onajin1.png",
+        "$file": "Photo Archives /Onajin1.jpg",
         "alt": "Onajin"
       }
     },
     {
-      "title": "Tunji Otegbeye 1942 (colourised)",
+      "title": "Onajin (2)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Onajin1.png",
+        "alt": "Onajin (2)"
+      }
+    },
+    {
+      "title": "Onajin (3)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Onajin2.jpg",
+        "alt": "Onajin (3)"
+      }
+    },
+    {
+      "title": "Onajin (4)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Onajin3.jpg",
+        "alt": "Onajin (4)"
+      }
+    },
+    {
+      "title": "Onajin (5)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Onajin4.jpg",
+        "alt": "Onajin (5)"
+      }
+    },
+    {
+      "title": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (colourised)",
       "type": "Photo",
       "era": "Colonial",
       "year": "1942",
@@ -4040,11 +4439,11 @@
       "collection": "Photo Archives",
       "media": {
         "$file": "Photo Archives /Otegbeye 1942 color.jpg",
-        "alt": "Tunji Otegbeye 1942 (colourised)"
+        "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (colourised)"
       }
     },
     {
-      "title": "Tunji Otegbeye, 1942",
+      "title": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes.",
       "type": "Photo",
       "era": "Colonial",
       "year": "1942",
@@ -4053,11 +4452,11 @@
       "collection": "Photo Archives",
       "media": {
         "$file": "Photo Archives /Otegbeye 1942.jpg",
-        "alt": "Tunji Otegbeye, 1942"
+        "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes."
       }
     },
     {
-      "title": "Tunji Otegbeye, 1942 (2)",
+      "title": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (2)",
       "type": "Photo",
       "era": "Colonial",
       "year": "1942",
@@ -4066,7 +4465,7 @@
       "collection": "Photo Archives",
       "media": {
         "$file": "Photo Archives /Otegbeye 1942.png",
-        "alt": "Tunji Otegbeye, 1942 (2)"
+        "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (2)"
       }
     },
     {
@@ -4226,6 +4625,19 @@
       }
     },
     {
+      "title": "Oyenuga Adeyinka",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Oyenuga Adeyinka.jpg",
+        "alt": "Oyenuga Adeyinka"
+      }
+    },
+    {
       "title": "Prince Solomon Akenzua",
       "type": "Photo",
       "era": null,
@@ -4356,6 +4768,32 @@
       }
     },
     {
+      "title": "Andrew A.E. Sagay (SN 16, set 1930), Head of School 1932",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Sagay B&W.jpg",
+        "alt": "Andrew A.E. Sagay (SN 16, set 1930), Head of School 1932"
+      }
+    },
+    {
+      "title": "Andrew A.E. Sagay (SN 16, set 1930), Head of School 1932 (colourised)",
+      "type": "Photo",
+      "era": null,
+      "year": null,
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Sagay color.jpg",
+        "alt": "Andrew A.E. Sagay (SN 16, set 1930), Head of School 1932 (colourised)"
+      }
+    },
+    {
       "title": "Wole Soyinka and Drama Group",
       "type": "Photo",
       "era": null,
@@ -4382,6 +4820,32 @@
       }
     },
     {
+      "title": "Wole Soyinka following his release from detention, October 8, 1969",
+      "type": "Photo",
+      "era": "Independence",
+      "year": "1969",
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Soyinka released in 1969.png",
+        "alt": "Wole Soyinka following his release from detention, October 8, 1969"
+      }
+    },
+    {
+      "title": "Andrew A.E. Sagay (SN 16, set 1930) as Head of School, in blue school jacket. His brother Gabriel Amone Sagay (SN 93, set 1932) seated extreme right.",
+      "type": "Photo",
+      "era": "Colonial",
+      "year": "1932",
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /The Head of School in Blue School Jacket is Andrew A.E Sagay, his Brother Gabriel Amone Sagay 1932 seated extreme right.jpg",
+        "alt": "Andrew A.E. Sagay (SN 16, set 1930) as Head of School, in blue school jacket. His brother Gabriel Amone Sagay (SN 93, set 1932) seated extreme right."
+      }
+    },
+    {
       "title": "Wole Soyinka inspecting Cadet Boys",
       "type": "Photo",
       "era": null,
@@ -4392,6 +4856,58 @@
       "media": {
         "$file": "Photo Archives /Wole Soyinka inspecting Cadet Boys.jpg",
         "alt": "Wole Soyinka inspecting Cadet Boys"
+      }
+    },
+    {
+      "title": "The uncommon brilliance of Omololu Olunloyo — in his own words",
+      "era": "Modern",
+      "year": "2026",
+      "description": "Dr Omololu Olunloyo presents his library and shares reflections on his intellectual life. Courtesy the Olunloyo family.",
+      "credit": "Olunloyo family",
+      "type": "Video",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/Dr Omololu Olunloyo showing his library.mp4",
+        "alt": "The uncommon brilliance of Omololu Olunloyo — in his own words"
+      }
+    },
+    {
+      "title": "Gilbert Enobakhare — video biography",
+      "era": "Modern",
+      "year": "2026",
+      "description": "Video biography of Notable Grierson Gilbert Enobakhare.",
+      "credit": "Grier House Museum and Library",
+      "type": "Video",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/Enobhakare video biography.mp4",
+        "alt": "Gilbert Enobakhare — video biography"
+      }
+    },
+    {
+      "title": "Old Griersons and current students singing the House Song at the 2026 Reunion",
+      "era": "Modern",
+      "year": "2026",
+      "description": "Old Griersons join current students in singing the Grier House Song at the 2026 Reunion, October 17, 2026.",
+      "credit": "Grier House Museum and Library",
+      "type": "Video",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/Old Griersons and Young boys singing house anthem at 2026 Reunion.mp4",
+        "alt": "Old Griersons and current students singing the House Song at the 2026 Reunion"
+      }
+    },
+    {
+      "title": "Grier House Museum and Library — video montage",
+      "era": "Modern",
+      "year": "2026",
+      "description": "A video montage of the Grier House Museum and Library.",
+      "credit": "Grier House Museum and Library",
+      "type": "Video",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/VIDEO Montage of the museum.mp4",
+        "alt": "Grier House Museum and Library — video montage"
       }
     },
     {
@@ -4415,7 +4931,7 @@
       "credit": "Grier House Museum and Library",
       "collection": "Video Archives",
       "media": {
-        "$file": "Video Archives/VIDEO-2026-09-25-17-09-23.mp4",
+        "$file": "Video Archives/Tour of Dr Omololu Olunloyo’s Father in Oke Ado built in 1945. Courtesy the family.mp4",
         "alt": "Grier House video 1"
       }
     },
@@ -4427,8 +4943,20 @@
       "credit": "Grier House Museum and Library",
       "collection": "Video Archives",
       "media": {
-        "$file": "Video Archives/VIDEO-2026-09-25-17-09-28.mp4",
+        "$file": "Video Archives/VIDEO-2026-09-25-17-09-23.mp4",
         "alt": "Grier House video 2"
+      }
+    },
+    {
+      "title": "Grier House Video, September 2026 (3)",
+      "type": "Video",
+      "era": "Modern",
+      "year": "2026",
+      "credit": "Grier House Museum and Library",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/VIDEO-2026-09-25-17-09-28.mp4",
+        "alt": "Grier House video 3"
       }
     }
   ],
