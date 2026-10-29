@@ -7,7 +7,7 @@ import ArtStrip from '@/components/art/ArtStrip';
 export const metadata: Metadata = {
   title: 'Archives',
   description:
-    'The digital archive of the Grier House Museum — photographs, video recordings, historical documents and artefacts spanning the full history of Grier House, Government College Ibadan, from 1930 to the present.',
+    'The digital archive of the Grier House Museum: photographs, video recordings, historical documents and artefacts spanning the full history of Grier House, Government College Ibadan, from 1930 to the present.',
 };
 
 export default async function ArchivesPage() {
@@ -29,7 +29,7 @@ export default async function ArchivesPage() {
           <p className={styles.eyebrow}>Grier House Museum &amp; Library</p>
           <h1 className={styles.title}>Archives</h1>
           <p className={styles.subtitle}>
-            Photographs, video recordings, historical documents and artefacts spanning the full history of Grier House — from its founding in 1930 to the present day.
+            Photographs, video recordings, historical documents and artefacts spanning the full history of Grier House, from its founding in 1930 to the present day.
           </p>
         </div>
       </section>

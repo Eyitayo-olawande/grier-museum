@@ -40,7 +40,7 @@ export default async function NotableGriersonsPage() {
           <p className={styles.eyebrow}>Grier House Museum &amp; Library</p>
           <h1 className={styles.title}>Notable Griersons</h1>
           <p className={styles.subtitle}>
-            Distinguished alumni of Grier House, Government College Ibadan &mdash; presented in alphabetical order by surname.
+            Distinguished alumni of Grier House, Government College Ibadan, presented in alphabetical order by surname.
           </p>
           <div className={styles.stat}>
             <span className={styles.statNum}>{profiles.length}</span>

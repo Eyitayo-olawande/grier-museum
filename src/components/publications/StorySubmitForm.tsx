@@ -126,7 +126,7 @@ export default function StorySubmitForm() {
           className={`${styles.textarea} ${errors.story ? styles.inputError : ''}`}
           value={form.story} onChange={handleChange} rows={10}
           aria-describedby={errors.story ? 'serr-story' : undefined}
-          placeholder="Share your memory of Grier House — a moment, a person, a lesson that stayed with you…" />
+          placeholder="Share your memory of Grier House: a moment, a person, a lesson that stayed with you…" />
         {errors.story && <span id="serr-story" className={styles.fieldError} role="alert">{errors.story}</span>}
       </div>
       <p className={styles.note}>

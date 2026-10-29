@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!profile) return {};
   return {
     title: profile.shortName,
-    description: `Profile of ${profile.fullName} — distinguished Grierson, ${profile.fields.join(', ')}.`,
+    description: `Profile of ${profile.fullName}, distinguished Grierson, ${profile.fields.join(', ')}.`,
   };
 }
 

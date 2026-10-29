@@ -9,7 +9,7 @@ import ArtStrip from '@/components/art/ArtStrip';
 export const metadata: Metadata = {
   title: 'Grier House Museum & Library',
   description:
-    'Home of the Grier House Museum & Library — custodian of the history and traditions of Grier House, Government College Ibadan.',
+    'Home of the Grier House Museum & Library, custodian of the history and traditions of Grier House, Government College Ibadan.',
 };
 
 const QUICK_LINKS = [
@@ -41,7 +41,7 @@ export default async function HomePage() {
             <p className={styles.heroEyebrow}>Government College Ibadan, founded 1929 &nbsp;&middot;&nbsp; Grier House, founded 1930</p>
             <h1 className={styles.heroTitle}>Grier House Museum<br />&amp; Library</h1>
             <p className={styles.heroDesc}>
-              Home of the Grier House Museum &amp; Library &mdash; custodian of the history and traditions of Grier House, Government College Ibadan. Explore profiles of notable Griersons, the traditions of the House, and an archive of photographs and videos from the Museum.
+              Home of the Grier House Museum &amp; Library, custodian of the history and traditions of Grier House, Government College Ibadan. Explore profiles of notable Griersons, the traditions of the House, and an archive of photographs and videos from the Museum.
             </p>
             <div className={styles.heroActions}>
               <Link href="/notable-griersons" className={styles.btnPrimary}>Notable Griersons</Link>

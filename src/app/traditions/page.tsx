@@ -7,7 +7,7 @@ import ArtStrip from '@/components/art/ArtStrip';
 export const metadata: Metadata = {
   title: 'Traditions',
   description:
-    'The living traditions of Grier House, Government College Ibadan — from the Mustard Seed literary magazine and the annual House Governor address to inter-house sports and the Old Griersons reunion.',
+    'The living traditions of Grier House, Government College Ibadan: from the Mustard Seed literary magazine and the annual House Governor address to inter-house sports and the Old Griersons reunion.',
 };
 
 const CATEGORY_COLOURS: Record<string, string> = {
@@ -32,7 +32,7 @@ export default async function TraditionsPage() {
           <p className={styles.eyebrow}>Grier House Museum &amp; Library</p>
           <h1 className={styles.title}>Traditions</h1>
           <p className={styles.subtitle}>
-            The customs, ceremonies and practices that have defined Grier House across nearly a century — from literary culture and sport to leadership and fellowship.
+            The customs, ceremonies and practices that have defined Grier House across nearly a century: from literary culture and sport to leadership and fellowship.
           </p>
         </div>
       </section>

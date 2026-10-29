@@ -6,7 +6,7 @@ import ArtStrip from '@/components/art/ArtStrip';
 export const metadata: Metadata = {
   title: 'News & Publications',
   description:
-    'News and publications from the Grier House Museum — including the Mustard Seed literary magazine, the Dare to Learn journal, the quarterly newsletter, alumni stories and messages from the House Governor.',
+    'News and publications from the Grier House Museum: the Mustard Seed literary magazine, the Dare to Learn journal, the quarterly newsletter, alumni stories and messages from the House Governor.',
 };
 
 /* Descriptions use the wording of the project brief and the committee's documents */

@@ -5067,42 +5067,42 @@
       }
     },
     {
-      "title": "Untitled",
+      "title": "Our culture is now",
       "slug": "ink-drawing-of-women-with-pots",
       "order": 7,
-      "medium": "Ink drawing",
-      "artist": null,
-      "year": null,
-      "description": "Women in patterned cloth with decorated pots. Title and artist to be confirmed.",
+      "medium": "Ink on paper",
+      "artist": "Bature",
+      "year": "2025",
+      "description": "Women in patterned cloth with decorated pots.",
       "image": {
         "$file": "Museum & Library /Original Art Works/08 Ink drawing of women with pots.jpg",
-        "alt": "Untitled"
+        "alt": "Our culture is now"
       }
     },
     {
-      "title": "Grier House",
+      "title": "New Grier House building donated by Wale Babalakin",
       "slug": "new-grier-house-building",
       "order": 8,
       "medium": "Painting",
       "artist": null,
-      "year": null,
-      "description": "The new Grier House building, completed in 2024. Artist to be confirmed.",
+      "year": "2024",
+      "description": "The new Grier House building, completed in 2024, donated by Wale Babalakin.",
       "image": {
         "$file": "Museum & Library /Original Art Works/09 New Grier House building.jpg",
-        "alt": "Grier House"
+        "alt": "New Grier House building donated by Wale Babalakin"
       }
     },
     {
-      "title": "Head",
+      "title": "Man of Nok",
       "slug": "green-head",
       "order": 9,
-      "medium": "Coloured pencil drawing",
+      "medium": "Acrylic on canvas",
       "artist": "Dele Olusanya",
-      "year": null,
+      "year": "2016",
       "description": "A head drawn in green on a red and yellow ground.",
       "image": {
         "$file": "Museum & Library /Original Art Works/10 Green head.jpg",
-        "alt": "Head"
+        "alt": "Man of Nok"
       }
     },
     {
@@ -5119,16 +5119,16 @@
       }
     },
     {
-      "title": "Faces",
+      "title": "Osolanke and the Princess of Ife",
       "slug": "faces-by-dipo-alao",
       "order": 11,
-      "medium": "Ink drawing",
-      "artist": "Dipo Alao",
-      "year": null,
+      "medium": "Ink on paper",
+      "artist": "Alao Dipo",
+      "year": "2018",
       "description": "Overlapping faces built from line and pattern.",
       "image": {
         "$file": "Museum & Library /Original Art Works/12 Faces by Dipo Alao.jpg",
-        "alt": "Faces"
+        "alt": "Osolanke and the Princess of Ife"
       }
     },
     {
