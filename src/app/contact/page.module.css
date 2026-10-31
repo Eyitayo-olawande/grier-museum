@@ -191,7 +191,7 @@
   border-color: var(--crimson);
 }
 
-.teamPhoto { object-fit: cover; object-position: center 20%; }
+.teamPhoto { object-fit: cover; object-position: center top; }
 
 /* Initials placeholder — shown when photo hasn't loaded */
 .teamInitials {
