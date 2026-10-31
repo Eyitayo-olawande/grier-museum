@@ -145,8 +145,14 @@ PROFILE_VIDEOS = {
 }
 
 
+EXCLUDE_PHOTOS = {
+    "Otegbeye 1942.png",  # format duplicate of Otegbeye 1942.jpg
+}
+
+
 def photo_files():
-    files = sorted(f for f in os.listdir(os.path.join(SRC, PHOTOS)) if re.search(r"\.(jpe?g|png)$", f, re.I))
+    files = sorted(f for f in os.listdir(os.path.join(SRC, PHOTOS))
+                   if re.search(r"\.(jpe?g|png)$", f, re.I) and f not in EXCLUDE_PHOTOS)
     # of two identical files keep the one with a descriptive name, not the unnamed copy
     files.sort(key=lambda f: bool(re.match(r"[0-9a-f]{8}-", f)))
     seen, unique = {}, []
@@ -427,7 +433,9 @@ def museum_page(gallery):
         # introductory videos in the Museum & Library folder; a better tour is to follow
         "introVideos": [media(f"{MUSEUM}/{f}", "A tour of the Grier Museum and Library")
                         for f in sorted(os.listdir(os.path.join(SRC, MUSEUM))) if f.lower().startswith("introductory video")],
-        "galleryImages": [media(f"{MUSEUM}/{f}", re.sub(r"\d*\.(jpe?g|png)$", "", f, flags=re.I).strip()) for f in gallery],
+        "galleryImages": [media(f"{MUSEUM}/{f}",
+                                MUSEUM_CAPTIONS.get(f, re.sub(r"\d*\.(jpe?g|png)$", "", f, flags=re.I).strip()))
+                          for f in gallery],
         "creatingTheMuseumTitle": "Creating the Museum, October 2026",
         "creatingTheMuseumMedia": [media(f"{CREATING}/{f}") for f in sorted(os.listdir(os.path.join(SRC, CREATING)))
                                    if re.search(r"\.(jpe?g|png|mp4)$", f, re.I)],
@@ -655,6 +663,18 @@ VIDEO_INFO = {
         "description": "Oladele Olusanya '65 presents the trophy for Banjo's Prize to the Grier House Governor, Gboyega Akin-Deko '70, at the Grier Museum and Library on October 27, 2026.",
         "credit": "Grier House Museum and Library",
     },
+}
+
+
+MUSEUM_CAPTIONS = {
+    "Images from the museum19.jpg": "Wole Soyinka space at the Grier Museum and Library",
+    "Original art wall.jpeg": "Original art wall at the Grier Museum and Library",
+    "Zoe Akintola.jpeg": "Zoe Akintola, Grier House Student & editor of The Mustard Seed, Oct 2026",
+    "Wall dedicated to Ekperigin.jpeg": (
+        "Wall dedicated to Ekperigin '32, Captain of all games, and Jide Bademosi '53, "
+        "Grierson and cricket icon, at the Grier Museum and Library"
+    ),
+    "The Grier House Chess & Draughts Club.jpeg": "The Grier House Chess & Draughts Club at the Grier Museum and Library",
 }
 
 

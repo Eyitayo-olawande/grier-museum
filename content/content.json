@@ -789,10 +789,6 @@
           "alt": "Harding Ekperigin"
         },
         {
-          "$file": "Museum & Library /Original Art Works/04 Ekperigin Captain of all Games.jpg",
-          "alt": "Ekperigin '32, “Captain of all Games” (painting)"
-        },
-        {
           "$file": "Museum & Library /Original Art Works/05 Ekperigin running.jpg",
           "alt": "Ekperigin (painting)"
         }
@@ -1312,7 +1308,7 @@
       "gallery": [
         {
           "$file": "Video Archives/Dr Omololu Olunloyo showing his library.mp4",
-          "alt": "The uncommon brilliance of Omololu Olunloyo — in his own words"
+          "alt": "The uncommon brilliance of Omololu Olunloyo, in his own words"
         }
       ]
     },
@@ -1489,10 +1485,6 @@
         },
         {
           "$file": "Photo Archives /Otegbeye 1942.jpg",
-          "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes."
-        },
-        {
-          "$file": "Photo Archives /Otegbeye 1942.png",
           "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes."
         },
         {
@@ -3715,6 +3707,19 @@
       }
     },
     {
+      "title": "Grier House students, October 2026",
+      "type": "Photo",
+      "era": "Modern",
+      "year": "2026",
+      "description": null,
+      "credit": "Grier House Museum and Library",
+      "collection": "Photo Archives",
+      "media": {
+        "$file": "Photo Archives /Grier House group photo, Oct 2026.jpeg",
+        "alt": "Grier House students, October 2026"
+      }
+    },
+    {
       "title": "Grier House sportsmen and trophy",
       "type": "Photo",
       "era": null,
@@ -4456,19 +4461,6 @@
       }
     },
     {
-      "title": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (2)",
-      "type": "Photo",
-      "era": "Colonial",
-      "year": "1942",
-      "description": null,
-      "credit": "Grier House Museum and Library",
-      "collection": "Photo Archives",
-      "media": {
-        "$file": "Photo Archives /Otegbeye 1942.png",
-        "alt": "Grierson Tunji Otegbeye '42 set in his sixties. Ground breaking physician, societal gadfly and activist for populist causes. (2)"
-      }
-    },
-    {
       "title": "Tunji Otegbeye Cricket",
       "type": "Photo",
       "era": null,
@@ -4872,20 +4864,7 @@
       }
     },
     {
-      "title": "The uncommon brilliance of Omololu Olunloyo — in his own words",
-      "era": "Modern",
-      "year": "2026",
-      "description": "Dr Omololu Olunloyo presents his library and shares reflections on his intellectual life. Courtesy the Olunloyo family.",
-      "credit": "Olunloyo family",
-      "type": "Video",
-      "collection": "Video Archives",
-      "media": {
-        "$file": "Video Archives/Dr Omololu Olunloyo showing his library.mp4",
-        "alt": "The uncommon brilliance of Omololu Olunloyo — in his own words"
-      }
-    },
-    {
-      "title": "Gilbert Enobakhare — video biography",
+      "title": "Gilbert Enobakhare, video biography",
       "era": "Modern",
       "year": "2026",
       "description": "Video biography of Notable Grierson Gilbert Enobakhare.",
@@ -4894,7 +4873,7 @@
       "collection": "Video Archives",
       "media": {
         "$file": "Video Archives/Enobhakare video biography.mp4",
-        "alt": "Gilbert Enobakhare — video biography"
+        "alt": "Gilbert Enobakhare, video biography"
       }
     },
     {
@@ -4924,7 +4903,20 @@
       }
     },
     {
-      "title": "Grier House Museum and Library — video montage",
+      "title": "Presentation of trophy for Banjo's Prize, October 27, 2026",
+      "era": "Modern",
+      "year": "2026",
+      "description": "Oladele Olusanya '65 presents the trophy for Banjo's Prize to the Grier House Governor, Gboyega Akin-Deko '70, at the Grier Museum and Library on October 27, 2026.",
+      "credit": "Grier House Museum and Library",
+      "type": "Video",
+      "collection": "Video Archives",
+      "media": {
+        "$file": "Video Archives/Presentation of Trophy for Banjo’s Prize.mp4",
+        "alt": "Presentation of trophy for Banjo's Prize, October 27, 2026"
+      }
+    },
+    {
+      "title": "Grier House Museum and Library, video montage",
       "era": "Modern",
       "year": "2026",
       "description": "A video montage of the Grier House Museum and Library.",
@@ -4933,7 +4925,7 @@
       "collection": "Video Archives",
       "media": {
         "$file": "Video Archives/VIDEO Montage of the museum.mp4",
-        "alt": "Grier House Museum and Library — video montage"
+        "alt": "Grier House Museum and Library, video montage"
       }
     },
     {
@@ -4960,103 +4952,78 @@
         "$file": "Video Archives/Tour of Dr Omololu Olunloyo’s Father in Oke Ado built in 1945. Courtesy the family.mp4",
         "alt": "Grier House video 1"
       }
-    },
-    {
-      "title": "Grier House Video, September 2026 (2)",
-      "type": "Video",
-      "era": "Modern",
-      "year": "2026",
-      "credit": "Grier House Museum and Library",
-      "collection": "Video Archives",
-      "media": {
-        "$file": "Video Archives/VIDEO-2026-09-25-17-09-28.mp4",
-        "alt": "Grier House video 2"
-      }
     }
   ],
   "api::artwork.artwork": [
     {
-      "title": "Victor Ludorum",
+      "title": "The Grierson",
       "slug": "victor-ludorum",
       "order": 0,
-      "medium": "Painting",
-      "artist": null,
-      "year": null,
-      "description": "A Grierson in a Grier House shirt holding the Victor Ludorum trophy, with a cricketer and a football team behind him. Subject and artist to be confirmed.",
+      "medium": "Oil on wood panel",
+      "artist": "Chinedu & Dele Olusanya",
+      "year": "2026",
+      "description": "A Grierson in a Grier House shirt holding the Victor Ludorum trophy, with a cricketer and a football team behind him.",
       "image": {
         "$file": "Museum & Library /Original Art Works/01 Victor Ludorum.jpg",
-        "alt": "Victor Ludorum"
+        "alt": "The Grierson"
       }
     },
     {
-      "title": "Grierson in Traditional Attire",
+      "title": "Gabriel Akin Adeko",
       "slug": "grierson-in-traditional-attire",
       "order": 1,
-      "medium": "Painting",
-      "artist": null,
-      "year": null,
-      "description": "Portrait in agbada and coral beads against a patterned background. Subject and artist to be confirmed.",
+      "medium": "Oil on wood panel",
+      "artist": "Chinedu & Dele Olusanya",
+      "year": "2026",
+      "description": "Portrait of Gabriel Akin Adeko in pink agbada with beaded necklace, against a patterned purple background.",
       "image": {
         "$file": "Museum & Library /Original Art Works/02 Grierson in traditional attire.jpg",
-        "alt": "Grierson in Traditional Attire"
+        "alt": "Gabriel Akin Adeko"
       }
     },
     {
-      "title": "With the Mustard Seed and The Rock",
-      "slug": "grierson-with-the-mustard-seed-and-the-rock",
-      "order": 2,
-      "medium": "Painting",
-      "artist": null,
-      "year": null,
-      "description": "Portrait in front of a bookshelf holding the GCI Year Book, the Mustard Seed and The Rock, beside the Grier House crest with the motto Sapere Aude. Subject and artist to be confirmed.",
-      "image": {
-        "$file": "Museum & Library /Original Art Works/03 Grierson with the Mustard Seed and The Rock.jpg",
-        "alt": "With the Mustard Seed and The Rock"
-      }
-    },
-    {
-      "title": "Ekperigin '32, “Captain of all Games”",
+      "title": "Ojutalayo",
       "slug": "ekperigin-captain-of-all-games",
-      "order": 3,
-      "medium": "Painting",
-      "artist": "Dele Olusanya / Chinex",
-      "year": null,
-      "description": "Harding Ekperigin of the 1932 set in his Government College blazer on the running track, inscribed “Captain of all Games”.",
+      "order": 2,
+      "medium": "Oil on wood panel",
+      "artist": "Chinedu & Dele Olusanya",
+      "year": "2026",
+      "description": "Ojutalayo in a Government College blazer on the running track.",
       "image": {
         "$file": "Museum & Library /Original Art Works/04 Ekperigin Captain of all Games.jpg",
-        "alt": "Ekperigin '32, “Captain of all Games”"
+        "alt": "Ojutalayo"
       }
     },
     {
       "title": "Ekperigin",
       "slug": "ekperigin-running",
-      "order": 4,
-      "medium": "Painting",
-      "artist": "Dele Olusanya / Chinex",
-      "year": null,
-      "description": "Harding Ekperigin running barefoot in a Grier House vest.",
+      "order": 3,
+      "medium": "Oil on wood panel",
+      "artist": "Chinedu & Dele Olusanya",
+      "year": "2026",
+      "description": "Harding Ekperigin running in a Grier House vest.",
       "image": {
         "$file": "Museum & Library /Original Art Works/05 Ekperigin running.jpg",
         "alt": "Ekperigin"
       }
     },
     {
-      "title": "Oba of Benin",
+      "title": "Oba Erediauwa",
       "slug": "oba-of-benin",
-      "order": 5,
-      "medium": "Painting",
-      "artist": null,
-      "year": null,
-      "description": "Portrait in coral regalia before palace columns and Benin figures. Subject and artist to be confirmed.",
+      "order": 4,
+      "medium": "Oil on canvas",
+      "artist": "Chinedu & Dele Olusanya",
+      "year": "2026",
+      "description": "Portrait of Oba Erediauwa in coral regalia and ceremonial headdress, before palace columns and Benin figures.",
       "image": {
         "$file": "Museum & Library /Original Art Works/06 Oba of Benin.jpg",
-        "alt": "Oba of Benin"
+        "alt": "Oba Erediauwa"
       }
     },
     {
       "title": "Untitled",
       "slug": "pen-and-ink-drawing",
-      "order": 6,
+      "order": 5,
       "medium": "Pen and ink drawing",
       "artist": null,
       "year": null,
@@ -5069,7 +5036,7 @@
     {
       "title": "Our culture is now",
       "slug": "ink-drawing-of-women-with-pots",
-      "order": 7,
+      "order": 6,
       "medium": "Ink on paper",
       "artist": "Bature",
       "year": "2025",
@@ -5082,7 +5049,7 @@
     {
       "title": "New Grier House building donated by Wale Babalakin",
       "slug": "new-grier-house-building",
-      "order": 8,
+      "order": 7,
       "medium": "Painting",
       "artist": null,
       "year": "2024",
@@ -5095,7 +5062,7 @@
     {
       "title": "Man of Nok",
       "slug": "green-head",
-      "order": 9,
+      "order": 8,
       "medium": "Acrylic on canvas",
       "artist": "Dele Olusanya",
       "year": "2016",
@@ -5108,7 +5075,7 @@
     {
       "title": "Head",
       "slug": "yellow-head",
-      "order": 10,
+      "order": 9,
       "medium": "Coloured pencil drawing",
       "artist": "Dele Olusanya",
       "year": "2006",
@@ -5121,7 +5088,7 @@
     {
       "title": "Osolanke and the Princess of Ife",
       "slug": "faces-by-dipo-alao",
-      "order": 11,
+      "order": 10,
       "medium": "Ink on paper",
       "artist": "Alao Dipo",
       "year": "2018",
@@ -5132,22 +5099,22 @@
       }
     },
     {
-      "title": "Grierson",
+      "title": "Wale Babalakin as a Teenage Student",
       "slug": "grierson-with-footballer",
-      "order": 12,
-      "medium": "Painting",
-      "artist": null,
-      "year": null,
-      "description": "A Grierson in white uniform, with students at work and a Grier House footballer behind him. Subject and artist to be confirmed.",
+      "order": 11,
+      "medium": "Oil on wood panel",
+      "artist": "Chinedu & Dele Olusanya",
+      "year": "2026",
+      "description": null,
       "image": {
         "$file": "Museum & Library /Original Art Works/13 Grierson with footballer.jpg",
-        "alt": "Grierson"
+        "alt": "Wale Babalakin as a Teenage Student"
       }
     },
     {
       "title": "Grier House, 1952",
       "slug": "grier-house-1952",
-      "order": 13,
+      "order": 12,
       "medium": "Painting",
       "artist": null,
       "year": null,
@@ -5247,7 +5214,7 @@
       },
       {
         "$file": "Museum & Library /Images from the museum19.jpg",
-        "alt": "Images from the museum"
+        "alt": "Wole Soyinka space at the Grier Museum and Library"
       },
       {
         "$file": "Museum & Library /Images from the museum2.jpg",
@@ -5296,6 +5263,22 @@
       {
         "$file": "Museum & Library /Museum Plaque.jpg",
         "alt": "Museum Plaque"
+      },
+      {
+        "$file": "Museum & Library /Original art wall.jpeg",
+        "alt": "Original art wall at the Grier Museum and Library"
+      },
+      {
+        "$file": "Museum & Library /The Grier House Chess & Draughts Club.jpeg",
+        "alt": "The Grier House Chess & Draughts Club at the Grier Museum and Library"
+      },
+      {
+        "$file": "Museum & Library /Wall dedicated to Ekperigin.jpeg",
+        "alt": "Wall dedicated to Ekperigin '32, Captain of all games, and Jide Bademosi '53, Grierson and cricket icon, at the Grier Museum and Library"
+      },
+      {
+        "$file": "Museum & Library /Zoe Akintola.jpeg",
+        "alt": "Zoe Akintola, Grier House Student & editor of The Mustard Seed, Oct 2026"
       }
     ],
     "creatingTheMuseumTitle": "Creating the Museum, October 2026",
