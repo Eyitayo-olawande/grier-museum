@@ -606,14 +606,14 @@ VIDEO_INFO = {
         "credit": "Grier House Museum and Library",
     },
     "Dr Omololu Olunloyo showing his library.mp4": {
-        "title": "The uncommon brilliance of Omololu Olunloyo — in his own words",
+        "title": "The uncommon brilliance of Omololu Olunloyo, in his own words",
         "era": "Modern",
         "year": "2026",
         "description": "Dr Omololu Olunloyo presents his library and shares reflections on his intellectual life. Courtesy the Olunloyo family.",
         "credit": "Olunloyo family",
     },
     "Enobhakare video biography.mp4": {
-        "title": "Gilbert Enobakhare — video biography",
+        "title": "Gilbert Enobakhare, video biography",
         "era": "Modern",
         "year": "2026",
         "description": "Video biography of Notable Grierson Gilbert Enobakhare.",
@@ -634,7 +634,7 @@ VIDEO_INFO = {
         "credit": "Olunloyo family",
     },
     "VIDEO Montage of the museum.mp4": {
-        "title": "Grier House Museum and Library — video montage",
+        "title": "Grier House Museum and Library, video montage",
         "era": "Modern",
         "year": "2026",
         "description": "A video montage of the Grier House Museum and Library.",
@@ -645,6 +645,13 @@ VIDEO_INFO = {
         "era": "Modern",
         "year": "2026",
         "description": "Keynote address delivered by Dr Adeshina for the book launch, with a narration by Prof. Taiwo.",
+        "credit": "Grier House Museum and Library",
+    },
+    "Presentation of Trophy for Banjo's Prize.mp4": {
+        "title": "Presentation of trophy for Banjo's Prize, October 27, 2026",
+        "era": "Modern",
+        "year": "2026",
+        "description": "Oladele Olusanya '65 presents the trophy for Banjo's Prize to the Grier House Governor, Gboyega Akin-Deko '70, at the Grier Museum and Library on October 27, 2026.",
         "credit": "Grier House Museum and Library",
     },
 }
