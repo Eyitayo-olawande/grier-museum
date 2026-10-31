@@ -549,6 +549,7 @@ CAPTIONS = {
     # Ifaturoti new photos (uppercase filename variant)
     "IFATUROTI B&W.jpg": "Michael Ifaturoti",
     "IFATUROTI Color.jpg": "Michael Ifaturoti (colourised)",
+    "Grier House group photo, Oct 2026.jpeg": "Grier House students, October 2026",
 }
 
 
@@ -647,7 +648,7 @@ VIDEO_INFO = {
         "description": "Keynote address delivered by Dr Adeshina for the book launch, with a narration by Prof. Taiwo.",
         "credit": "Grier House Museum and Library",
     },
-    "Presentation of Trophy for Banjo's Prize.mp4": {
+    "Presentation of Trophy for Banjo’s Prize.mp4": {
         "title": "Presentation of trophy for Banjo's Prize, October 27, 2026",
         "era": "Modern",
         "year": "2026",
