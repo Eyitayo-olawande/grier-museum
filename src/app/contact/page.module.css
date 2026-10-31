@@ -102,3 +102,151 @@
 @media (max-width: 1023px) {
   .emailGrid { grid-template-columns: 1fr; }
 }
+
+/* MANAGEMENT TEAM */
+.team {
+  background: var(--linen);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0 80px;
+}
+
+.teamInner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* — Title row with flanking rules — */
+.teamHeader {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 52px;
+}
+
+.teamRule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--crimson) 40%, var(--crimson) 60%, transparent);
+  opacity: .35;
+}
+
+.teamTitleBlock {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.teamEyebrow {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 6px;
+  opacity: .8;
+}
+
+.teamTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--slate-dark);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* — Portrait grid — */
+.teamGrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 24px;
+}
+
+/* — Individual card — */
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Portrait frame */
+.teamPortrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 3px solid var(--border);
+  box-shadow: 0 4px 18px rgba(0,0,0,.10), inset 0 0 0 1px rgba(255,255,255,.6);
+  background: var(--pearl);
+  margin-bottom: 14px;
+  transition: box-shadow .2s;
+}
+
+.teamCard:hover .teamPortrait {
+  box-shadow: 0 8px 28px rgba(128,0,0,.14), inset 0 0 0 1px rgba(255,255,255,.6);
+  border-color: var(--crimson);
+}
+
+.teamPhoto { object-fit: cover; object-position: top center; }
+
+/* Initials placeholder — shown when photo hasn't loaded */
+.teamInitials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--crimson);
+  opacity: .18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* When the photo loads, hide the initials behind it */
+.teamPortrait:has(.teamPhoto[src]) .teamInitials { display: none; }
+
+/* Name & role */
+.teamInfo { padding: 0 4px; width: 100%; }
+
+.teamName {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--slate-dark);
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.teamRole {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--crimson);
+  line-height: 1.45;
+  opacity: .85;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .teamGrid { grid-template-columns: repeat(3, 1fr); gap: 28px 20px; }
+}
+
+@media (max-width: 767px) {
+  .teamGrid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+  .teamHeader { gap: 16px; }
+  .teamTitle { font-size: 16px; white-space: normal; }
+}
+
+@media (max-width: 479px) {
+  .teamGrid { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
+  .teamName { font-size: 13px; }
+  .teamRole { font-size: 10px; }
+}

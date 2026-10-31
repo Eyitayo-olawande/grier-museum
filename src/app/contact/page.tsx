@@ -1,9 +1,21 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import ContactForm from '@/components/contact/ContactForm';
 import Prose from '@/components/common/Prose';
 import { getContactPage } from '@/lib/content';
 import styles from './page.module.css';
 import ArtStrip from '@/components/art/ArtStrip';
+
+const TEAM = [
+  { name: 'Oladele Olusanya',          role: 'Chairman, Grier House History and Traditions Committee', photo: 'oladele-olusanya.jpeg' },
+  { name: 'Oladele Jegede',            role: 'Overseer, Grier Museum & Library',                      photo: 'oladele-jegede.jpeg' },
+  { name: 'Gboyega Akin-Deko',         role: 'Grier House Governor',                                  photo: 'gboyega-akin-deko.jpeg' },
+  { name: 'Bimbo Akinyemi',            role: 'Deputy Governor, Grier House',                          photo: 'bimbo-akinyemi.jpeg' },
+  { name: 'Kazeem Olanrewaju Faniyi',  role: 'Grier Housemaster',                                     photo: 'kazeem-faniyi.jpeg' },
+  { name: 'Kingsley Raymond',          role: 'Grier House Warden',                                    photo: 'kingsley-raymond.jpeg' },
+  { name: 'Isiak Busari',              role: 'Head of House 2026–27',                                 photo: 'isiak-busari.jpeg' },
+  { name: 'Kenny Oladipo',             role: 'Website Creator and Sponsor',                           photo: 'kenny-oladipo.jpeg' },
+] as const;
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -109,6 +121,43 @@ export default async function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* MANAGEMENT TEAM */}
+      <section className={styles.team} aria-labelledby="team-heading">
+        <div className={styles.teamInner}>
+          <header className={styles.teamHeader}>
+            <div className={styles.teamRule} aria-hidden="true" />
+            <div className={styles.teamTitleBlock}>
+              <p className={styles.teamEyebrow}>Grier Museum and Library</p>
+              <h2 id="team-heading" className={styles.teamTitle}>Management Team</h2>
+            </div>
+            <div className={styles.teamRule} aria-hidden="true" />
+          </header>
+
+          <ul className={styles.teamGrid}>
+            {TEAM.map((member) => (
+              <li key={member.name} className={styles.teamCard}>
+                <div className={styles.teamPortrait}>
+                  <Image
+                    src={`/team/${member.photo}`}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 600px) 50vw, (max-width: 1024px) 25vw, 200px"
+                    className={styles.teamPhoto}
+                  />
+                  <span className={styles.teamInitials} aria-hidden="true">
+                    {member.name.split(' ').slice(0, 2).map(w => w[0]).join('')}
+                  </span>
+                </div>
+                <div className={styles.teamInfo}>
+                  <p className={styles.teamName}>{member.name}</p>
+                  <p className={styles.teamRole}>{member.role}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
       <ArtStrip start={10} />
