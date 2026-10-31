@@ -6,9 +6,8 @@
   z-index: 100;
 }
 
-/* A little wider than the page content so the nine menu tabs fit on one row */
 .inner {
-  max-width: 1320px;
+  max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: flex;

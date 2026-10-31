@@ -87,7 +87,11 @@ export async function findSingle<T>(singleType: string, query = 'populate=*'): P
 }
 
 function absolute(url: string): string {
-  return url.startsWith('http') ? url : `${STRAPI_URL}${url}`;
+  if (url.startsWith('http')) return url;
+  // In dev the Next.js rewrite proxies /uploads/* to Strapi, so relative URLs
+  // work from any device on the network without exposing port 1337.
+  // In production the static export needs absolute Strapi URLs.
+  return process.env.NODE_ENV === 'development' ? url : `${STRAPI_URL}${url}`;
 }
 
 /* Media entries without a url (local content file, nothing uploaded yet) are skipped. */
