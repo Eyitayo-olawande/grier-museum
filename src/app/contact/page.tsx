@@ -9,7 +9,7 @@ import ArtStrip from '@/components/art/ArtStrip';
 const TEAM = [
   { name: 'Oladele Olusanya',          role: 'Chairman, Grier House History and Traditions Committee', photo: 'oladele-olusanya.jpeg' },
   { name: 'Oladele Jegede',            role: 'Overseer, Grier Museum & Library',                      photo: 'oladele-jegede.jpeg' },
-  { name: 'Gboyega Akin-Deko',         role: 'Grier House Governor',                                  photo: 'gboyega-akin-deko.jpeg' },
+  { name: 'Gboyega Akin-Deko',         role: 'Grier House Governor',                                  photo: 'gboyega-akin-deko.jpeg',  scale: 0.68 },
   { name: 'Bimbo Akinyemi',            role: 'Deputy Governor, Grier House',                          photo: 'bimbo-akinyemi.jpeg' },
   { name: 'Kazeem Olanrewaju Faniyi',  role: 'Grier Housemaster',                                     photo: 'kazeem-faniyi.jpeg' },
   { name: 'Kingsley Raymond',          role: 'Grier House Warden',                                    photo: 'kingsley-raymond.jpeg' },
@@ -144,6 +144,7 @@ export default async function ContactPage() {
                     fill
                     sizes="(max-width: 600px) 50vw, (max-width: 1024px) 25vw, 200px"
                     className={styles.teamPhoto}
+                    style={'scale' in member ? { transform: `scale(${member.scale})`, transformOrigin: 'center bottom' } : undefined}
                   />
                   <span className={styles.teamInitials} aria-hidden="true">
                     {member.name.split(' ').slice(0, 2).map(w => w[0]).join('')}
