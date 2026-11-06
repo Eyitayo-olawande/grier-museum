@@ -23,7 +23,7 @@
 .storySet { font-size: 10px; color: var(--crimson); font-weight: 600; background: rgba(128,0,0,.06); padding: 2px 8px; border-radius: 10px; }
 .storyDate { font-size: 11px; color: var(--text-muted); }
 .storyTitle { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.25; margin-bottom: 10px; }
-.storyExcerpt { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; max-width: 720px; }
+.storyExcerpt { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; max-width: 720px; text-align: justify; }
 
 .storyDetails { }
 .storyReadMore { font-size: 12px; font-weight: 700; color: #5C3317; cursor: pointer; list-style: none; }
@@ -31,14 +31,14 @@
 .storyReadMore::after { content: ' ↓'; }
 .storyDetails[open] .storyReadMore::after { content: ' ↑'; }
 .storyBody { margin-top: 16px; max-width: 680px; }
-.storyBody p { font-size: 15px; color: var(--text); line-height: 1.9; margin-bottom: 18px; }
+.storyBody p { font-size: 15px; color: var(--text); line-height: 1.9; margin-bottom: 18px; text-align: justify; }
 .storyBody p:last-child { margin-bottom: 0; }
 
 /* SUBMIT */
 .submit { background: var(--bg-linen); padding: 56px 0 72px; }
 .submitLayout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: flex-start; }
 .submitTitle { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 14px; }
-.submitBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; }
+.submitBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; text-align: justify; }
 
 .guidelines { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 4px; padding: 18px 20px; margin-top: 20px; }
 .guidelinesTitle { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--text-muted); margin-bottom: 10px; }

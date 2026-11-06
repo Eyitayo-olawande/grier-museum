@@ -70,7 +70,7 @@
 }
 
 .featuredDesc {
-  font-size: 15px; color: var(--text); line-height: 1.75;
+  font-size: 15px; color: var(--text); line-height: 1.75; text-align: justify;
 }
 
 .featuredRight {
@@ -79,7 +79,7 @@
 
 .featuredDetail {
   font-size: 14px; color: var(--text-muted); line-height: 1.8;
-  margin-bottom: 16px;
+  margin-bottom: 16px; text-align: justify;
 }
 .featuredDetail:last-child { margin-bottom: 0; }
 
@@ -140,7 +140,7 @@
 }
 .detailsBody p {
   font-size: 12.5px; color: var(--text-muted); line-height: 1.75;
-  margin-bottom: 10px;
+  margin-bottom: 10px; text-align: justify;
 }
 .detailsBody p:last-child { margin-bottom: 0; }
 

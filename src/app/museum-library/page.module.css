@@ -46,7 +46,7 @@
 }
 .missionBody {
   font-size: 15px; color: var(--text-muted); line-height: 1.85;
-  margin-bottom: 16px;
+  margin-bottom: 16px; text-align: justify;
 }
 .missionBody:last-child { margin-bottom: 0; }
 
@@ -98,7 +98,7 @@
 }
 
 .visitDesc {
-  font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px;
+  font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px; text-align: justify;
 }
 
 .visitTable { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
@@ -154,7 +154,7 @@
   color: #fff; margin-bottom: 12px;
 }
 .committeeBody {
-  font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.8; margin-bottom: 20px;
+  font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.8; margin-bottom: 20px; text-align: justify;
 }
 .committeeLink {
   font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;

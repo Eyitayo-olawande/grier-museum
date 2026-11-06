@@ -18,7 +18,7 @@
 .text { flex: 1; min-width: 0; }
 .meta { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--slate); margin-bottom: 6px; }
 .title { font-family: var(--font-display); font-size: 22px; color: var(--crimson-dark); margin-bottom: 8px; }
-.summary { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 10px; }
+.summary { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 10px; text-align: justify; }
 .details { margin-top: 6px; }
 .readMore { cursor: pointer; font-size: 14px; font-weight: 800; color: var(--crimson); margin-bottom: 12px; }
 .pdf { display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 800; color: var(--crimson); }

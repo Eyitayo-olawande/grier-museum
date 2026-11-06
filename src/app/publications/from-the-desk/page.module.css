@@ -24,14 +24,14 @@
 .governorName { font-size: 14px; font-weight: 700; color: var(--text); }
 .governorDetail { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 .latestTitle { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 14px; }
-.latestExcerpt { font-size: 16px; color: var(--text-muted); line-height: 1.8; font-style: italic; margin-bottom: 16px; max-width: 700px; }
+.latestExcerpt { font-size: 16px; color: var(--text-muted); line-height: 1.8; font-style: italic; margin-bottom: 16px; max-width: 700px; text-align: justify; }
 .latestDetails {}
 .readMore { font-size: 12px; font-weight: 700; color: #1B4D2E; cursor: pointer; list-style: none; }
 .readMore::-webkit-details-marker { display: none; }
 .readMore::after { content: ' ↓'; }
 .latestDetails[open] .readMore::after { content: ' ↑'; }
 .latestBody { margin-top: 20px; border-top: 1px solid var(--linen); padding-top: 20px; max-width: 700px; }
-.latestBody p { font-size: 15px; color: var(--text); line-height: 1.9; margin-bottom: 18px; }
+.latestBody p { font-size: 15px; color: var(--text); line-height: 1.9; margin-bottom: 18px; text-align: justify; }
 .latestBody p:last-child { margin-bottom: 0; }
 
 /* ARCHIVE */
@@ -45,21 +45,21 @@
 .archiveGovernor { font-size: 13px; font-weight: 700; color: var(--text); }
 .archiveDetail { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
 .archiveTitle { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
-.archiveExcerpt { font-size: 14px; color: var(--text-muted); line-height: 1.75; font-style: italic; margin-bottom: 10px; max-width: 680px; }
+.archiveExcerpt { font-size: 14px; color: var(--text-muted); line-height: 1.75; font-style: italic; margin-bottom: 10px; max-width: 680px; text-align: justify; }
 .archiveDetails {}
 .archiveReadMore { font-size: 11px; font-weight: 700; color: #1B4D2E; cursor: pointer; list-style: none; }
 .archiveReadMore::-webkit-details-marker { display: none; }
 .archiveReadMore::after { content: ' ↓'; }
 .archiveDetails[open] .archiveReadMore::after { content: ' ↑'; }
 .archiveBody { margin-top: 14px; border-top: 1px solid var(--linen); padding-top: 14px; max-width: 680px; }
-.archiveBody p { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; }
+.archiveBody p { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; text-align: justify; }
 .archiveBody p:last-child { margin-bottom: 0; }
 
 /* ABOUT */
 .about { background: var(--bg-page); padding: 48px 0 64px; }
 .aboutInner { max-width: 680px; }
 .aboutTitle { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 14px; }
-.aboutBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; }
+.aboutBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; text-align: justify; }
 .aboutLink { font-size: 12px; font-weight: 700; color: #1B4D2E; text-decoration: none; transition: color .15s; }
 .aboutLink:hover { color: #0F2E1A; }
 

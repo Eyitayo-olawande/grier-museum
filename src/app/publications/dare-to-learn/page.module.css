@@ -16,7 +16,7 @@
 .latestMeta { margin-bottom: 12px; }
 .volBadge { font-size: 11px; font-weight: 700; color: #1A365D; text-transform: uppercase; letter-spacing: .5px; }
 .latestTheme { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 14px; }
-.latestExcerpt { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; max-width: 720px; }
+.latestExcerpt { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; max-width: 720px; text-align: justify; }
 .latestEssays { font-size: 11px; color: var(--text-muted); font-weight: 600; }
 
 /* ARCHIVE */
@@ -34,13 +34,13 @@
 .archiveSeason { font-size: 12px; color: var(--text-muted); }
 .archiveEssays { font-size: 10px; color: var(--text-muted); margin-top: 4px; }
 .archiveTheme { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-.archiveExcerpt { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+.archiveExcerpt { font-size: 13px; color: var(--text-muted); line-height: 1.7; text-align: justify; }
 
 /* ABOUT */
 .about { background: var(--bg-page); padding: 48px 0 64px; }
 .aboutGrid { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: flex-start; }
 .aboutTitle { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 14px; }
-.aboutBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; }
+.aboutBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; text-align: justify; }
 
 .submitBox { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 6px; padding: 26px; }
 .submitEyebrow { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A365D; margin-bottom: 6px; }
