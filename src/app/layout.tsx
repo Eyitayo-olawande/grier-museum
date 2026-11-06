@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import BackToTop from '@/components/common/BackToTop';
 
 export const metadata: Metadata = {
   title: {
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <Header />
         <main style={{ flex: 1 }}>{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

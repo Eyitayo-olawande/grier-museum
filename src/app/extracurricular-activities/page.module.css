@@ -29,25 +29,20 @@
 .videoCaption { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
 
 .activity {
-  display: grid; grid-template-columns: 1fr 360px; gap: 40px; align-items: start;
   padding: 44px 0; border-bottom: 1px solid var(--border);
   scroll-margin-top: 24px;
 }
 .activity:last-child { border-bottom: 0; }
-.activityText { grid-column: 1; }
 .activityTitle {
   font-family: var(--font-display); font-size: var(--text-2xl); color: var(--crimson);
   margin-bottom: 8px;
 }
-.summary { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
-.photos { display: grid; gap: 12px; }
+.summary { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; text-align: justify; }
+.activityText :global(p) { text-align: justify; }
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 32px; }
 .photo { width: 100%; object-fit: cover; border: 1px solid var(--border); display: block; }
 .sectionVideo { margin: 0; }
 .sectionVideo .photo { max-height: 560px; object-fit: contain; background: #000; }
-
-@media (max-width: 1023px) {
-  .activity { grid-template-columns: 1fr; gap: 24px; }
-}
 @media (max-width: 767px) {
   .title { font-size: 32px; }
 }

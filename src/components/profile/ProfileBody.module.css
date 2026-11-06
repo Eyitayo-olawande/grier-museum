@@ -25,6 +25,7 @@
 
 .bioText p {
   font-size: 15px; color: #2a2a2a; line-height: 1.85; margin-bottom: 20px;
+  text-align: justify;
 }
 .bioText p:last-child { margin-bottom: 0; }
 
