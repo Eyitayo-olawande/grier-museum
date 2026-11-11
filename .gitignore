@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 .claude/
 __pycache__/
+
+# deploy — keep scripts, exclude any real env copies placed here locally
+deploy/.env
+deploy/.env.local

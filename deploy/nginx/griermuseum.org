@@ -1,0 +1,37 @@
+# /etc/nginx/sites-available/griermuseum.org
+# Static Next.js site
+# After certbot runs, it will add the SSL server block automatically.
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name griermuseum.org www.griermuseum.org;
+
+    root /var/www/griermuseum.org/html;
+    index index.html;
+
+    # Serve Next.js static export
+    # Handles both /path and /path/ (with or without trailingSlash)
+    location / {
+        try_files $uri $uri/index.html $uri.html =404;
+    }
+
+    # Long-lived cache for hashed assets (_next/static/)
+    location /_next/static/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Moderate cache for media uploads (they don't change URL when updated)
+    location /uploads/ {
+        expires 7d;
+        add_header Cache-Control "public";
+    }
+
+    # Custom 404
+    error_page 404 /404/index.html;
+
+    # Logs
+    access_log /var/log/nginx/griermuseum.org.access.log;
+    error_log  /var/log/nginx/griermuseum.org.error.log;
+}
