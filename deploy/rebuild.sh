@@ -28,10 +28,11 @@ npm ci --prefer-offline
 #   STRAPI_URL=https://cms.griermuseum.org
 #   STRAPI_TOKEN=<token from production Strapi admin>
 echo "--> next build"
-# Cap memory so the build doesn't OOM on the 1 GB droplet
-NODE_OPTIONS="--max_old_space_size=512" \
-  $(grep -v '^#' "$ENV_FILE" | xargs) \
-  npm run build
+set -a
+# shellcheck disable=SC1090
+source "$ENV_FILE"
+set +a
+NODE_OPTIONS="--max_old_space_size=512" npm run build
 
 # --- 4. Swap the static files into the web root atomically ---
 echo "--> deploy to $WEB_ROOT"
