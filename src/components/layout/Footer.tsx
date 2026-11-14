@@ -33,6 +33,14 @@ export default function Footer() {
 
         <div className={styles.right}>
           <div className={styles.url}>griermuseum.org</div>
+          <a
+            href="https://gcimuseum.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.gciLink}
+          >
+            GCI Museum &rarr;
+          </a>
           <div className={styles.copy}>&copy; {year} Grier House Museum &amp; Library</div>
         </div>
       </div>

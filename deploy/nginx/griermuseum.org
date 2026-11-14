@@ -5,7 +5,7 @@
 server {
     listen 80;
     listen [::]:80;
-    server_name griermuseum.org www.griermuseum.org gcimuseum.org www.gcimuseum.org;
+    server_name griermuseum.org www.griermuseum.org;
 
     root /var/www/griermuseum.org/html;
     index index.html;

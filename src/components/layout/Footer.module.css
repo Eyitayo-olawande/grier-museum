@@ -63,6 +63,18 @@
   margin-bottom: 2px;
 }
 
+.gciLink {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  letter-spacing: .5px;
+  margin-bottom: 4px;
+  transition: color .15s;
+}
+.gciLink:hover { color: rgba(255, 255, 255, 0.85); }
+
 .copy {
   font-size: 10px;
   color: rgba(255, 255, 255, 0.28);
