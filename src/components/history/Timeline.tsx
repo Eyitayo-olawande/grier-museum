@@ -58,7 +58,7 @@ export default function Timeline({ items }: { items: TimelineMilestone[] }) {
                   </span>
                   <span className={styles.toggle}>{isOpen ? '−' : '+'}</span>
                 </div>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
+                <h3 className={styles.cardTitle} data-year={item.year}>{item.title}</h3>
                 {isOpen && (
                   <p className={styles.cardBody}>{item.body}</p>
                 )}

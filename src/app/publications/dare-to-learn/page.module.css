@@ -1,5 +1,5 @@
 /* DARE TO LEARN */
-.hero { background: #1A365D; color: #fff; }
+.hero { background: #800000; color: #fff; }
 .heroInner { max-width: var(--container); margin: 0 auto; padding: 48px var(--gutter) 44px; }
 .backLink { display: inline-block; font-size: 11px; font-weight: 600; color: rgba(255,255,255,.5); text-decoration: none; margin-bottom: 16px; transition: color .15s; }
 .backLink:hover { color: rgba(255,255,255,.85); }
@@ -11,17 +11,17 @@
 
 /* LATEST */
 .latest { background: var(--bg-page); padding: 48px 0; }
-.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #1A365D; margin-bottom: 16px; }
-.latestCard { background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid #1A365D; border-radius: 4px; padding: 32px 36px; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #800000; margin-bottom: 16px; }
+.latestCard { background: var(--bg-surface); border: 1px solid var(--border); border-left: 4px solid #800000; border-radius: 4px; padding: 32px 36px; }
 .latestMeta { margin-bottom: 12px; }
-.volBadge { font-size: 11px; font-weight: 700; color: #1A365D; text-transform: uppercase; letter-spacing: .5px; }
+.volBadge { font-size: 11px; font-weight: 700; color: #800000; text-transform: uppercase; letter-spacing: .5px; }
 .latestTheme { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 14px; }
 .latestExcerpt { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; max-width: 720px; text-align: justify; }
 .latestEssays { font-size: 11px; color: var(--text-muted); font-weight: 600; }
 
 /* ARCHIVE */
 .archive { background: var(--bg-linen); padding: 48px 0 64px; }
-.sectionTitle { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: #1A365D; margin-bottom: 20px; }
+.sectionTitle { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: #800000; margin-bottom: 20px; }
 .archiveList { display: flex; flex-direction: column; gap: 0; }
 .archiveRow {
   display: block; padding: 20px 0; border-top: 1px solid var(--border);
@@ -30,7 +30,7 @@
 .archiveRow:hover .archiveTheme { color: var(--crimson); }
 .archiveRow:last-child { border-bottom: 1px solid var(--border); }
 .archiveMeta { display: flex; flex-direction: column; gap: 4px; padding-top: 2px; }
-.archiveVol { font-size: 11px; font-weight: 700; color: #1A365D; text-transform: uppercase; letter-spacing: .5px; }
+.archiveVol { font-size: 11px; font-weight: 700; color: #800000; text-transform: uppercase; letter-spacing: .5px; }
 .archiveSeason { font-size: 12px; color: var(--text-muted); }
 .archiveEssays { font-size: 10px; color: var(--text-muted); margin-top: 4px; }
 .archiveTheme { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
@@ -43,12 +43,12 @@
 .aboutBody { font-size: 14px; color: var(--text-muted); line-height: 1.85; margin-bottom: 14px; text-align: justify; }
 
 .submitBox { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 6px; padding: 26px; }
-.submitEyebrow { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1A365D; margin-bottom: 6px; }
+.submitEyebrow { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #800000; margin-bottom: 6px; }
 .submitTitle { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 10px; }
 .submitBody { font-size: 13px; color: var(--text-muted); line-height: 1.75; margin-bottom: 12px; }
 .submitBody:last-of-type { margin-bottom: 18px; }
-.submitBtn { display: inline-block; background: #1A365D; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; text-decoration: none; padding: 10px 22px; border-radius: 3px; transition: background .15s; }
-.submitBtn:hover { background: #0F2040; }
+.submitBtn { display: inline-block; background: #800000; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; text-decoration: none; padding: 10px 22px; border-radius: 3px; transition: background .15s; }
+.submitBtn:hover { background: #600000; }
 
 @media (max-width: 1023px) { .aboutGrid { grid-template-columns: 1fr; } }
 @media (max-width: 767px) {
