@@ -142,7 +142,7 @@ export default async function MuseumLibraryPage() {
             <div className={styles.reflectionPhotoWrap}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/uploads/Museum_Overseer_visit_Oct2026_e3f4g5h6i7.webp"
+                src="/images/museum-overseer-visit-oct2026.webp"
                 alt="From left to right, Kazeem Faniyi, Housemaster, Gboyega Akin-Deko, House Governor, Dele Olusanya, Committee Chairman, Bimbo Akinyemi, Deputy House Governor and Oladele Jegede, Overseer, at the Museum Oct 2026"
                 className={styles.reflectionPhoto}
                 loading="lazy"
