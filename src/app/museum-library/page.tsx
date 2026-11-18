@@ -135,6 +135,46 @@ export default async function MuseumLibraryPage() {
         </div>
       </section>
 
+      {/* OVERSEER'S REFLECTION */}
+      <section className={styles.reflection}>
+        <div className={styles.container}>
+          <div className={styles.reflectionInner}>
+            <div className={styles.reflectionPhotoWrap}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/uploads/Museum_Overseer_visit_Oct2026_e3f4g5h6i7.webp"
+                alt="From left to right, Kazeem Faniyi, Housemaster, Gboyega Akin-Deko, House Governor, Dele Olusanya, Committee Chairman, Bimbo Akinyemi, Deputy House Governor and Oladele Jegede, Overseer, at the Museum Oct 2026"
+                className={styles.reflectionPhoto}
+                loading="lazy"
+              />
+              <p className={styles.reflectionCaption}>
+                From left to right, Kazeem Faniyi, Housemaster, Gboyega Akin-Deko, House Governor, Dele Olusanya, Committee Chairman, Bimbo Akinyemi, Deputy House Governor and Oladele Jegede, Overseer, at the Museum — Oct 2026
+              </p>
+            </div>
+            <div className={styles.reflectionText}>
+              <p className={styles.reflectionEyebrow}>From the Project Overseer</p>
+              <h2 className={styles.reflectionTitle}>How the Grier House Museum and Library Has Inspired Me</h2>
+              <p className={styles.reflectionBody}>
+                My journey with Grier House Museum and Library has been one of passion, purpose, and inspiration. What started as an effort to preserve the history and heritage of our great House has grown into a vision of building a lasting legacy for generations to come.
+              </p>
+              <p className={styles.reflectionBody}>
+                Seeing our old photographs, trophies, books, and historical records come together in one place reminds me that our past is worth preserving and our future is worth investing in.
+              </p>
+              <p className={styles.reflectionBody}>
+                The Grier House Museum and Library has inspired me to understand that what matters most is not what we achieve today, but what we leave behind for those coming after us. Any visitor to this place will see that it is more than a museum or library; it is a place where history is preserved, knowledge is shared, and young minds are inspired to dream and achieve.
+              </p>
+              <blockquote className={styles.reflectionQuote}>
+                My greatest joy is knowing that we are not just building a library; we are preserving a legacy and inspiring generations.
+              </blockquote>
+              <p className={styles.reflectionAuthor}>
+                <strong>Oladele Jegede</strong>, Grierson &lsquo;88<br />
+                Project Overseer, Grier House Museum and Library
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* VISIT & ACCESS */}
       <section className={styles.visit}>
         <div className={styles.container}>

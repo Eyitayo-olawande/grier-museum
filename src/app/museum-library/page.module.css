@@ -163,18 +163,59 @@
 }
 .committeeLink:hover { color: #fff; }
 
+/* OVERSEER'S REFLECTION */
+.reflection { padding: 72px 0; background: var(--bg-page); border-top: 1px solid var(--border); }
+.reflectionInner {
+  display: grid; grid-template-columns: 420px 1fr; gap: 64px; align-items: flex-start;
+}
+.reflectionPhotoWrap { position: sticky; top: 24px; }
+.reflectionPhoto {
+  width: 100%; display: block; border-radius: 4px;
+  border: 1px solid var(--border); aspect-ratio: 4/3; object-fit: cover;
+}
+.reflectionCaption {
+  font-size: 11px; color: var(--text-muted); line-height: 1.6;
+  margin-top: 10px; font-style: italic;
+}
+.reflectionEyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--crimson); margin-bottom: 10px;
+}
+.reflectionTitle {
+  font-family: var(--font-display); font-size: 26px; font-weight: 800;
+  color: var(--text); line-height: 1.25; margin-bottom: 24px;
+}
+.reflectionBody {
+  font-size: 15px; color: var(--text-muted); line-height: 1.85;
+  margin-bottom: 16px; text-align: justify;
+}
+.reflectionQuote {
+  border-left: 3px solid var(--crimson);
+  margin: 28px 0; padding: 4px 0 4px 20px;
+  font-family: var(--font-display); font-size: 18px; font-weight: 700;
+  font-style: italic; color: var(--text); line-height: 1.5;
+}
+.reflectionAuthor {
+  font-size: 13px; color: var(--text-muted); line-height: 1.8;
+  padding-top: 20px; border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1023px) {
   .missionInner { grid-template-columns: 1fr; gap: 36px; }
   .missionStats { grid-template-columns: repeat(4, 1fr); }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .visitInner { grid-template-columns: 1fr; gap: 32px; }
+  .reflectionInner { grid-template-columns: 1fr; gap: 32px; }
+  .reflectionPhotoWrap { position: static; }
 }
 
 @media (max-width: 767px) {
   .title { font-size: 28px; }
   .missionStats { grid-template-columns: repeat(2, 1fr); }
   .grid { grid-template-columns: 1fr; }
+  .reflectionTitle { font-size: 22px; }
 }
 
 /* MEDIA GRIDS */
