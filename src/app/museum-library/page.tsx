@@ -125,6 +125,30 @@ export default async function MuseumLibraryPage() {
       {/* ORIGINAL ART WORKS FROM THE MUSEUM */}
       <ArtStrip start={1} />
 
+      {/* THE ARTIST */}
+      <section className={styles.artist}>
+        <div className={styles.container}>
+          <div className={styles.artistInner}>
+            <div className={styles.artistPhotoWrap}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/artist-chinedu-immanuel-oct2026.webp"
+                alt="Mr Chinedu Immanuel holding an oil portrait of a Grier House student at his studio in Aguda, Lagos, Oct 2026"
+                className={styles.artistPhoto}
+                loading="lazy"
+              />
+            </div>
+            <div className={styles.artistText}>
+              <p className={styles.artistEyebrow}>The Artist</p>
+              <h2 className={styles.artistTitle}>Mr Chinedu Immanuel</h2>
+              <p className={styles.artistBody}>
+                Mr Chinedu Immanuel, collaborating with Dele Olusanya &lsquo;65, created the evocative oil portraits of notable Griersons now on permanent display at the Grier House Museum. He is shown here in his studio at Aguda, Lagos — October 2026.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* THE LIBRARY */}
       <section className={styles.library}>
         <div className={styles.container}>
