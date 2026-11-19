@@ -32,7 +32,7 @@ export interface Profile {
   shortName: string;
   /* Used for A to Z ordering; defaults to the last word of fullName */
   surname?: string;
-  era: Era;
+  era: Era | null;
   fields: Field[];
   meta: ProfileMeta;
   heroTags: string[];

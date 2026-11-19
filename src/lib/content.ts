@@ -66,7 +66,7 @@ function toProfile(p: RawProfile): Profile {
     fullName: p.fullName,
     shortName: p.shortName,
     surname: p.surname,
-    era: p.era ?? 'Modern',
+    era: p.era ?? null,
     fields: labels(p.fields) as Field[],
     meta: {
       schoolNumber: p.schoolNumber ?? '',
